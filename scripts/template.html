@@ -22,6 +22,16 @@
   .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
   .kpi{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px}
   .kpi b{display:block;font-size:26px} .kpi span{color:var(--mute);font-size:12px}
+  .kpi.click{cursor:pointer;transition:border-color .15s,box-shadow .15s}
+  .kpi.click:hover{border-color:var(--blue)}
+  .kpi.on{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue) inset}
+  .kpis.proj{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .kpi .sub2{display:block;color:var(--mute);font-size:11px;margin-top:2px}
+  .cbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:2px 8px;cursor:pointer;font-size:12px;white-space:nowrap}
+  .cbtn:hover{border-color:var(--blue)}
+  dialog.cm{width:min(820px,96vw);max-height:90vh;overflow:auto}
+  .cmhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+  .cmhead b{font-size:15px} .cmhead .x{border:0;background:none;font-size:20px;cursor:pointer;color:var(--mute)}
   .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
   input[type=search],input[type=password]{flex:1;min-width:220px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:14px}
   .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer;font-size:12px}
@@ -69,11 +79,12 @@
     <div class="track"><div class="fill" id="progFill"></div></div>
   </div>
   <div class="kpis" id="kpis"></div>
+  <div class="kpis proj" id="projs"></div>
   <div class="bar"><input type="search" id="q"></div>
   <div class="bar" id="chips"></div>
   <div class="count" id="count"></div>
   <div class="tablewrap"><table>
-    <thead><tr><th data-k="key" data-i="colKey"></th><th data-k="summary" data-i="colSummary"></th><th data-k="extId" data-i="colExt"></th><th data-k="status" data-i="colStatus"></th></tr></thead>
+    <thead><tr><th data-k="key" data-i="colKey"></th><th data-k="summary" data-i="colSummary"></th><th data-k="extId" data-i="colExt"></th><th data-k="status" data-i="colStatus"></th><th data-i="colCmt"></th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
 </main>
@@ -89,19 +100,28 @@
   </div>
 </dialog>
 
+<dialog id="dlgCmt" class="cm">
+  <div class="cmhead"><div><b id="cmKey"></b><div class="hint" id="cmSum"></div></div><button class="x" id="cmClose" aria-label="close">×</button></div>
+  <div class="hint" data-i="cmtHint"></div>
+  <div id="cmBox" style="margin-top:12px"></div>
+</dialog>
+
 <script>
 const DATA = /*__DATA__*/null;
 const GH_REPO='marzlo/RAR', GH_WF='refresh-dashboard.yml', TOKEN_KEY='rar-gh-token', FILTER='12811';
+/* giscus (comments stored in GitHub Discussions of this repo) */
+const GISCUS = /*__GISCUS__*/null;   // filled from scripts/giscus.json by build_dashboard.py
+const PROJECTS=['NR1L','NR1LD'];
 const JIRA='https://'+((DATA&&DATA.site)||'mobiledrivetech.atlassian.net');
 
 const T={
- zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStatus:'狀態',
+ zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStatus:'狀態',colCmt:'留言',cmt:'💬 留言',cmtHint:'留言會用你的 GitHub 帳號登入並記錄名字與時間（存在 marzlo/RAR 的 Discussions，公開可見）。',projAll:'張',cmtOff:'留言功能尚未啟用（需要安裝 giscus app）。',projOf:'待處理 / 進行中 / 已完成',
   search:'搜尋 Jira ID、摘要或外部編號…',total:'總數',todo:'待處理',inprog:'進行中',done:'已完成',showing:(a,b)=>`顯示 ${a} / ${b}`,
   tokenPrompt:`請貼上 GitHub token（僅會存在你自己瀏覽器裡，不會傳給 GitHub 以外的地方）。<br><br>第一次使用請到 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">建立 fine-grained token</a>：Repository access 只選 <b>${GH_REPO}</b>，Permissions 的 <b>Actions</b> 設為 Read and write，其他都不用給。`,
   ok:'確定',cancel:'取消',clear:'清除',tokenSet:'目前已設定 Token',tokenNone:'目前尚未設定 Token',
   p1:'送出更新要求…',p2:'排隊中，等待 GitHub 開始執行…',p3:'正在從 Jira 抓取資料並重建網頁…',p4:'完成！即將重新載入…',
   eFail:'更新沒有成功，請到 GitHub Actions 查看',eToken:'Token 無效或權限不足，請重新設定',eTimeout:'等太久了，請稍後重新整理頁面',eNet:'無法連線到 GitHub'},
- en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStatus:'Status',
+ en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStatus:'Status',colCmt:'Comments',cmt:'💬 Comment',cmtHint:'Comments sign in with your GitHub account and record your name and time (stored in marzlo/RAR Discussions, publicly visible).',projAll:'issues',cmtOff:'Comments are not enabled yet (the giscus app needs to be installed).',projOf:'To Do / In Progress / Done',
   search:'Search Jira ID, summary or external ID…',total:'Total',todo:'To Do',inprog:'In Progress',done:'Done',showing:(a,b)=>`Showing ${a} / ${b}`,
   tokenPrompt:`Paste a GitHub token (stored only in your own browser, sent nowhere except GitHub).<br><br>First time: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">create a fine-grained token</a>, set Repository access to <b>${GH_REPO}</b> only and the <b>Actions</b> permission to Read and write. Nothing else is needed.`,
   ok:'OK',cancel:'Cancel',clear:'Clear',tokenSet:'A token is currently set',tokenNone:'No token set',
@@ -114,7 +134,8 @@ const t=k=>T[lang][k];
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const data=DATA||{issues:[]};
-let active=new Set(),sortK='status',sortDir=1;
+let active=new Set(),sortK='status',sortDir=1,projF=null,catF=null;
+const projOf=k=>String(k).split('-')[0];
 
 function fmt(iso){return iso?new Date(iso).toLocaleString(lang==='zh'?'zh-TW':'en-US',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}):'—'}
 function applyLang(){
@@ -130,18 +151,23 @@ function renderAll(){
   $('sub').innerHTML=`Jira filter <a href="${JIRA}/issues?filter=${FILTER}" target="_blank" rel="noopener">${FILTER}</a>`;
   $('updatedAt').textContent=fmt(data.generated);
   const cat=c=>all.filter(i=>i.category===c).length;
-  $('kpis').innerHTML=[[t('total'),all.length],[t('todo'),cat('new')],[t('inprog'),cat('indeterminate')],[t('done'),cat('done')]]
-    .map(([l,v])=>`<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join('');
-  const counts={};all.forEach(i=>counts[i.status]=(counts[i.status]||0)+1);
+  $('kpis').innerHTML=[[t('total'),all.length,''],[t('todo'),cat('new'),'new'],[t('inprog'),cat('indeterminate'),'indeterminate'],[t('done'),cat('done'),'done']]
+    .map(([l,v,c])=>`<div class="kpi click${(c?catF===c:!catF&&!projF)?' on':''}" data-cat="${c}"><b>${v}</b><span>${l}</span></div>`).join('');
+  $('projs').innerHTML=PROJECTS.map(p=>{
+    const its=all.filter(i=>projOf(i.key)===p), c=k=>its.filter(i=>i.category===k).length;
+    return `<div class="kpi click${projF===p?' on':''}" data-proj="${p}"><b>${p} · ${its.length}</b><span class="sub2">${t('projOf')}: ${c('new')} / ${c('indeterminate')} / ${c('done')}</span></div>`;
+  }).join('');
+  const counts={};all.filter(i=>(!projF||projOf(i.key)===projF)&&(!catF||i.category===catF)).forEach(i=>counts[i.status]=(counts[i.status]||0)+1);
+  [...active].forEach(s=>{if(!counts[s])active.delete(s)});
   $('chips').innerHTML=Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([s,n])=>`<button class="chip${active.has(s)?' on':''}" data-s="${esc(s)}">${esc(s)} (${n})</button>`).join('');
   render();
 }
 function render(){
   const all=data.issues, q=$('q').value.trim().toLowerCase();
-  const rows=all.filter(i=>(!active.size||active.has(i.status))&&(!q||(i.key+' '+i.summary+' '+(i.extId||'')).toLowerCase().includes(q)))
+  const rows=all.filter(i=>(!projF||projOf(i.key)===projF)&&(!catF||i.category===catF)&&(!active.size||active.has(i.status))&&(!q||(i.key+' '+i.summary+' '+(i.extId||'')).toLowerCase().includes(q)))
     .sort((a,b)=>sortDir*String(a[sortK]??'').localeCompare(String(b[sortK]??''),undefined,{numeric:true}));
   $('count').textContent=t('showing')(rows.length,all.length);
-  $('rows').innerHTML=rows.map(i=>`<tr><td><a href="${JIRA}/browse/${esc(i.key)}" target="_blank" rel="noopener">${esc(i.key)} ↗</a></td><td>${esc(i.summary)}</td><td>${i.ext?`<a href="${esc(i.ext)}" target="_blank" rel="noopener">${esc(i.extId)} ↗</a>`:'<span class="dash">—</span>'}</td><td><span class="st ${esc(i.category)}">${esc(i.status)}</span></td></tr>`).join('');
+  $('rows').innerHTML=rows.map(i=>`<tr><td><a href="${JIRA}/browse/${esc(i.key)}" target="_blank" rel="noopener">${esc(i.key)} ↗</a></td><td>${esc(i.summary)}</td><td>${i.ext?`<a href="${esc(i.ext)}" target="_blank" rel="noopener">${esc(i.extId)} ↗</a>`:'<span class="dash">—</span>'}</td><td><span class="st ${esc(i.category)}">${esc(i.status)}</span></td><td><button class="cbtn" data-c="${esc(i.key)}">${t('cmt')}</button></td></tr>`).join('');
 }
 function prog(pct,key,state){
   const p=$('prog');p.classList.add('show');p.classList.toggle('err',state==='err');p.classList.toggle('ok',state==='ok');
@@ -202,6 +228,26 @@ async function triggerRefresh(){
 }
 $('btnUpdate').onclick=()=>{ if(getToken())triggerRefresh(); else {pendingUpdate=true;openToken()} };
 
+$('kpis').onclick=e=>{const k=e.target.closest('.kpi');if(!k)return;const c=k.dataset.cat;catF=(!c||catF===c)?null:c;if(!c)projF=null;renderAll()};
+$('projs').onclick=e=>{const k=e.target.closest('.kpi');if(!k)return;const p=k.dataset.proj;projF=projF===p?null:p;renderAll()};
+/* ---- comments (giscus, one thread per Jira key) ---- */
+function openComments(key){
+  const it=data.issues.find(i=>i.key===key)||{};
+  $('cmKey').innerHTML=`<a href="${JIRA}/browse/${esc(key)}" target="_blank" rel="noopener">${esc(key)} ↗</a>`;
+  $('cmSum').textContent=it.summary||'';
+  const box=$('cmBox'); box.innerHTML='';
+  if(!GISCUS||!GISCUS.categoryId){box.innerHTML=`<p class="hint">${t('cmtOff')}</p>`;$('dlgCmt').showModal();return;}
+  const sc=document.createElement('script');
+  const a={src:'https://giscus.app/client.js','data-repo':GISCUS.repo,'data-repo-id':GISCUS.repoId,'data-category':GISCUS.category,'data-category-id':GISCUS.categoryId,
+    'data-mapping':'specific','data-term':key,'data-strict':'1','data-reactions-enabled':'0','data-emit-metadata':'0','data-input-position':'top',
+    'data-theme':'preferred_color_scheme','data-lang':lang==='zh'?'zh-TW':'en','data-loading':'lazy',crossorigin:'anonymous'};
+  Object.entries(a).forEach(([k,v])=>sc.setAttribute(k,v)); sc.async=true;
+  box.appendChild(sc);
+  $('dlgCmt').showModal();
+}
+$('rows').onclick=e=>{const b=e.target.closest('.cbtn');if(b)openComments(b.dataset.c)};
+$('cmClose').onclick=()=>{$('dlgCmt').close();$('cmBox').innerHTML=''};
+$('dlgCmt').addEventListener('close',()=>{$('cmBox').innerHTML=''});
 $('q').oninput=render;
 $('chips').onclick=e=>{const s=e.target.dataset.s;if(!s)return;active.has(s)?active.delete(s):active.add(s);e.target.classList.toggle('on');render()};
 document.querySelector('thead').onclick=e=>{const k=e.target.dataset.k;if(!k)return;sortDir=(sortK===k)?-sortDir:1;sortK=k;render()};
