@@ -1,0 +1,267 @@
+{
+ "imported": "2026-11-18",
+ "items": {
+  "54247": {
+   "spec": "CFTS043",
+   "status": "Solution Accepted"
+  },
+  "54610": {
+   "spec": "CFTS-026",
+   "status": "Solution Accepted"
+  },
+  "54855": {
+   "spec": "CFTS057",
+   "status": "Closed"
+  },
+  "55044": {
+   "spec": "CFTS057",
+   "status": "Solution Accepted"
+  },
+  "55045": {
+   "spec": "CFTS057",
+   "status": "Solution Accepted"
+  },
+  "55046": {
+   "spec": "CFTS057",
+   "status": "Solution Accepted"
+  },
+  "55151": {
+   "spec": "CFTS086",
+   "status": "Solution Accepted"
+  },
+  "55433": {
+   "spec": "CFTS026",
+   "status": "Solution Proposed"
+  },
+  "55434": {
+   "spec": "CFTS043",
+   "status": "Solution Proposed"
+  },
+  "55937": {
+   "spec": "CFTS032",
+   "status": "Solution Proposed"
+  },
+  "56116": {
+   "spec": "VF747 Fota_Management_VF747_V6_R3 (Fastback)",
+   "status": "Closed"
+  },
+  "57711": {
+   "spec": "CFTS024",
+   "status": "Analysis"
+  },
+  "57812": {
+   "spec": "CFTS043",
+   "status": "Solution Accepted"
+  },
+  "58748": {
+   "spec": "CFTS069",
+   "status": "Solution Proposed"
+  },
+  "59210": {
+   "spec": "CFTS026",
+   "status": "Solution Proposed"
+  },
+  "59266": {
+   "spec": "CS.00152_04",
+   "status": "RAR Rejected"
+  },
+  "59383": {
+   "spec": "SD-A0502",
+   "status": "Solution Proposed"
+  },
+  "59920": {
+   "spec": "CFTS086",
+   "status": "Solution Proposed"
+  },
+  "60548": {
+   "spec": "CS.00101",
+   "status": "RAR Rejected"
+  },
+  "60549": {
+   "spec": "CFTS015",
+   "status": "RAR Rejected"
+  },
+  "60579": {
+   "spec": "CS.00038",
+   "status": "Solution Proposed"
+  },
+  "60580": {
+   "spec": "CS.00038",
+   "status": "Solution Proposed"
+  },
+  "60986": {
+   "spec": "CS.00099",
+   "status": "Draft"
+  },
+  "61536": {
+   "spec": "CFTS044",
+   "status": "RAR Rejected"
+  },
+  "61900": {
+   "spec": "CFTS041",
+   "status": "Solution Proposed"
+  },
+  "61940": {
+   "spec": "VF654",
+   "status": "Solution Proposed"
+  },
+  "61964": {
+   "spec": "CFTS092",
+   "status": "Closed"
+  },
+  "62486": {
+   "spec": "CS.00102",
+   "status": "RAR Rejected"
+  },
+  "62518": {
+   "spec": "CFTS057",
+   "status": "RAR Rejected"
+  },
+  "62761": {
+   "spec": "VF551",
+   "status": "Draft"
+  },
+  "62983": {
+   "spec": "CFTS084",
+   "status": "Solution Proposed"
+  },
+  "62984": {
+   "spec": "CFTS026",
+   "status": "Solution Proposed"
+  },
+  "63225": {
+   "spec": "CFTS012",
+   "status": "Solution Proposed"
+  },
+  "63365": {
+   "spec": "CFTS011",
+   "status": "RAR Rejected"
+  },
+  "63400": {
+   "spec": "CFTS039, VF174",
+   "status": "RAR Rejected"
+  },
+  "63445": {
+   "spec": "CS.00102",
+   "status": "Solution Proposed"
+  },
+  "63451": {
+   "spec": "CFTS044",
+   "status": "Solution Proposed"
+  },
+  "63474": {
+   "spec": "RVC+PAM R1 Low SR24 1A (June 25 2021).pdf",
+   "status": "RAR Accepted"
+  },
+  "63558": {
+   "spec": "PDO Theme Config",
+   "status": "Solution Proposed"
+  },
+  "63559": {
+   "spec": "CS.00038",
+   "status": "RAR Rejected"
+  },
+  "63603": {
+   "spec": "CS.00102",
+   "status": "Solution Proposed"
+  },
+  "63606": {
+   "spec": "CS.00102",
+   "status": "Solution Proposed"
+  },
+  "63608": {
+   "spec": "CS.00102",
+   "status": "Solution Proposed"
+  },
+  "63610": {
+   "spec": "CFTS004",
+   "status": "RAR Accepted"
+  },
+  "63646": {
+   "spec": "CS.00102",
+   "status": "RAR Rejected"
+  },
+  "63719": {
+   "spec": "cs.00102",
+   "status": "RAR Rejected"
+  },
+  "63768": {
+   "spec": "CS.00099",
+   "status": "Solution Proposed"
+  },
+  "63815": {
+   "spec": "CFTS013_26PI1.5, CS.00263",
+   "status": "Solution Proposed"
+  },
+  "63816": {
+   "spec": "CS.00093",
+   "status": "Solution Proposed"
+  },
+  "63823": {
+   "spec": "CFTS026 / VF451",
+   "status": "Submitted"
+  },
+  "63831": {
+   "spec": "CS.00212",
+   "status": "RAR Accepted"
+  },
+  "63846": {
+   "spec": "CFTS039",
+   "status": "Solution Proposed"
+  },
+  "63939": {
+   "spec": "",
+   "status": "Solution Proposed"
+  },
+  "63975": {
+   "spec": "CFTS_022",
+   "status": "Analysis"
+  },
+  "63976": {
+   "spec": "HMI",
+   "status": "Solution Proposed"
+  },
+  "64057": {
+   "spec": "VF155",
+   "status": "Analysis"
+  },
+  "64116": {
+   "spec": "CFTS092",
+   "status": "Solution Proposed"
+  },
+  "64163": {
+   "spec": "Latest-R1LR_Atl-H_25PI4.5 Dec Release-Multimedia - Radio and Audio_CFTS 019_Audio Management_20251203-1112.doc and Logical Identifiers and CAN Mapping v1_80.xls",
+   "status": "RAR Accepted"
+  },
+  "64164": {
+   "spec": "Latest-R1LR_Atl-H_25PI4.5 Dec Release-Multimedia - Radio and Audio_CFTS 019_Audio Management_20251203-1112.doc (reference: Apple Accessory Interface Specification R10)",
+   "status": "RAR Rejected"
+  },
+  "64167": {
+   "spec": "Pop Up List HMI CR0003 - PU1633 & PU1634",
+   "status": "Analysis"
+  },
+  "64188": {
+   "spec": "CFTS043",
+   "status": "Analysis"
+  },
+  "64193": {
+   "spec": "HUIG 4.5",
+   "status": "Submitted"
+  },
+  "64200": {
+   "spec": "SYS1_KPI_R1L-R_Rev2 -",
+   "status": "Solution Proposed"
+  },
+  "64246": {
+   "spec": "CFTS086 (LID 1.80)",
+   "status": "Analysis"
+  },
+  "64288": {
+   "spec": "CFTS020",
+   "status": "Submitted"
+  }
+ },
+ "note": "Only the IDs used by the dashboard. Regenerated by Claude from a new prsse CSV export.",
+ "source": "RAR include done 1.csv (prsse export)"
+}
