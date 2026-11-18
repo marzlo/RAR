@@ -7,6 +7,7 @@ Optional: JIRA_SITE (default mobiledrivetech.atlassian.net), JIRA_JQL (default f
 import base64
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -32,6 +33,35 @@ def _post(url, body):
         raise RuntimeError(f"Jira API error {e.code} for {url}:\n{e.read().decode(errors='replace')}") from e
 
 
+def _get(url):
+    req = urllib.request.Request(url, headers=_HEADERS, method="GET")
+    try:
+        with urllib.request.urlopen(req) as resp:
+            return resp.status, json.load(resp)
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode(errors="replace")[:300]
+
+
+def diagnose():
+    """Print which Jira account the secrets log in as and whether it can open the filter."""
+    code, me = _get(f"https://{JIRA_SITE}/rest/api/3/myself")
+    if code == 401:
+        sys.exit("Jira rejected JIRA_EMAIL / JIRA_API_TOKEN (401). Check that the email matches the account "
+                 "that created the API token, and that the token has not expired or been revoked.")
+    if code != 200:
+        print(f"/myself returned HTTP {code}: {me}")
+    else:
+        print(f"Authenticated as: {me.get('displayName')} (active={me.get('active')})")
+    m = re.search(r"filter\s*=\s*(\d+)", JQL)
+    if m:
+        fcode, f = _get(f"https://{JIRA_SITE}/rest/api/3/filter/{m.group(1)}")
+        if fcode == 200:
+            print(f"Filter {m.group(1)} '{f.get('name')}' owner: {(f.get('owner') or {}).get('displayName')}")
+        else:
+            print(f"This account cannot open filter {m.group(1)} (HTTP {fcode}). Share the filter with this "
+                  "account (or with the organization), or use secrets of an account that can open it.")
+
+
 def search(jql, fields):
     url = f"https://{JIRA_SITE}/rest/api/3/search/jql"
     issues, token = [], None
@@ -51,6 +81,7 @@ def main():
     if not JIRA_EMAIL or not JIRA_API_TOKEN:
         sys.exit("JIRA_EMAIL / JIRA_API_TOKEN are empty. Add both under "
                  "Settings > Secrets and variables > Actions, then re-run.")
+    diagnose()
     issues = search(JQL, FIELDS)
     print(f"'{JQL}': {len(issues)} issues")
     if not issues:
