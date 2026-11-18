@@ -23,6 +23,7 @@ def main():
             "summary": (f.get("summary") or "").strip(),
             "status": st.get("name", ""),
             "category": (st.get("statusCategory") or {}).get("key", "indeterminate"),
+            "assignee": ((f.get("assignee") or {}).get("displayName") or ""),
             "ext": ext,
             "extId": m.group(1) if m else ("link" if ext else ""),
         })
