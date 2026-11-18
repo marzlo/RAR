@@ -17,7 +17,7 @@ JIRA_EMAIL = os.environ.get("JIRA_EMAIL", "")
 JIRA_API_TOKEN = os.environ.get("JIRA_API_TOKEN", "")
 JQL = os.environ.get("JIRA_JQL", "filter=12811 ORDER BY key ASC")
 # External Link: NR1L uses customfield_10599, NR1LD uses customfield_10595
-FIELDS = ["summary", "status", "customfield_10595", "customfield_10599"]
+FIELDS = ["summary", "status", "assignee", "customfield_10595", "customfield_10599"]
 
 _auth = base64.b64encode(f"{JIRA_EMAIL}:{JIRA_API_TOKEN}".encode()).decode()
 _HEADERS = {"Authorization": f"Basic {_auth}", "Content-Type": "application/json",
