@@ -43,12 +43,18 @@ def main():
     if os.path.exists(cpath):
         with open(cpath, encoding="utf-8") as fh:
             comments = json.load(fh)
+    rpath = os.path.join(HERE, "..", "remarks.json")    # per-ticket "Status remark" (one editable text each)
+    remarks = {"remarks": {}}
+    if os.path.exists(rpath):
+        with open(rpath, encoding="utf-8") as fh:
+            remarks = json.load(fh)
     data = {
         "generated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "site": JIRA_SITE,
         "filter": "12811",
         "issues": issues,
         "comments": comments,
+        "remarks": remarks,
     }
     with open(TEMPLATE, encoding="utf-8") as fh:
         html = fh.read()
