@@ -26,6 +26,16 @@ def main():
             "ext": ext,
             "extId": m.group(1) if m else ("link" if ext else ""),
         })
+    # STLA prsse export (scripts/prsse.json): External Link id -> STLA status / Other Specification
+    ppath = os.path.join(HERE, "prsse.json")
+    prsse = {}
+    if os.path.exists(ppath):
+        with open(ppath, encoding="utf-8") as fh:
+            prsse = json.load(fh).get("items", {})
+    for i in issues:
+        p = prsse.get(i["extId"]) or {}
+        i["stla"] = p.get("status", "")
+        i["spec"] = p.get("spec", "")
     data = {
         "generated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "site": JIRA_SITE,
