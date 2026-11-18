@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAR Issue Tracker</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2328;--mute:#656d76;--line:#d8dee4;--blue:#0969da;--btn:#4b5b5b;--btn2:#d5e5ea;
+        --new:#6e7781;--prog:#bf8700;--done:#1a7f37;--err:#cf222e}
+  @media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--ink:#e6edf3;--mute:#8d96a0;--line:#30363d;--blue:#4493f8;--btn:#6b7d7d;--btn2:#2b3a40;--new:#8d96a0;--prog:#d29922;--done:#3fb950;--err:#f85149}}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,"Segoe UI","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink)}
+  main{max-width:1200px;margin:0 auto;padding:16px 16px 32px}
+  .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:8px}
+  .tools{display:flex;gap:8px;flex-wrap:wrap}
+  .tbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:6px 14px;cursor:pointer;font-size:14px}
+  .tbtn:hover{border-color:var(--blue)} .tbtn:disabled{opacity:.5;cursor:default}
+  .tbtn.ok{border-color:var(--done)}
+  h1{font-size:22px;margin:0}
+  .sub{color:var(--mute);font-size:12px;margin:4px 0} .sub a{color:var(--blue)}
+  .updated{font-size:13px;margin:0 0 16px} .updated b{font-variant-numeric:tabular-nums}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px}
+  .kpi b{display:block;font-size:26px} .kpi span{color:var(--mute);font-size:12px}
+  .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  input[type=search],input[type=password]{flex:1;min-width:220px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:14px}
+  .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer;font-size:12px}
+  .chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+  .tablewrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  th,td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{font-size:12px;color:var(--mute);cursor:pointer;user-select:none;white-space:nowrap}
+  td a{color:var(--blue);text-decoration:none;white-space:nowrap} td a:hover{text-decoration:underline}
+  .st{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;white-space:nowrap;border:1px solid currentColor}
+  .new{color:var(--new)} .indeterminate{color:var(--prog)} .done{color:var(--done)}
+  .count{color:var(--mute);font-size:12px;margin:8px 0}
+  .dash{color:var(--mute)}
+  .prog{display:none;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-bottom:16px}
+  .prog.show{display:block}
+  .track{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:6px}
+  .fill{height:100%;width:0;background:var(--blue);transition:width .6s}
+  .prog.err .fill{background:var(--err)} .prog.ok .fill{background:var(--done)}
+  .prog .msg{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+  .prog.err .msg{color:var(--err)}
+  dialog{border:0;border-radius:12px;padding:20px;width:min(480px,92vw);background:var(--card);color:var(--ink);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+  dialog::backdrop{background:rgba(0,0,0,.35)}
+  dialog p{margin:0 0 12px;font-size:14px} dialog a{color:var(--blue)}
+  dialog input{width:100%}
+  .actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .b1{background:var(--btn);color:#fff;border:0;border-radius:999px;padding:8px 20px;cursor:pointer;font-size:14px}
+  .b2{background:var(--btn2);color:var(--ink);border:0;border-radius:999px;padding:8px 20px;cursor:pointer;font-size:14px}
+  .hint{color:var(--mute);font-size:12px;margin-top:6px}
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <h1>RAR Issue Tracker</h1>
+    <div class="tools">
+      <button class="tbtn" id="btnToken">🔑 <span data-i="token"></span></button>
+      <button class="tbtn" id="btnUpdate">⟳ <span data-i="update"></span></button>
+      <button class="tbtn" id="btnLang">EN</button>
+    </div>
+  </div>
+  <div class="sub" id="sub"></div>
+  <div class="updated"><span data-i="lastUpdated"></span> <b id="updatedAt">—</b></div>
+  <div class="prog" id="prog">
+    <div class="msg"><span id="progMsg"></span><span id="progPct">0%</span></div>
+    <div class="track"><div class="fill" id="progFill"></div></div>
+  </div>
+  <div class="kpis" id="kpis"></div>
+  <div class="bar"><input type="search" id="q"></div>
+  <div class="bar" id="chips"></div>
+  <div class="count" id="count"></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th data-k="key" data-i="colKey"></th><th data-k="summary" data-i="colSummary"></th><th data-k="extId" data-i="colExt"></th><th data-k="status" data-i="colStatus"></th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+</main>
+
+<dialog id="dlgToken">
+  <p data-html="tokenPrompt"></p>
+  <input type="password" id="tokenInput" autocomplete="off" placeholder="github_pat_...">
+  <div class="hint" id="tokenState"></div>
+  <div class="actions">
+    <button class="b2" id="tokenClear" data-i="clear"></button>
+    <button class="b2" id="tokenCancel" data-i="cancel"></button>
+    <button class="b1" id="tokenOk" data-i="ok"></button>
+  </div>
+</dialog>
+
+<script>
+const DATA = /*__DATA__*/null;
+const GH_REPO='marzlo/RAR', GH_WF='refresh-dashboard.yml', TOKEN_KEY='rar-gh-token', FILTER='12811';
+const JIRA='https://'+((DATA&&DATA.site)||'mobiledrivetech.atlassian.net');
+
+const T={
+ zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStatus:'狀態',
+  search:'搜尋 Jira ID、摘要或外部編號…',total:'總數',todo:'待處理',inprog:'進行中',done:'已完成',showing:(a,b)=>`顯示 ${a} / ${b}`,
+  tokenPrompt:`請貼上 GitHub token（僅會存在你自己瀏覽器裡，不會傳給 GitHub 以外的地方）。<br><br>第一次使用請到 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">建立 fine-grained token</a>：Repository access 只選 <b>${GH_REPO}</b>，Permissions 的 <b>Actions</b> 設為 Read and write，其他都不用給。`,
+  ok:'確定',cancel:'取消',clear:'清除',tokenSet:'目前已設定 Token',tokenNone:'目前尚未設定 Token',
+  p1:'送出更新要求…',p2:'排隊中，等待 GitHub 開始執行…',p3:'正在從 Jira 抓取資料並重建網頁…',p4:'完成！即將重新載入…',
+  eFail:'更新沒有成功，請到 GitHub Actions 查看',eToken:'Token 無效或權限不足，請重新設定',eTimeout:'等太久了，請稍後重新整理頁面',eNet:'無法連線到 GitHub'},
+ en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStatus:'Status',
+  search:'Search Jira ID, summary or external ID…',total:'Total',todo:'To Do',inprog:'In Progress',done:'Done',showing:(a,b)=>`Showing ${a} / ${b}`,
+  tokenPrompt:`Paste a GitHub token (stored only in your own browser, sent nowhere except GitHub).<br><br>First time: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">create a fine-grained token</a>, set Repository access to <b>${GH_REPO}</b> only and the <b>Actions</b> permission to Read and write. Nothing else is needed.`,
+  ok:'OK',cancel:'Cancel',clear:'Clear',tokenSet:'A token is currently set',tokenNone:'No token set',
+  p1:'Sending the update request…',p2:'Queued, waiting for GitHub to start…',p3:'Fetching Jira and rebuilding the page…',p4:'Done! Reloading…',
+  eFail:'The update did not succeed; check GitHub Actions',eToken:'The token is invalid or lacks permission; set it again',eTimeout:'This is taking too long; reload the page later',eNet:'Cannot reach GitHub'}
+};
+const store={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{v?localStorage.setItem(k,v):localStorage.removeItem(k)}catch(e){}}};
+let lang=new URL(location.href).searchParams.get('lang')||store.get('rar-lang')||'zh';
+const t=k=>T[lang][k];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const data=DATA||{issues:[]};
+let active=new Set(),sortK='status',sortDir=1;
+
+function fmt(iso){return iso?new Date(iso).toLocaleString(lang==='zh'?'zh-TW':'en-US',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}):'—'}
+function applyLang(){
+  document.documentElement.lang=lang==='zh'?'zh-Hant':'en';
+  document.querySelectorAll('[data-i]').forEach(el=>el.textContent=t(el.dataset.i));
+  document.querySelectorAll('[data-html]').forEach(el=>el.innerHTML=t(el.dataset.html));
+  $('btnLang').textContent=lang==='zh'?'EN':'中文';
+  $('q').placeholder=t('search');
+  renderAll();
+}
+function renderAll(){
+  const all=data.issues;
+  $('sub').innerHTML=`Jira filter <a href="${JIRA}/issues?filter=${FILTER}" target="_blank" rel="noopener">${FILTER}</a>`;
+  $('updatedAt').textContent=fmt(data.generated);
+  const cat=c=>all.filter(i=>i.category===c).length;
+  $('kpis').innerHTML=[[t('total'),all.length],[t('todo'),cat('new')],[t('inprog'),cat('indeterminate')],[t('done'),cat('done')]]
+    .map(([l,v])=>`<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join('');
+  const counts={};all.forEach(i=>counts[i.status]=(counts[i.status]||0)+1);
+  $('chips').innerHTML=Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([s,n])=>`<button class="chip${active.has(s)?' on':''}" data-s="${esc(s)}">${esc(s)} (${n})</button>`).join('');
+  render();
+}
+function render(){
+  const all=data.issues, q=$('q').value.trim().toLowerCase();
+  const rows=all.filter(i=>(!active.size||active.has(i.status))&&(!q||(i.key+' '+i.summary+' '+(i.extId||'')).toLowerCase().includes(q)))
+    .sort((a,b)=>sortDir*String(a[sortK]??'').localeCompare(String(b[sortK]??''),undefined,{numeric:true}));
+  $('count').textContent=t('showing')(rows.length,all.length);
+  $('rows').innerHTML=rows.map(i=>`<tr><td><a href="${JIRA}/browse/${esc(i.key)}" target="_blank" rel="noopener">${esc(i.key)} ↗</a></td><td>${esc(i.summary)}</td><td>${i.ext?`<a href="${esc(i.ext)}" target="_blank" rel="noopener">${esc(i.extId)} ↗</a>`:'<span class="dash">—</span>'}</td><td><span class="st ${esc(i.category)}">${esc(i.status)}</span></td></tr>`).join('');
+}
+function prog(pct,key,state){
+  const p=$('prog');p.classList.add('show');p.classList.toggle('err',state==='err');p.classList.toggle('ok',state==='ok');
+  $('progFill').style.width=pct+'%';$('progPct').textContent=Math.round(pct)+'%';$('progMsg').textContent=t(key);
+}
+
+/* ---- token ---- */
+let memToken='';
+const getToken=()=>store.get(TOKEN_KEY)||memToken;
+const setToken=v=>{memToken=v;store.set(TOKEN_KEY,v)};
+function refreshTokenBtn(){$('btnToken').classList.toggle('ok',!!getToken())}
+function openToken(){$('tokenInput').value='';$('tokenState').textContent=getToken()?t('tokenSet'):t('tokenNone');$('dlgToken').showModal()}
+$('btnToken').onclick=openToken;
+$('tokenCancel').onclick=()=>$('dlgToken').close();
+$('tokenClear').onclick=()=>{setToken('');refreshTokenBtn();$('dlgToken').close()};
+$('tokenOk').onclick=()=>{const v=$('tokenInput').value.trim();if(v)setToken(v);refreshTokenBtn();$('dlgToken').close();if(v&&pendingUpdate){pendingUpdate=false;triggerRefresh()}};
+$('tokenInput').onkeydown=e=>{if(e.key==='Enter')$('tokenOk').click()};
+
+/* ---- update: run the GitHub Actions workflow and wait for it, staying on this page ---- */
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const gh=(path,opt={})=>fetch(`https://api.github.com/repos/${GH_REPO}${path}`,{...opt,cache:'no-store',headers:{'Accept':'application/vnd.github+json','Authorization':`Bearer ${getToken()}`}});
+let pendingUpdate=false;
+async function triggerRefresh(){
+  const btn=$('btnUpdate');btn.disabled=true;
+  try{
+    prog(5,'p1');
+    const since=Date.now()-60000;
+    let r;
+    try{r=await gh(`/actions/workflows/${GH_WF}/dispatches`,{method:'POST',body:JSON.stringify({ref:'main'})})}
+    catch(e){prog(100,'eNet','err');return}
+    if([401,403,404].includes(r.status)){prog(100,'eToken','err');pendingUpdate=true;openToken();return}
+    if(!r.ok){prog(100,'eFail','err');return}
+    prog(10,'p2');
+    let started=0;
+    for(let i=0;i<72;i++){                    // up to ~6 minutes
+      await sleep(5000);
+      let run;
+      try{
+        const res=await gh(`/actions/workflows/${GH_WF}/runs?event=workflow_dispatch&per_page=5`);
+        if(!res.ok)continue;
+        run=(await res.json()).workflow_runs.find(w=>new Date(w.created_at).getTime()>=since);
+      }catch(e){continue}
+      if(!run){prog(Math.min(20,10+i),'p2');continue}
+      if(run.status!=='completed'){
+        if(run.status==='in_progress'){started=started||Date.now();prog(Math.min(90,25+(Date.now()-started)/1000*1.2),'p3')}
+        else prog(20,'p2');
+        continue;
+      }
+      if(run.conclusion!=='success'){prog(100,'eFail','err');return}
+      prog(95,'p4','ok');
+      await sleep(12000);                     // give GitHub Pages a moment to publish
+      prog(100,'p4','ok');
+      const u=new URL(location.href);u.searchParams.set('r',Date.now());location.replace(u);
+      return;
+    }
+    prog(100,'eTimeout','err');
+  }finally{btn.disabled=false}
+}
+$('btnUpdate').onclick=()=>{ if(getToken())triggerRefresh(); else {pendingUpdate=true;openToken()} };
+
+$('q').oninput=render;
+$('chips').onclick=e=>{const s=e.target.dataset.s;if(!s)return;active.has(s)?active.delete(s):active.add(s);e.target.classList.toggle('on');render()};
+document.querySelector('thead').onclick=e=>{const k=e.target.dataset.k;if(!k)return;sortDir=(sortK===k)?-sortDir:1;sortK=k;render()};
+$('btnLang').onclick=()=>{lang=lang==='zh'?'en':'zh';store.set('rar-lang',lang);applyLang()};
+applyLang(); refreshTokenBtn();
+</script>
+</body>
+</html>
