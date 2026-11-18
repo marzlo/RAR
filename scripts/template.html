@@ -159,8 +159,9 @@ const pmRtc=i=>{                                         // PM: no External Link
   const p=String(i.key).split('-')[0], st=String(i.status||'').toLowerCase();
   return p==='NR1L'||(p==='NR1LD'&&st==='md in progress');
 };
-const isPmTodo=i=>pmCopy(i)||pmRtc(i);
-const isRdTodo=i=>stlaAnswered(i)&&!isPM(i.assignee);   // RD: answer the STLA reply (accept or reject)
+const TODO_EXCLUDE=['NR1L-114'];   // sample ticket, never a to-do
+const isPmTodo=i=>!TODO_EXCLUDE.includes(i.key)&&(pmCopy(i)||pmRtc(i));
+const isRdTodo=i=>!TODO_EXCLUDE.includes(i.key)&&stlaAnswered(i)&&!isPM(i.assignee);   // RD: answer the STLA reply (accept or reject)
 const hasLabel=(i,l)=>(i.labels||[]).some(x=>String(x).toLowerCase()===String(l).toLowerCase());
 const ATLH='Atl-H';
 const TABS={all:()=>true,pm:isPmTodo,rd:isRdTodo,atlh:i=>hasLabel(i,ATLH)};
