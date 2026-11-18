@@ -24,6 +24,7 @@ def main():
             "status": st.get("name", ""),
             "category": (st.get("statusCategory") or {}).get("key", "indeterminate"),
             "assignee": ((f.get("assignee") or {}).get("displayName") or ""),
+            "labels": f.get("labels") or [],
             "ext": ext,
             "extId": m.group(1) if m else ("link" if ext else ""),
         })
