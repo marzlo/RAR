@@ -36,11 +36,17 @@ def main():
         p = prsse.get(i["extId"]) or {}
         i["stla"] = p.get("status", "")
         i["spec"] = p.get("spec", "")
+    cpath = os.path.join(HERE, "..", "comments.json")   # per-ticket comments written by the page
+    comments = {"comments": {}}
+    if os.path.exists(cpath):
+        with open(cpath, encoding="utf-8") as fh:
+            comments = json.load(fh)
     data = {
         "generated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "site": JIRA_SITE,
         "filter": "12811",
         "issues": issues,
+        "comments": comments,
     }
     with open(TEMPLATE, encoding="utf-8") as fh:
         html = fh.read()
