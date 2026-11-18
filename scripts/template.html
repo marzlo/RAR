@@ -10,7 +10,7 @@
   @media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--ink:#e6edf3;--mute:#8d96a0;--line:#30363d;--blue:#4493f8;--btn:#6b7d7d;--btn2:#2b3a40;--new:#8d96a0;--prog:#d29922;--done:#3fb950;--err:#f85149}}
   *{box-sizing:border-box}
   body{margin:0;font:14px/1.5 -apple-system,"Segoe UI","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink)}
-  main{max-width:1200px;margin:0 auto;padding:16px 16px 32px}
+  main{max-width:min(1880px,100%);margin:0 auto;padding:16px 16px 32px}
   .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:8px}
   .tools{display:flex;gap:8px;flex-wrap:wrap}
   .tbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:6px 14px;cursor:pointer;font-size:14px}
@@ -40,11 +40,16 @@
   .pmsub{display:block;width:100%;text-align:left;border:1px solid transparent;background:none;color:var(--ink);font:inherit;font-size:13px;padding:4px 8px;margin-top:4px;border-radius:6px;cursor:pointer}
   .pmsub:hover{border-color:var(--line)} .pmsub.on{border-color:var(--blue);background:rgba(9,105,218,.08)}
   .todohint{font-size:12px;color:var(--err);margin-top:2px}
-  td.asg{font-size:13px;white-space:nowrap}
+  td.asg{font-size:13px;min-width:90px}
   .lblsel{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:14px;max-width:260px}
   .lbls{margin-top:4px;display:flex;flex-wrap:wrap;gap:4px}
   .lbl{font-size:11px;padding:0 6px;border-radius:4px;background:var(--line);color:var(--ink)}
-  td.cmcell{min-width:220px;max-width:320px;font-size:12px}
+  td.rmcell{min-width:150px;width:190px}
+  textarea.rmk{width:100%;min-width:140px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit;font-size:13px;resize:vertical}
+  textarea.rmk:focus{outline:none;border-color:var(--blue)}
+  textarea.rmk[readonly]{background:transparent;border-style:dashed}
+  .rmmeta{font-size:11px;color:var(--mute);margin-top:2px;min-height:14px}
+  td.cmcell{min-width:150px;width:200px;font-size:12px}
   .cmrow{border-left:3px solid var(--blue);padding:2px 0 2px 8px;margin-bottom:6px}
   .cmrow .meta{color:var(--mute);font-size:11px} .cmrow .meta b{color:var(--ink)}
   .cmrow .txt{white-space:pre-wrap;word-break:break-word}
@@ -64,9 +69,12 @@
   .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer;font-size:12px}
   .chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
   .tablewrap{overflow-x:auto}
-  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  th,td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-  th{font-size:12px;color:var(--mute);cursor:pointer;user-select:none;white-space:nowrap}
+  .tablewrap{background:var(--card);border:1px solid var(--line);border-radius:8px}
+  table{width:100%;border-collapse:collapse;table-layout:auto;font-size:13px}
+  th,td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  td:nth-child(2){min-width:200px}
+  td.spec{max-width:170px;word-break:break-word}
+  th{font-size:12px;color:var(--mute);cursor:pointer;user-select:none;vertical-align:bottom}
   td a{color:var(--blue);text-decoration:none;white-space:nowrap} td a:hover{text-decoration:underline}
   .st{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;white-space:nowrap;border:1px solid currentColor}
   .new{color:var(--new)} .indeterminate{color:var(--prog)} .done{color:var(--done)}
@@ -116,7 +124,7 @@
   <div class="todoinfo" id="todoInfo" style="display:none"></div>
   <div class="count" id="count"></div>
   <div class="tablewrap"><table>
-    <thead><tr><th data-k="key" data-i="colKey"></th><th data-k="summary" data-i="colSummary"></th><th data-k="status" data-i="colStatus"></th><th data-k="assignee" data-i="colAsg"></th><th data-k="extId" data-i="colExt"></th><th data-k="stla" data-i="colStla"></th><th data-k="spec" data-i="colSpec"></th><th data-i="colCmt"></th></tr></thead>
+    <thead><tr><th data-k="key" data-i="colKey"></th><th data-k="summary" data-i="colSummary"></th><th data-k="status" data-i="colStatus"></th><th data-k="assignee" data-i="colAsg"></th><th data-k="extId" data-i="colExt"></th><th data-k="stla" data-i="colStla"></th><th data-k="spec" data-i="colSpec"></th><th data-i="colCmt"></th><th data-k="remark" data-i="colRemark"></th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
 </main>
@@ -171,13 +179,13 @@ const inTab=i=>(TABS[tab]||TABS.all)(i)&&(tab!=='pm'||!pmSub||(pmSub==='copy'?pm
 const JIRA='https://'+((DATA&&DATA.site)||'mobiledrivetech.atlassian.net');
 
 const T={
- zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStla:'STLA 狀態',colAsg:'Assignee',unassigned:'未指派',tabAll:'全部',tabPm:'PM 待辦',stlaUp:'上傳 STLA 檔',u1:'讀取 STLA 檔案…',u2:(a,b,c)=>`檔案共 ${a} 筆，其中 ${b} 筆對應到清單（清單共 ${c} 個 External Link）`,u3:'上傳到 GitHub…',eStlaCols:h=>'找不到 Id / Status 欄位。目前欄位：'+h,eStlaNone:'檔案裡沒有任何 Id 對應到清單的 External Link',tabRd:'RD 待辦',allLabels:'全部 Label',noLabel:'（沒有 Label）',cmtAdd:'💬 留言',cmtNew:'💬 新增留言',expandAll:n=>`展開全部 (${n})`,collapse:'收合',pmAct:'→ PM：把 STLA 的回覆貼到 Jira',pmRtcAct:'→ PM：到 RTC 新建 ticket，把連結貼回 Jira',pmTitle:'PM 待辦（兩種情況）',pmClick:'點選下面任一項可篩選，再點一次取消',pmCopyT:'貼 STLA 回覆',pmCopyD:'STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的資料貼到 Jira。',pmRtcT:'建 RTC 票',pmRtcD:'Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdAct:'→ RD：回覆 STLA，決定接受或拒絕',pmRule:'<b>PM 待辦（兩種情況）：</b><br>① 貼 STLA 回覆：STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的資料貼到 Jira。<br>② 建 RTC 票：Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdRule:'<b>RD 待辦：</b>STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 不是 Joseph / Amanda / Leyo / Lynn / Book（未指派也算）。需要 RD 針對 STLA 的回覆進行回答，決定接受或拒絕。',colSpec:'Other Specification',colStatus:'狀態',colCmt:'留言（最新）',cmt:'💬',send:'送出留言',namePh:'你的名字',textPh:'留言內容…',noCmt:'還沒有留言。',del:'刪除',delConfirm:'確定刪除？',saving:'儲存中…',saved:'已儲存 ✓',needName:'請先輸入名字',needTok:'要留言請先按右上角 🔑 Token 設定（只需一次）。',eTokenCm:'Token 沒有寫入權限（需要 Contents: Read and write）',eBusy:'太多人同時存檔，請再按一次',cmtHint:'留言會用你的 GitHub 帳號登入並記錄名字與時間（存在 marzlo/RAR 的 Discussions，公開可見）。',projAll:'張',cmtOff:'留言功能尚未啟用。',cmtHint2:'輸入你的名字和留言即可送出，不需要登入（名字由留言者自填）。',projOf:'待處理 / 進行中 / 已完成',
+ zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStla:'STLA 狀態',colAsg:'Assignee',unassigned:'未指派',tabAll:'全部',tabPm:'PM 待辦',stlaUp:'上傳 STLA 檔',u1:'讀取 STLA 檔案…',u2:(a,b,c)=>`檔案共 ${a} 筆，其中 ${b} 筆對應到清單（清單共 ${c} 個 External Link）`,u3:'上傳到 GitHub…',eStlaCols:h=>'找不到 Id / Status 欄位。目前欄位：'+h,eStlaNone:'檔案裡沒有任何 Id 對應到清單的 External Link',tabRd:'RD 待辦',allLabels:'全部 Label',noLabel:'（沒有 Label）',cmtAdd:'💬 留言',cmtNew:'💬 新增留言',expandAll:n=>`展開全部 (${n})`,collapse:'收合',pmAct:'→ PM：把 STLA 的回覆貼到 Jira',pmRtcAct:'→ PM：到 RTC 新建 ticket，把連結貼回 Jira',pmTitle:'PM 待辦（兩種情況）',pmClick:'點選下面任一項可篩選，再點一次取消',pmCopyT:'貼 STLA 回覆',pmCopyD:'STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的資料貼到 Jira。',pmRtcT:'建 RTC 票',pmRtcD:'Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdAct:'→ RD：回覆 STLA，決定接受或拒絕',pmRule:'<b>PM 待辦（兩種情況）：</b><br>① 貼 STLA 回覆：STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的資料貼到 Jira。<br>② 建 RTC 票：Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdRule:'<b>RD 待辦：</b>STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 不是 Joseph / Amanda / Leyo / Lynn / Book（未指派也算）。需要 RD 針對 STLA 的回覆進行回答，決定接受或拒絕。',colSpec:'Other Specification',colStatus:'狀態',colCmt:'留言（最新）',colRemark:'Status remark',rmPh:'輸入後點別處即儲存（會覆蓋）',rmNoTok:'設定 🔑 Token 後可編輯',cmt:'💬',send:'送出留言',namePh:'你的名字',textPh:'留言內容…',noCmt:'還沒有留言。',del:'刪除',delConfirm:'確定刪除？',saving:'儲存中…',saved:'已儲存 ✓',needName:'請先輸入名字',needTok:'要留言請先按右上角 🔑 Token 設定（只需一次）。',eTokenCm:'Token 沒有寫入權限（需要 Contents: Read and write）',eBusy:'太多人同時存檔，請再按一次',cmtHint:'留言會用你的 GitHub 帳號登入並記錄名字與時間（存在 marzlo/RAR 的 Discussions，公開可見）。',projAll:'張',cmtOff:'留言功能尚未啟用。',cmtHint2:'輸入你的名字和留言即可送出，不需要登入（名字由留言者自填）。',projOf:'待處理 / 進行中 / 已完成',
   search:'搜尋 Jira ID、摘要、外部編號、STLA 狀態或 Specification…',total:'總數',todo:'待處理',inprog:'進行中',done:'已完成',showing:(a,b)=>`顯示 ${a} / ${b}`,
   tokenPrompt:`請貼上 GitHub token（僅會存在你自己瀏覽器裡，不會傳給 GitHub 以外的地方）。<br><br>第一次使用請到 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">建立 fine-grained token</a>：Repository access 只選 <b>${GH_REPO}</b>，Permissions 的 <b>Actions</b> 和 <b>Contents</b> 都設為 Read and write（Contents 是留言用），其他都不用給。`,
   ok:'確定',cancel:'取消',clear:'清除',tokenSet:'目前已設定 Token',tokenNone:'目前尚未設定 Token',
   p1:'送出更新要求…',p2:'排隊中，等待 GitHub 開始執行…',p3:'正在從 Jira 抓取資料並重建網頁…',p4:'完成！即將重新載入…',
   eFail:'更新沒有成功，請到 GitHub Actions 查看',eToken:'Token 無效或權限不足，請重新設定',eTimeout:'等太久了，請稍後重新整理頁面',eNet:'無法連線到 GitHub'},
- en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStla:'STLA Status',colAsg:'Assignee',unassigned:'Unassigned',tabAll:'All',tabPm:'PM to-do',stlaUp:'Upload STLA file',u1:'Reading the STLA file…',u2:(a,b,c)=>`${a} rows in the file, ${b} match the list (${c} External Links on the list)`,u3:'Uploading to GitHub…',eStlaCols:h=>'Id / Status columns not found. Columns: '+h,eStlaNone:'No Id in the file matches an External Link on the list',tabRd:'RD to-do',allLabels:'All labels',noLabel:'(no label)',cmtAdd:'💬 Reply',cmtNew:'💬 Add comment',expandAll:n=>`Show all (${n})`,collapse:'Collapse',pmAct:'→ PM: copy the STLA reply into Jira',pmRtcAct:'→ PM: create the RTC ticket and paste its link into Jira',pmTitle:'PM to-do (two cases)',pmClick:'Click a case to filter; click again to clear',pmCopyT:'Copy the STLA reply',pmCopyD:'STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA data into Jira.',pmRtcT:'Create the RTC ticket',pmRtcD:'Assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdAct:'→ RD: answer the STLA reply (accept or reject)',pmRule:'<b>PM to-do (two cases):</b><br>① Copy the STLA reply: STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA data into Jira.<br>② Create the RTC ticket: assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdRule:'<b>RD to-do:</b> STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is not Joseph / Amanda / Leyo / Lynn / Book (unassigned counts). RD needs to answer the STLA reply and decide to accept or reject.',colSpec:'Other Specification',colStatus:'Status',colCmt:'Comments (latest)',cmt:'💬',send:'Post comment',namePh:'Your name',textPh:'Comment…',noCmt:'No comments yet.',del:'Delete',delConfirm:'Delete?',saving:'Saving…',saved:'Saved ✓',needName:'Please enter your name',needTok:'To comment, set your 🔑 Token (top right) once.',eTokenCm:'The token cannot write to the repo (needs Contents: Read and write)',eBusy:'Too many saves at once; press again',cmtHint:'Comments sign in with your GitHub account and record your name and time (stored in marzlo/RAR Discussions, publicly visible).',projAll:'issues',cmtOff:'Comments are not enabled yet.',cmtHint2:'Enter your name and comment to post; no sign-in needed (names are self-reported).',projOf:'To Do / In Progress / Done',
+ en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStla:'STLA Status',colAsg:'Assignee',unassigned:'Unassigned',tabAll:'All',tabPm:'PM to-do',stlaUp:'Upload STLA file',u1:'Reading the STLA file…',u2:(a,b,c)=>`${a} rows in the file, ${b} match the list (${c} External Links on the list)`,u3:'Uploading to GitHub…',eStlaCols:h=>'Id / Status columns not found. Columns: '+h,eStlaNone:'No Id in the file matches an External Link on the list',tabRd:'RD to-do',allLabels:'All labels',noLabel:'(no label)',cmtAdd:'💬 Reply',cmtNew:'💬 Add comment',expandAll:n=>`Show all (${n})`,collapse:'Collapse',pmAct:'→ PM: copy the STLA reply into Jira',pmRtcAct:'→ PM: create the RTC ticket and paste its link into Jira',pmTitle:'PM to-do (two cases)',pmClick:'Click a case to filter; click again to clear',pmCopyT:'Copy the STLA reply',pmCopyD:'STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA data into Jira.',pmRtcT:'Create the RTC ticket',pmRtcD:'Assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdAct:'→ RD: answer the STLA reply (accept or reject)',pmRule:'<b>PM to-do (two cases):</b><br>① Copy the STLA reply: STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA data into Jira.<br>② Create the RTC ticket: assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdRule:'<b>RD to-do:</b> STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is not Joseph / Amanda / Leyo / Lynn / Book (unassigned counts). RD needs to answer the STLA reply and decide to accept or reject.',colSpec:'Other Specification',colStatus:'Status',colCmt:'Comments (latest)',colRemark:'Status remark',rmPh:'Type, then click elsewhere to save (overwrites)',rmNoTok:'Set the 🔑 Token to edit',cmt:'💬',send:'Post comment',namePh:'Your name',textPh:'Comment…',noCmt:'No comments yet.',del:'Delete',delConfirm:'Delete?',saving:'Saving…',saved:'Saved ✓',needName:'Please enter your name',needTok:'To comment, set your 🔑 Token (top right) once.',eTokenCm:'The token cannot write to the repo (needs Contents: Read and write)',eBusy:'Too many saves at once; press again',cmtHint:'Comments sign in with your GitHub account and record your name and time (stored in marzlo/RAR Discussions, publicly visible).',projAll:'issues',cmtOff:'Comments are not enabled yet.',cmtHint2:'Enter your name and comment to post; no sign-in needed (names are self-reported).',projOf:'To Do / In Progress / Done',
   search:'Search Jira ID, summary, external ID, STLA status or specification…',total:'Total',todo:'To Do',inprog:'In Progress',done:'Done',showing:(a,b)=>`Showing ${a} / ${b}`,
   tokenPrompt:`Paste a GitHub token (stored only in your own browser, sent nowhere except GitHub).<br><br>First time: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">create a fine-grained token</a>, set Repository access to <b>${GH_REPO}</b> only and both <b>Actions</b> and <b>Contents</b> to Read and write (Contents is for comments). Nothing else is needed.`,
   ok:'OK',cancel:'Cancel',clear:'Clear',tokenSet:'A token is currently set',tokenNone:'No token set',
@@ -236,8 +244,9 @@ function renderAll(){
   render();
 }
 function render(){
+  data.issues.forEach(i=>i.remark=rmText(i.key));
   const all=data.issues, q=$('q').value.trim().toLowerCase();
-  const rows=all.filter(i=>inTab(i)&&(!lblF||(lblF==='__none'?!(i.labels||[]).length:hasLabel(i,lblF)))&&(!projF||projOf(i.key)===projF)&&(!catF||i.category===catF)&&(!active.size||active.has(i.status))&&(!q||(i.key+' '+i.summary+' '+(i.extId||'')+' '+(i.stla||'')+' '+(i.spec||'')+' '+(i.assignee||'')+' '+(i.labels||[]).join(' ')).toLowerCase().includes(q)))
+  const rows=all.filter(i=>inTab(i)&&(!lblF||(lblF==='__none'?!(i.labels||[]).length:hasLabel(i,lblF)))&&(!projF||projOf(i.key)===projF)&&(!catF||i.category===catF)&&(!active.size||active.has(i.status))&&(!q||(i.key+' '+i.summary+' '+(i.extId||'')+' '+(i.stla||'')+' '+(i.spec||'')+' '+(i.assignee||'')+' '+(i.labels||[]).join(' ')+' '+(i.remark||'')).toLowerCase().includes(q)))
     .sort((a,b)=>sortDir*String(a[sortK]??'').localeCompare(String(b[sortK]??''),undefined,{numeric:true}));
   $('count').textContent=t('showing')(rows.length,all.length);
   $('rows').innerHTML=rows.map(i=>`<tr>`+
@@ -248,7 +257,8 @@ function render(){
     `<td>${i.ext?`<a href="${esc(i.ext)}" target="_blank" rel="noopener">${esc(i.extId)} ↗</a>`:'<span class="dash">—</span>'}</td>`+
     `<td>${i.stla?`<span class="st stla">${esc(i.stla)}</span>`:'<span class="dash">—</span>'}</td>`+
     `<td class="spec">${i.spec?esc(i.spec):'<span class="dash">—</span>'}</td>`+
-    `<td class="cmcell">${cmCell(i.key)}</td></tr>`).join('');
+    `<td class="cmcell">${cmCell(i.key)}</td>`+
+    `<td class="rmcell">${rmCell(i.key)}</td></tr>`).join('');
 }
 function prog(pct,key,state){
   const p=$('prog');p.classList.add('show');p.classList.toggle('err',state==='err');p.classList.toggle('ok',state==='ok');
@@ -412,6 +422,39 @@ async function cmSave(mutate){       // read-modify-write with retry, so two peo
   }
   throw new Error(t('eBusy'));
 }
+/* ---- Status remark: one editable text per ticket, overwritten on save (remarks.json in this repo) ---- */
+const RM_PATH='remarks.json';
+let RM=(DATA&&DATA.remarks)||{remarks:{}}; if(!RM.remarks)RM.remarks={};
+const rmText=k=>(RM.remarks[k]&&RM.remarks[k].text)||'';
+function rmMeta(k){const r=RM.remarks[k];return r&&r.text?`${esc(r.by||'')} · ${esc(fmtT(r.at))}`:''}
+function rmCell(key){
+  const ro=getToken()?'':' readonly';
+  return `<textarea class="rmk" data-k="${esc(key)}" rows="2"${ro} placeholder="${esc(getToken()?t('rmPh'):t('rmNoTok'))}">${esc(rmText(key))}</textarea><div class="rmmeta" id="rm-${esc(key)}">${rmMeta(key)}</div>`;
+}
+async function rmFetch(){
+  const h={'Accept':'application/vnd.github+json'}; if(getToken())h.Authorization=`Bearer ${getToken()}`;
+  const r=await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${RM_PATH}?ref=main`,{cache:'no-store',headers:h});
+  if(r.status===404)return {sha:null,json:{remarks:{}}};
+  if(!r.ok)throw new Error('HTTP '+r.status);
+  const j=await r.json(); const json=JSON.parse(decB64(j.content)); if(!json.remarks)json.remarks={};
+  return {sha:j.sha,json};
+}
+async function rmSave(key,text){
+  const who=store.get(NAME_KEY)||'';
+  for(let n=0;n<4;n++){
+    const {sha,json}=await rmFetch();
+    if(text)json.remarks[key]={text,by:who,at:new Date().toISOString()}; else delete json.remarks[key];
+    json.updated_at=new Date().toISOString(); json.updated_by=who;
+    const body={message:`Status remark ${key}${who?' by '+who:''}`,content:encB64(JSON.stringify(json,null,1)+'\n'),branch:'main'}; if(sha)body.sha=sha;
+    const r=await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${RM_PATH}`,{method:'PUT',headers:{'Accept':'application/vnd.github+json','Authorization':`Bearer ${getToken()}`,'Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(r.ok){RM=json;return}
+    if([401,403,404].includes(r.status))throw new Error(t('eTokenCm'));
+    if(r.status!==409&&r.status!==422)throw new Error('HTTP '+r.status);
+    await sleep(800);
+  }
+  throw new Error(t('eBusy'));
+}
+async function rmRefresh(){try{const {json}=await rmFetch();RM=json;document.querySelectorAll('textarea.rmk').forEach(el=>{if(document.activeElement!==el){el.value=rmText(el.dataset.k);const m=$('rm-'+el.dataset.k);if(m)m.innerHTML=rmMeta(el.dataset.k)}})}catch(e){}}
 function cmCell(key){                 // latest comment shown in the table; expand to see all
   const items=cmList(key), n=items.length, open=openCm.has(key);
   const one=c=>`<div class="cmrow"><div class="meta"><b>${esc(c.by)}</b> ${esc(fmtT(c.at))}</div><div class="txt${open?'':' clamp'}">${esc(c.text)}</div></div>`;
@@ -447,6 +490,15 @@ $('cmList').onclick=async e=>{
   if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent=t('delConfirm');return}
   try{await cmSave(j=>{j.comments[cmKey]=(j.comments[cmKey]||[]).filter(c=>c.id!==b.dataset.id)});cmRender();render()}catch(err){$('cmMsg').textContent=err.message}
 };
+$('rows').addEventListener('change',async e=>{
+  const el=e.target.closest('textarea.rmk'); if(!el||el.readOnly)return;
+  const key=el.dataset.k, text=el.value.trim(), m=$('rm-'+key);
+  if(text===rmText(key))return;
+  m.textContent=t('saving'); el.disabled=true;
+  try{await rmSave(key,text);m.innerHTML=rmMeta(key)+(text?' ✓':'');}catch(err){m.textContent=err.message;}
+  finally{el.disabled=false}
+});
+$('rows').addEventListener('keydown',e=>{const el=e.target.closest('textarea.rmk');if(el&&e.key==='Enter'&&!e.shiftKey){e.preventDefault();el.blur()}});
 $('rows').onclick=e=>{const x=e.target.closest('.cmx');if(x){const k=x.dataset.x;openCm.has(k)?openCm.delete(k):openCm.add(k);render();return}const b=e.target.closest('.cbtn');if(b)openComments(b.dataset.c)};
 $('cmClose').onclick=()=>$('dlgCmt').close();
 $('dlgCmt').addEventListener('close',()=>{cmKey=null});
@@ -457,7 +509,7 @@ $('q').oninput=render;
 $('chips').onclick=e=>{const s=e.target.dataset.s;if(!s)return;active.has(s)?active.delete(s):active.add(s);e.target.classList.toggle('on');render()};
 document.querySelector('thead').onclick=e=>{const k=e.target.dataset.k;if(!k)return;sortDir=(sortK===k)?-sortDir:1;sortK=k;render()};
 $('btnLang').onclick=()=>{lang=lang==='zh'?'en':'zh';store.set('rar-lang',lang);applyLang()};
-applyLang(); refreshTokenBtn();
+applyLang(); refreshTokenBtn(); rmRefresh();
 </script>
 </body>
 </html>
