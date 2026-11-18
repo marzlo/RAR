@@ -115,13 +115,13 @@ const PROJECTS=['NR1L','NR1LD'];
 const JIRA='https://'+((DATA&&DATA.site)||'mobiledrivetech.atlassian.net');
 
 const T={
- zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStatus:'狀態',colCmt:'留言',cmt:'💬 留言',cmtHint:'留言會用你的 GitHub 帳號登入並記錄名字與時間（存在 marzlo/RAR 的 Discussions，公開可見）。',projAll:'張',cmtOff:'留言功能尚未啟用（需要安裝 giscus app）。',projOf:'待處理 / 進行中 / 已完成',
+ zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStatus:'狀態',colCmt:'留言',cmt:'💬 留言',cmtHint:'留言會用你的 GitHub 帳號登入並記錄名字與時間（存在 marzlo/RAR 的 Discussions，公開可見）。',projAll:'張',cmtOff:'留言功能尚未啟用。',cmtHint2:'輸入你的名字和留言即可送出，不需要登入（名字由留言者自填）。',projOf:'待處理 / 進行中 / 已完成',
   search:'搜尋 Jira ID、摘要或外部編號…',total:'總數',todo:'待處理',inprog:'進行中',done:'已完成',showing:(a,b)=>`顯示 ${a} / ${b}`,
   tokenPrompt:`請貼上 GitHub token（僅會存在你自己瀏覽器裡，不會傳給 GitHub 以外的地方）。<br><br>第一次使用請到 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">建立 fine-grained token</a>：Repository access 只選 <b>${GH_REPO}</b>，Permissions 的 <b>Actions</b> 設為 Read and write，其他都不用給。`,
   ok:'確定',cancel:'取消',clear:'清除',tokenSet:'目前已設定 Token',tokenNone:'目前尚未設定 Token',
   p1:'送出更新要求…',p2:'排隊中，等待 GitHub 開始執行…',p3:'正在從 Jira 抓取資料並重建網頁…',p4:'完成！即將重新載入…',
   eFail:'更新沒有成功，請到 GitHub Actions 查看',eToken:'Token 無效或權限不足，請重新設定',eTimeout:'等太久了，請稍後重新整理頁面',eNet:'無法連線到 GitHub'},
- en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStatus:'Status',colCmt:'Comments',cmt:'💬 Comment',cmtHint:'Comments sign in with your GitHub account and record your name and time (stored in marzlo/RAR Discussions, publicly visible).',projAll:'issues',cmtOff:'Comments are not enabled yet (the giscus app needs to be installed).',projOf:'To Do / In Progress / Done',
+ en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStatus:'Status',colCmt:'Comments',cmt:'💬 Comment',cmtHint:'Comments sign in with your GitHub account and record your name and time (stored in marzlo/RAR Discussions, publicly visible).',projAll:'issues',cmtOff:'Comments are not enabled yet.',cmtHint2:'Enter your name and comment to post; no sign-in needed (names are self-reported).',projOf:'To Do / In Progress / Done',
   search:'Search Jira ID, summary or external ID…',total:'Total',todo:'To Do',inprog:'In Progress',done:'Done',showing:(a,b)=>`Showing ${a} / ${b}`,
   tokenPrompt:`Paste a GitHub token (stored only in your own browser, sent nowhere except GitHub).<br><br>First time: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">create a fine-grained token</a>, set Repository access to <b>${GH_REPO}</b> only and the <b>Actions</b> permission to Read and write. Nothing else is needed.`,
   ok:'OK',cancel:'Cancel',clear:'Clear',tokenSet:'A token is currently set',tokenNone:'No token set',
@@ -140,7 +140,7 @@ const projOf=k=>String(k).split('-')[0];
 function fmt(iso){return iso?new Date(iso).toLocaleString(lang==='zh'?'zh-TW':'en-US',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}):'—'}
 function applyLang(){
   document.documentElement.lang=lang==='zh'?'zh-Hant':'en';
-  document.querySelectorAll('[data-i]').forEach(el=>el.textContent=t(el.dataset.i));
+  document.querySelectorAll('[data-i]').forEach(el=>el.textContent=t(el.dataset.i==='cmtHint'&&GISCUS&&GISCUS.provider==='cusdis'?'cmtHint2':el.dataset.i));
   document.querySelectorAll('[data-html]').forEach(el=>el.innerHTML=t(el.dataset.html));
   $('btnLang').textContent=lang==='zh'?'EN':'中文';
   $('q').placeholder=t('search');
@@ -236,6 +236,7 @@ function openComments(key){
   $('cmKey').innerHTML=`<a href="${JIRA}/browse/${esc(key)}" target="_blank" rel="noopener">${esc(key)} ↗</a>`;
   $('cmSum').textContent=it.summary||'';
   const box=$('cmBox'); box.innerHTML='';
+  if(GISCUS&&GISCUS.provider==='cusdis'&&GISCUS.appId){openCusdis(key,it,box);$('dlgCmt').showModal();return;}
   if(!GISCUS||!GISCUS.categoryId){box.innerHTML=`<p class="hint">${t('cmtOff')}</p>`;$('dlgCmt').showModal();return;}
   const sc=document.createElement('script');
   const a={src:'https://giscus.app/client.js','data-repo':GISCUS.repo,'data-repo-id':GISCUS.repoId,'data-category':GISCUS.category,'data-category-id':GISCUS.categoryId,
@@ -244,6 +245,22 @@ function openComments(key){
   Object.entries(a).forEach(([k,v])=>sc.setAttribute(k,v)); sc.async=true;
   box.appendChild(sc);
   $('dlgCmt').showModal();
+}
+/* Cusdis: comment with a name only, no login (one thread per Jira key) */
+let cusdisLoaded=null;
+function loadScript(src){return new Promise((ok,no)=>{const x=document.createElement('script');x.src=src;x.async=true;x.onload=ok;x.onerror=no;document.head.appendChild(x)})}
+async function openCusdis(key,it,box){
+  const host=GISCUS.host||'https://cusdis.com';
+  const el=document.createElement('div');el.id='cusdis_thread';
+  Object.entries({'data-host':host,'data-app-id':GISCUS.appId,'data-page-id':key,'data-page-url':`${location.origin}${location.pathname}#${key}`,
+    'data-page-title':`${key} ${it.summary||''}`.slice(0,200),'data-theme':'auto'}).forEach(([k,v])=>el.setAttribute(k,v));
+  box.appendChild(el);
+  try{
+    if(!cusdisLoaded){
+      cusdisLoaded=(async()=>{ if(lang==='zh'){try{await loadScript(host+'/js/widget/lang/zh-tw.js')}catch(e){}} await loadScript(host+'/js/cusdis.es.js'); })();
+      await cusdisLoaded;
+    }else{ await cusdisLoaded; window.CUSDIS&&window.CUSDIS.initial(); }
+  }catch(e){box.innerHTML=`<p class="hint">${t('cmtOff')}</p>`}
 }
 $('rows').onclick=e=>{const b=e.target.closest('.cbtn');if(b)openComments(b.dataset.c)};
 $('cmClose').onclick=()=>{$('dlgCmt').close();$('cmBox').innerHTML=''};
