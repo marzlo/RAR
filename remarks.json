@@ -54,8 +54,13 @@
    "text": "Harman agree to integrate the CDD for the target 5 vehicles. Suggest to close this.\nWe need now to move with the diagnostics design review which is waiting MD’s feedback.",
    "by": "",
    "at": "2026-11-19T11:51:24.469Z"
+  },
+  "NR1LD-1073": {
+   "text": "Not blocker, LID table updated",
+   "by": "",
+   "at": "2026-11-19T11:56:37.720Z"
   }
  },
- "updated_at": "2026-11-19T11:51:24.469Z",
+ "updated_at": "2026-11-19T11:56:37.720Z",
  "updated_by": ""
 }
