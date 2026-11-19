@@ -40,14 +40,7 @@
     "at": "2026-11-18T09:49:02.324Z"
    }
   ],
-  "NR1L-17202": [
-   {
-    "id": "mwmxtrg1p5c3",
-    "text": "已從STLA貼到Jira",
-    "by": "Melody",
-    "at": "2026-11-19T02:35:16.657Z"
-   }
-  ],
+  "NR1L-17202": [],
   "NR1L-1221": [
    {
     "id": "mwmzewsx91xa",
@@ -57,6 +50,6 @@
    }
   ]
  },
- "updated_at": "2026-11-19T03:19:43.452Z",
- "updated_by": "Nick"
+ "updated_at": "2026-11-19T03:30:38.020Z",
+ "updated_by": "Melody"
 }
