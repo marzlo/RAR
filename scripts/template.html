@@ -69,6 +69,8 @@
   .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer;font-size:12px}
   .chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
   .tablewrap{overflow-x:auto}
+  .xlscols{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;margin-top:10px} .xlscols label{display:flex;gap:8px;align-items:center;justify-content:flex-start;text-align:left;font-size:14px;padding:3px 0;cursor:pointer;white-space:nowrap} .xlscols input{width:auto!important;flex:none;margin:0;padding:0}
+  .lnk{border:0;background:none;color:var(--blue);cursor:pointer;font-size:13px;padding:0}
   .stlasteps{margin:8px 0 4px;padding-left:22px;line-height:1.6;font-size:14px} .stlasteps li{margin-bottom:10px} .stlasteps a{color:var(--blue)}
   .colwrap{position:relative}
   .colbtn{padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:14px;cursor:pointer;white-space:nowrap}
@@ -129,7 +131,7 @@
   <div class="kpis" id="kpis"></div>
   <div class="kpis proj" id="projs"></div>
   <div class="tabs" id="tabs"><button data-tab="all"></button><button data-tab="pm"></button><button data-tab="rd"></button><button data-tab="stla"></button><button data-tab="atlh"></button></div>
-  <div class="bar"><input type="search" id="q"><select id="doneSel" class="lblsel"></select><select id="lblSel" class="lblsel"></select><div class="colwrap"><button class="colbtn" id="colBtn">☰ <span data-i="cols"></span></button><div class="colmenu" id="colMenu"></div></div></div><style id="colStyleTag"></style>
+  <div class="bar"><input type="search" id="q"><select id="doneSel" class="lblsel"></select><select id="lblSel" class="lblsel"></select><div class="colwrap"><button class="colbtn" id="colBtn">☰ <span data-i="cols"></span></button><div class="colmenu" id="colMenu"></div></div><button class="colbtn" id="xlsBtn">⬇ <span data-i="xls"></span></button></div><style id="colStyleTag"></style>
   <div class="bar" id="chips"></div>
   <div class="todoinfo" id="todoInfo" style="display:none"></div>
   <div class="count" id="count"></div>
@@ -149,6 +151,17 @@
   <div class="actions">
     <button class="b2" id="stlaCancel" data-i="cancel"></button>
     <button class="b1" id="stlaPick" data-i="stlaPick"></button>
+  </div>
+</dialog>
+<dialog id="dlgXls" style="width:min(460px,94vw)">
+  <p><b data-i="xlsT"></b></p>
+  <div class="hint" id="xlsInfo"></div>
+  <div class="xlscols" id="xlsCols"></div>
+  <div class="cact" style="display:flex;gap:12px;margin:6px 0 2px"><button class="lnk" id="xlsAll" data-i="xlsAll"></button><button class="lnk" id="xlsNone" data-i="xlsNone"></button></div>
+  <div class="hint" id="xlsMsg"></div>
+  <div class="actions">
+    <button class="b2" id="xlsCancel" data-i="cancel"></button>
+    <button class="b1" id="xlsGo" data-i="xlsGo"></button>
   </div>
 </dialog>
 <dialog id="dlgToken">
@@ -205,13 +218,13 @@ const inTab=i=>(TABS[tab]||TABS.all)(i)&&(tab!=='pm'||!pmSub||PM_SUB[pmSub](i));
 const JIRA='https://'+((DATA&&DATA.site)||'mobiledrivetech.atlassian.net');
 
 const T={
- zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStla:'STLA 狀態',colAsg:'Assignee',unassigned:'未指派',tabAll:'全部',tabPm:'PM 待辦',stlaUp:'上傳 STLA 檔',u1:'讀取 STLA 檔案…',u2:(a,b,c)=>`檔案共 ${a} 筆，其中 ${b} 筆對應到清單（清單共 ${c} 個 External Link）`,u3:'上傳到 GitHub…',eStlaCols:h=>'找不到 Id / Status 欄位。目前欄位：'+h,eStlaNone:'檔案裡沒有任何 Id 對應到清單的 External Link',tabRd:'RD 待辦',fOpen:'未完成',fDone:'已完成',fAll:'全部狀態',stlaHowT:'如何更新 STLA 狀態',stlaS1:'打開 prsse 的「RAR (include done)」查詢：',stlaS1L:'點這裡開啟 ↗',stlaS2:'按右上角這個按鈕（紅色箭頭）匯出，下載檔案。',stlaS3:'回到這裡按「選擇檔案上傳」，選剛剛下載的檔案（.csv / .xlsx 都可以）。',stlaPick:'選擇檔案上傳',tabStla:'STLA 待處理',stlaRule:'<b>STLA 待處理：</b>STLA 狀態為 Analysis、Solution Accepted 或 Submitted 的票（等 STLA 處理中）。<br><b>Solution Accepted</b>：我們已接受 STLA 的提案（例如 STLA 已提供解決方向，但相關的需求修改檔案之後才會提供）。狀態會先停在 Solution Accepted，等 STLA 提供檔案後再切到 Closed。',allLabels:'全部 Label',noLabel:'（沒有 Label）',cmtAdd:'💬 留言',cmtNew:'💬 新增留言',expandAll:n=>`展開全部 (${n})`,collapse:'收合',pmAct:'→ PM：把 STLA 的回覆貼到 Jira，或把 Jira 的回覆貼到 STLA',pmRtcAct:'→ PM：到 RTC 新建 ticket，把連結貼回 Jira',pmTitle:'PM 待辦（三種情況）',pmDraftT:'STLA 改 Submit',pmDraftD:'STLA 狀態為 Draft → 到 STLA ticket 把狀態改成 Submit。',pmDraftAct:'→ PM：到 STLA ticket 把 Draft 改成 Submit',pmClick:'點選下面任一項可篩選，再點一次取消',pmCopyT:'同步 STLA / Jira 回覆',pmCopyD:'STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的回覆貼到 Jira，或把 Jira 的回覆貼到 STLA。',pmRtcT:'建 RTC 票',pmRtcD:'Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdAct:'→ RD：回覆 STLA，決定接受或拒絕',pmRule:'<b>PM 待辦（兩種情況）：</b><br>① 同步 STLA / Jira 回覆：STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的回覆貼到 Jira，或把 Jira 的回覆貼到 STLA。<br>② 建 RTC 票：Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdRule:'<b>RD 待辦：</b>STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 不是 Joseph / Amanda / Leyo / Lynn / Book（未指派也算）。需要 RD 針對 STLA 的回覆進行回答，決定接受或拒絕。',colSpec:'Other Specification',colStatus:'狀態',colCmt:'留言（最新）',colRemark:'Status remark',cols:'顯示欄位',colsAll:'全部顯示',colsReset:'恢復預設',rmPh:'輸入後點別處即儲存（會覆蓋）',rmNoTok:'設定 🔑 Token 後可編輯',cmt:'💬',send:'送出留言',namePh:'你的名字',textPh:'留言內容…',noCmt:'還沒有留言。',del:'刪除',delConfirm:'確定刪除？',saving:'儲存中…',saved:'已儲存 ✓',needName:'請先輸入名字',needTok:'要留言請先按右上角 🔑 Token 設定（只需一次）。',eTokenCm:'Token 沒有寫入權限（需要 Contents: Read and write）',eBusy:'太多人同時存檔，請再按一次',cmtHint:'留言會用你的 GitHub 帳號登入並記錄名字與時間（存在 marzlo/RAR 的 Discussions，公開可見）。',projAll:'張',cmtOff:'留言功能尚未啟用。',cmtHint2:'輸入你的名字和留言即可送出，不需要登入（名字由留言者自填）。',projOf:'待處理 / 進行中 / 已完成',
+ zh:{token:'Token',update:'更新資料',lastUpdated:'資料更新時間：',colKey:'Jira ID',colSummary:'摘要',colExt:'External Link',colStla:'STLA 狀態',colAsg:'Assignee',unassigned:'未指派',tabAll:'全部',tabPm:'PM 待辦',stlaUp:'上傳 STLA 檔',u1:'讀取 STLA 檔案…',u2:(a,b,c)=>`檔案共 ${a} 筆，其中 ${b} 筆對應到清單（清單共 ${c} 個 External Link）`,u3:'上傳到 GitHub…',eStlaCols:h=>'找不到 Id / Status 欄位。目前欄位：'+h,eStlaNone:'檔案裡沒有任何 Id 對應到清單的 External Link',tabRd:'RD 待辦',xls:'匯出 Excel',xlsT:'匯出 Excel',xlsInfo:(n,tb)=>`會匯出目前畫面上的 ${n} 筆（頁籤：${tb}，含目前的篩選與搜尋）。請勾選要輸出的欄位：`,xlsAll:'全選',xlsNone:'全不選',xlsGo:'下載',xlsWait:'產生中…',xlsNoCol:'請至少勾選一個欄位',xLabels:'Labels',xExtUrl:'External Link 網址',xCmLatest:'最新留言',xCmAll:'全部留言',xRemarkBy:'Remark 修改者 / 時間',fOpen:'未完成',fDone:'已完成',fAll:'全部狀態',stlaHowT:'如何更新 STLA 狀態',stlaS1:'打開 prsse 的「RAR (include done)」查詢：',stlaS1L:'點這裡開啟 ↗',stlaS2:'按右上角這個按鈕（紅色箭頭）匯出，下載檔案。',stlaS3:'回到這裡按「選擇檔案上傳」，選剛剛下載的檔案（.csv / .xlsx 都可以）。',stlaPick:'選擇檔案上傳',tabStla:'STLA 待處理',stlaRule:'<b>STLA 待處理：</b>STLA 狀態為 Analysis、Solution Accepted 或 Submitted 的票（等 STLA 處理中）。<br><b>Solution Accepted</b>：我們已接受 STLA 的提案（例如 STLA 已提供解決方向，但相關的需求修改檔案之後才會提供）。狀態會先停在 Solution Accepted，等 STLA 提供檔案後再切到 Closed。',allLabels:'全部 Label',noLabel:'（沒有 Label）',cmtAdd:'💬 留言',cmtNew:'💬 新增留言',expandAll:n=>`展開全部 (${n})`,collapse:'收合',pmAct:'→ PM：把 STLA 的回覆貼到 Jira，或把 Jira 的回覆貼到 STLA',pmRtcAct:'→ PM：到 RTC 新建 ticket，把連結貼回 Jira',pmTitle:'PM 待辦（三種情況）',pmDraftT:'STLA 改 Submit',pmDraftD:'STLA 狀態為 Draft → 到 STLA ticket 把狀態改成 Submit。',pmDraftAct:'→ PM：到 STLA ticket 把 Draft 改成 Submit',pmClick:'點選下面任一項可篩選，再點一次取消',pmCopyT:'同步 STLA / Jira 回覆',pmCopyD:'STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的回覆貼到 Jira，或把 Jira 的回覆貼到 STLA。',pmRtcT:'建 RTC 票',pmRtcD:'Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdAct:'→ RD：回覆 STLA，決定接受或拒絕',pmRule:'<b>PM 待辦（兩種情況）：</b><br>① 同步 STLA / Jira 回覆：STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 是 Joseph / Amanda / Leyo / Lynn / Book → 把 STLA 的回覆貼到 Jira，或把 Jira 的回覆貼到 STLA。<br>② 建 RTC 票：Assignee 是上述 PM，且沒有 External Link（NR1L 不限狀態；NR1LD 需為「MD In Progress」）→ 到 RTC 新建 ticket，把連結貼回 Jira。',rdRule:'<b>RD 待辦：</b>STLA 狀態為 Solution Proposed 或 RAR Rejected，且 Jira 狀態為 NR1LD「MD In Progress」或 NR1L「In Progress」，且 Assignee 不是 Joseph / Amanda / Leyo / Lynn / Book（未指派也算）。需要 RD 針對 STLA 的回覆進行回答，決定接受或拒絕。',colSpec:'Other Specification',colStatus:'狀態',colCmt:'留言（最新）',colRemark:'Status remark',cols:'顯示欄位',colsAll:'全部顯示',colsReset:'恢復預設',rmPh:'輸入後點別處即儲存（會覆蓋）',rmNoTok:'設定 🔑 Token 後可編輯',cmt:'💬',send:'送出留言',namePh:'你的名字',textPh:'留言內容…',noCmt:'還沒有留言。',del:'刪除',delConfirm:'確定刪除？',saving:'儲存中…',saved:'已儲存 ✓',needName:'請先輸入名字',needTok:'要留言請先按右上角 🔑 Token 設定（只需一次）。',eTokenCm:'Token 沒有寫入權限（需要 Contents: Read and write）',eBusy:'太多人同時存檔，請再按一次',cmtHint:'留言會用你的 GitHub 帳號登入並記錄名字與時間（存在 marzlo/RAR 的 Discussions，公開可見）。',projAll:'張',cmtOff:'留言功能尚未啟用。',cmtHint2:'輸入你的名字和留言即可送出，不需要登入（名字由留言者自填）。',projOf:'待處理 / 進行中 / 已完成',
   search:'搜尋 Jira ID、摘要、外部編號、STLA 狀態或 Specification…',total:'總數',todo:'待處理',inprog:'進行中',done:'已完成',showing:(a,b)=>`顯示 ${a} / ${b}`,
   tokenPrompt:`請貼上 GitHub token（僅會存在你自己瀏覽器裡，不會傳給 GitHub 以外的地方）。<br><br>第一次使用請到 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">建立 fine-grained token</a>：Repository access 只選 <b>${GH_REPO}</b>，Permissions 的 <b>Actions</b> 和 <b>Contents</b> 都設為 Read and write（Contents 是留言用），其他都不用給。`,
   ok:'確定',cancel:'取消',clear:'清除',tokenSet:'目前已設定 Token',tokenNone:'目前尚未設定 Token',
   p1:'送出更新要求…',p2:'排隊中，等待 GitHub 開始執行…',p3:'正在從 Jira 抓取資料並重建網頁…',p4:'完成！即將重新載入…',
   eFail:'更新沒有成功，請到 GitHub Actions 查看',eToken:'Token 無效或權限不足，請重新設定',eTimeout:'等太久了，請稍後重新整理頁面',eNet:'無法連線到 GitHub'},
- en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStla:'STLA Status',colAsg:'Assignee',unassigned:'Unassigned',tabAll:'All',tabPm:'PM to-do',stlaUp:'Upload STLA file',u1:'Reading the STLA file…',u2:(a,b,c)=>`${a} rows in the file, ${b} match the list (${c} External Links on the list)`,u3:'Uploading to GitHub…',eStlaCols:h=>'Id / Status columns not found. Columns: '+h,eStlaNone:'No Id in the file matches an External Link on the list',tabRd:'RD to-do',fOpen:'Not done',fDone:'Done',fAll:'All statuses',stlaHowT:'How to update the STLA status',stlaS1:'Open the prsse query "RAR (include done)":',stlaS1L:'open it here ↗',stlaS2:'Click this button at the top right (red arrow) to export and download the file.',stlaS3:'Come back here, click "Choose file to upload" and pick the downloaded file (.csv or .xlsx).',stlaPick:'Choose file to upload',tabStla:'STLA pending',stlaRule:'<b>STLA pending:</b> tickets whose STLA status is Analysis, Solution Accepted or Submitted (waiting on STLA).<br><b>Solution Accepted</b>: we accepted the STLA proposal (for example, STLA gave the solution direction but the updated requirement documents come later). The status stays at Solution Accepted until STLA delivers them, then moves to Closed.',allLabels:'All labels',noLabel:'(no label)',cmtAdd:'💬 Reply',cmtNew:'💬 Add comment',expandAll:n=>`Show all (${n})`,collapse:'Collapse',pmAct:'→ PM: copy the STLA reply into Jira, or the Jira reply into STLA',pmRtcAct:'→ PM: create the RTC ticket and paste its link into Jira',pmTitle:'PM to-do (three cases)',pmDraftT:'Submit the STLA ticket',pmDraftD:'STLA status is Draft → open the STLA ticket and change it to Submit.',pmDraftAct:'→ PM: change the STLA ticket from Draft to Submit',pmClick:'Click a case to filter; click again to clear',pmCopyT:'Sync the STLA / Jira reply',pmCopyD:'STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA reply into Jira, or the Jira reply into STLA.',pmRtcT:'Create the RTC ticket',pmRtcD:'Assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdAct:'→ RD: answer the STLA reply (accept or reject)',pmRule:'<b>PM to-do (two cases):</b><br>① Sync the STLA / Jira reply: STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA reply into Jira, or the Jira reply into STLA.<br>② Create the RTC ticket: assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdRule:'<b>RD to-do:</b> STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is not Joseph / Amanda / Leyo / Lynn / Book (unassigned counts). RD needs to answer the STLA reply and decide to accept or reject.',colSpec:'Other Specification',colStatus:'Status',colCmt:'Comments (latest)',colRemark:'Status remark',cols:'Columns',colsAll:'Show all',colsReset:'Reset',rmPh:'Type, then click elsewhere to save (overwrites)',rmNoTok:'Set the 🔑 Token to edit',cmt:'💬',send:'Post comment',namePh:'Your name',textPh:'Comment…',noCmt:'No comments yet.',del:'Delete',delConfirm:'Delete?',saving:'Saving…',saved:'Saved ✓',needName:'Please enter your name',needTok:'To comment, set your 🔑 Token (top right) once.',eTokenCm:'The token cannot write to the repo (needs Contents: Read and write)',eBusy:'Too many saves at once; press again',cmtHint:'Comments sign in with your GitHub account and record your name and time (stored in marzlo/RAR Discussions, publicly visible).',projAll:'issues',cmtOff:'Comments are not enabled yet.',cmtHint2:'Enter your name and comment to post; no sign-in needed (names are self-reported).',projOf:'To Do / In Progress / Done',
+ en:{token:'Token',update:'Update data',lastUpdated:'Data updated:',colKey:'Jira ID',colSummary:'Summary',colExt:'External Link',colStla:'STLA Status',colAsg:'Assignee',unassigned:'Unassigned',tabAll:'All',tabPm:'PM to-do',stlaUp:'Upload STLA file',u1:'Reading the STLA file…',u2:(a,b,c)=>`${a} rows in the file, ${b} match the list (${c} External Links on the list)`,u3:'Uploading to GitHub…',eStlaCols:h=>'Id / Status columns not found. Columns: '+h,eStlaNone:'No Id in the file matches an External Link on the list',tabRd:'RD to-do',xls:'Export Excel',xlsT:'Export to Excel',xlsInfo:(n,tb)=>`Exports the ${n} rows shown now (tab: ${tb}, with the current filters and search). Choose the columns:`,xlsAll:'Select all',xlsNone:'Clear',xlsGo:'Download',xlsWait:'Building…',xlsNoCol:'Choose at least one column',xLabels:'Labels',xExtUrl:'External Link URL',xCmLatest:'Latest comment',xCmAll:'All comments',xRemarkBy:'Remark by / time',fOpen:'Not done',fDone:'Done',fAll:'All statuses',stlaHowT:'How to update the STLA status',stlaS1:'Open the prsse query "RAR (include done)":',stlaS1L:'open it here ↗',stlaS2:'Click this button at the top right (red arrow) to export and download the file.',stlaS3:'Come back here, click "Choose file to upload" and pick the downloaded file (.csv or .xlsx).',stlaPick:'Choose file to upload',tabStla:'STLA pending',stlaRule:'<b>STLA pending:</b> tickets whose STLA status is Analysis, Solution Accepted or Submitted (waiting on STLA).<br><b>Solution Accepted</b>: we accepted the STLA proposal (for example, STLA gave the solution direction but the updated requirement documents come later). The status stays at Solution Accepted until STLA delivers them, then moves to Closed.',allLabels:'All labels',noLabel:'(no label)',cmtAdd:'💬 Reply',cmtNew:'💬 Add comment',expandAll:n=>`Show all (${n})`,collapse:'Collapse',pmAct:'→ PM: copy the STLA reply into Jira, or the Jira reply into STLA',pmRtcAct:'→ PM: create the RTC ticket and paste its link into Jira',pmTitle:'PM to-do (three cases)',pmDraftT:'Submit the STLA ticket',pmDraftD:'STLA status is Draft → open the STLA ticket and change it to Submit.',pmDraftAct:'→ PM: change the STLA ticket from Draft to Submit',pmClick:'Click a case to filter; click again to clear',pmCopyT:'Sync the STLA / Jira reply',pmCopyD:'STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA reply into Jira, or the Jira reply into STLA.',pmRtcT:'Create the RTC ticket',pmRtcD:'Assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdAct:'→ RD: answer the STLA reply (accept or reject)',pmRule:'<b>PM to-do (two cases):</b><br>① Sync the STLA / Jira reply: STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is Joseph / Amanda / Leyo / Lynn / Book → copy the STLA reply into Jira, or the Jira reply into STLA.<br>② Create the RTC ticket: assignee is one of those PMs and there is no External Link (NR1L any status; NR1LD only "MD In Progress") → create the ticket in RTC and paste its link into Jira.',rdRule:'<b>RD to-do:</b> STLA status is Solution Proposed or RAR Rejected, the Jira status is NR1LD "MD In Progress" or NR1L "In Progress", and the assignee is not Joseph / Amanda / Leyo / Lynn / Book (unassigned counts). RD needs to answer the STLA reply and decide to accept or reject.',colSpec:'Other Specification',colStatus:'Status',colCmt:'Comments (latest)',colRemark:'Status remark',cols:'Columns',colsAll:'Show all',colsReset:'Reset',rmPh:'Type, then click elsewhere to save (overwrites)',rmNoTok:'Set the 🔑 Token to edit',cmt:'💬',send:'Post comment',namePh:'Your name',textPh:'Comment…',noCmt:'No comments yet.',del:'Delete',delConfirm:'Delete?',saving:'Saving…',saved:'Saved ✓',needName:'Please enter your name',needTok:'To comment, set your 🔑 Token (top right) once.',eTokenCm:'The token cannot write to the repo (needs Contents: Read and write)',eBusy:'Too many saves at once; press again',cmtHint:'Comments sign in with your GitHub account and record your name and time (stored in marzlo/RAR Discussions, publicly visible).',projAll:'issues',cmtOff:'Comments are not enabled yet.',cmtHint2:'Enter your name and comment to post; no sign-in needed (names are self-reported).',projOf:'To Do / In Progress / Done',
   search:'Search Jira ID, summary, external ID, STLA status or specification…',total:'Total',todo:'To Do',inprog:'In Progress',done:'Done',showing:(a,b)=>`Showing ${a} / ${b}`,
   tokenPrompt:`Paste a GitHub token (stored only in your own browser, sent nowhere except GitHub).<br><br>First time: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">create a fine-grained token</a>, set Repository access to <b>${GH_REPO}</b> only and both <b>Actions</b> and <b>Contents</b> to Read and write (Contents is for comments). Nothing else is needed.`,
   ok:'OK',cancel:'Cancel',clear:'Clear',tokenSet:'A token is currently set',tokenNone:'No token set',
@@ -227,6 +240,7 @@ const data=DATA||{issues:[]};
 const DONE_STATUS=['done','drop','dropped','released','polarion in progress','polarion in review','pc (polarion checked)'];
 data.issues.forEach(i=>{if(DONE_STATUS.includes(String(i.status||'').trim().toLowerCase()))i.category='done'});
 let active=new Set(),sortK='status',sortDir=1,projF=null,catF=null,tab=({'#pm':'pm','#rd':'rd','#atlh':'atlh','#stla':'stla'})[location.hash]||'all',lblF='',openCm=new Set(),pmSub='',doneF='open';
+let lastRows=[];
 const doneOk=i=>doneF==='all'||(doneF==='done'?i.category==='done':i.category!=='done');
 const projOf=k=>String(k).split('-')[0];
 
@@ -281,6 +295,7 @@ function render(){
   const all=data.issues, q=$('q').value.trim().toLowerCase();
   const rows=all.filter(i=>inTab(i)&&doneOk(i)&&(!lblF||(lblF==='__none'?!(i.labels||[]).length:hasLabel(i,lblF)))&&(!projF||projOf(i.key)===projF)&&(!catF||i.category===catF)&&(!active.size||active.has(i.status))&&(!q||(i.key+' '+i.summary+' '+(i.extId||'')+' '+(i.stla||'')+' '+(i.spec||'')+' '+(i.assignee||'')+' '+(i.labels||[]).join(' ')+' '+(i.remark||'')).toLowerCase().includes(q)))
     .sort((a,b)=>sortDir*String(a[sortK]??'').localeCompare(String(b[sortK]??''),undefined,{numeric:true}));
+  lastRows=rows;
   $('count').textContent=t('showing')(rows.length,all.length);
   $('rows').innerHTML=rows.map(i=>`<tr>`+
     `<td><a href="${JIRA}/browse/${esc(i.key)}" target="_blank" rel="noopener">${esc(i.key)} ↗</a></td>`+
@@ -361,9 +376,10 @@ function parseDelimited(text,delim){
     else f+=c}
   row.push(f);if(row.some(x=>x!==''))rows.push(row);return rows;
 }
+const loadXLSX=()=>window.XLSX?Promise.resolve():new Promise((ok,no)=>{const x=document.createElement('script');x.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';x.onload=ok;x.onerror=()=>no(new Error('Excel library failed to load'));document.head.appendChild(x)});
 async function readStlaRows(file){
   if(/\.xlsx?$/i.test(file.name)){
-    if(!window.XLSX)await new Promise((ok,no)=>{const x=document.createElement('script');x.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';x.onload=ok;x.onerror=()=>no(new Error('Excel reader failed to load'));document.head.appendChild(x)});
+    await loadXLSX();
     const wb=XLSX.read(await file.arrayBuffer(),{type:'array'});
     return XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,raw:false,defval:''});
   }
@@ -564,6 +580,57 @@ $('colMenu').onclick=e=>{e.stopPropagation();if(e.target.dataset.cact==='all'){h
 $('colMenu').onchange=e=>{const c=e.target.dataset.col;if(!c)return;e.target.checked?hiddenCols.delete(c):hiddenCols.add(c);applyCols()};
 document.addEventListener('click',()=>$('colMenu').classList.remove('open'));
 $('btnLang').addEventListener('click',()=>{applyCols();if($('colMenu').classList.contains('open'))renderColMenu()});
+// ---- Excel export of the current tab / filters ----
+const XF=[ // [id, label key, table column it follows (for default), width, value]
+ ['key','colKey','colKey',14,i=>i.key],
+ ['summary','colSummary','colSummary',60,i=>i.summary],
+ ['labels','xLabels','colSummary',24,i=>(i.labels||[]).join(', ')],
+ ['status','colStatus','colStatus',18,i=>i.status],
+ ['assignee','colAsg','colAsg',22,i=>i.assignee||''],
+ ['extId','colExt','colExt',12,i=>i.extId||''],
+ ['extUrl','xExtUrl',null,40,i=>i.ext||''],
+ ['stla','colStla','colStla',18,i=>i.stla||''],
+ ['spec','colSpec','colSpec',22,i=>i.spec||''],
+ ['cmLatest','xCmLatest','colCmt',50,i=>{const c=cmList(i.key).slice(-1)[0];return c?`${c.by} (${fmtT(c.at)}): ${c.text}`:''}],
+ ['cmAll','xCmAll',null,60,i=>cmList(i.key).map(c=>`${c.by} (${fmtT(c.at)}): ${c.text}`).join('\n')],
+ ['remark','colRemark','colRemark',40,i=>rmText(i.key)],
+ ['remarkBy','xRemarkBy',null,26,i=>{const r=RM.remarks[i.key];return r&&r.text?`${r.by||''} ${fmtT(r.at)}`:''}],
+];
+let xSel=null;
+function openXls(){
+  if(!xSel)xSel=new Set(XF.filter(f=>f[2]&&!hiddenCols.has(f[2])).map(f=>f[0]));
+  $('xlsCols').innerHTML=XF.map(f=>`<label><input type="checkbox" data-x="${f[0]}"${xSel.has(f[0])?' checked':''}> ${esc(t(f[1]))}</label>`).join('');
+  const tabName=(document.querySelector(`#tabs [data-tab=${tab}]`)||{}).innerText||'';
+  $('xlsInfo').textContent=t('xlsInfo')(lastRows.length,tabName.replace(/\s+/g,' ').trim());
+  $('xlsMsg').textContent='';if(!$('dlgXls').open)$('dlgXls').showModal();
+}
+async function doXls(){
+  const cols=XF.filter(f=>xSel.has(f[0]));
+  if(!cols.length){$('xlsMsg').textContent=t('xlsNoCol');return}
+  $('xlsMsg').textContent=t('xlsWait');
+  try{
+    await loadXLSX();
+    const aoa=[cols.map(f=>t(f[1]))].concat(lastRows.map(i=>cols.map(f=>f[4](i))));
+    const ws=XLSX.utils.aoa_to_sheet(aoa);
+    ws['!cols']=cols.map(f=>({wch:f[3]}));
+    ws['!autofilter']={ref:XLSX.utils.encode_range({s:{r:0,c:0},e:{r:aoa.length-1,c:cols.length-1}})};
+    const kc=cols.findIndex(f=>f[0]==='key'), ec=cols.findIndex(f=>f[0]==='extId');
+    lastRows.forEach((i,r)=>{
+      if(kc>=0){const a=XLSX.utils.encode_cell({r:r+1,c:kc});ws[a].l={Target:`${JIRA}/browse/${i.key}`}}
+      if(ec>=0&&i.ext){const a=XLSX.utils.encode_cell({r:r+1,c:ec});if(ws[a])ws[a].l={Target:i.ext}}
+    });
+    const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'RAR');
+    const d=new Date(),p=n=>String(n).padStart(2,'0');
+    XLSX.writeFile(wb,`RAR_${tab}${doneF==='open'?'':'_'+doneF}_${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}_${p(d.getHours())}${p(d.getMinutes())}.xlsx`);
+    $('dlgXls').close();
+  }catch(e){$('xlsMsg').textContent=e.message}
+}
+$('xlsBtn').onclick=openXls;
+$('xlsCols').onchange=e=>{const x=e.target.dataset.x;if(x)e.target.checked?xSel.add(x):xSel.delete(x)};
+$('xlsAll').onclick=()=>{XF.forEach(f=>xSel.add(f[0]));openXls()};
+$('xlsNone').onclick=()=>{xSel.clear();openXls()};
+$('xlsCancel').onclick=()=>$('dlgXls').close();
+$('xlsGo').onclick=doXls;
 applyLang(); refreshTokenBtn(); rmRefresh(); applyCols();
 </script>
 </body>
