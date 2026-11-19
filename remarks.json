@@ -79,8 +79,13 @@
    "text": "19/Nov:MD (Dean) to update SYS2 Due: 1 day after receive feedback from STLA (R1L : RAR Query NR1LD-1129 (#2))",
    "by": "",
    "at": "2026-11-19T11:59:35.330Z"
+  },
+  "NR1LD-1275": {
+   "text": "19/Nov: (RAR 63610 & 63719 Waiting Response from STLA",
+   "by": "",
+   "at": "2026-11-19T11:59:49.758Z"
   }
  },
- "updated_at": "2026-11-19T11:59:35.330Z",
+ "updated_at": "2026-11-19T11:59:49.758Z",
  "updated_by": ""
 }
