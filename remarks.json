@@ -64,8 +64,13 @@
    "text": "Not blocker, only wait for LID",
    "by": "",
    "at": "2026-11-19T11:57:31.615Z"
+  },
+  "NR1LD-1061": {
+   "text": "18/Nov: STLA:This signal Telematic_FD_14.CameraDisplaySts is not used by HDCC/DT platform. In the past, it was used by WL. [CR needed]] ---> MD to check with Harman. Romulo to discuss internally.",
+   "by": "",
+   "at": "2026-11-19T11:58:29.366Z"
   }
  },
- "updated_at": "2026-11-19T11:57:36.421Z",
+ "updated_at": "2026-11-19T11:58:29.366Z",
  "updated_by": ""
 }
