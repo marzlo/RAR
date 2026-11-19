@@ -1,5 +1,5 @@
 {
- "imported": "2026-11-18",
+ "imported": "2026-11-19",
  "source": "RAR (include done) (1).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
@@ -31,14 +31,6 @@
    "status": "Solution Accepted",
    "spec": "CFTS086"
   },
-  "55433": {
-   "status": "Solution Proposed",
-   "spec": "CFTS026"
-  },
-  "55434": {
-   "status": "Solution Proposed",
-   "spec": "CFTS043"
-  },
   "55937": {
    "status": "Solution Proposed",
    "spec": "CFTS032"
@@ -48,7 +40,7 @@
    "spec": "VF747 Fota_Management_VF747_V6_R3 (Fastback)"
   },
   "57711": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "CFTS024"
   },
   "57812": {
@@ -72,7 +64,7 @@
    "spec": "SD-A0502"
   },
   "59920": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS086"
   },
   "60548": {
@@ -92,7 +84,7 @@
    "spec": "CS.00038"
   },
   "60986": {
-   "status": "Draft",
+   "status": "Submitted",
    "spec": "CS.00099"
   },
   "61536": {
@@ -136,7 +128,7 @@
    "spec": "CFTS012"
   },
   "63365": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS011"
   },
   "63400": {
@@ -184,7 +176,7 @@
    "spec": "CS.00102"
   },
   "63719": {
-   "status": "RAR Rejected",
+   "status": "Submitted",
    "spec": "cs.00102"
   },
   "63768": {
@@ -196,7 +188,7 @@
    "spec": "CFTS013_26PI1.5, CS.00263"
   },
   "63816": {
-   "status": "Solution Proposed",
+   "status": "Submitted",
    "spec": "CS.00093"
   },
   "63823": {
@@ -211,17 +203,9 @@
    "status": "Solution Proposed",
    "spec": "CFTS039"
   },
-  "63939": {
-   "status": "Solution Proposed",
-   "spec": ""
-  },
   "63975": {
-   "status": "Analysis",
+   "status": "RAR Accepted",
    "spec": "CFTS_022"
-  },
-  "63976": {
-   "status": "Solution Proposed",
-   "spec": "HMI"
   },
   "64057": {
    "status": "Analysis",
@@ -240,7 +224,7 @@
    "spec": "Latest-R1LR_Atl-H_25PI4.5 Dec Release-Multimedia - Radio and Audio_CFTS 019_Audio Management_20251203-1112.doc (reference: Apple Accessory Interface Specification R10)"
   },
   "64167": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "Pop Up List HMI CR0003 - PU1633 & PU1634"
   },
   "64188": {
@@ -248,7 +232,7 @@
    "spec": "CFTS043"
   },
   "64193": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "HUIG 4.5"
   },
   "64200": {
@@ -262,6 +246,18 @@
   "64288": {
    "status": "Analysis",
    "spec": "CFTS020"
+  },
+  "64418": {
+   "status": "Submitted",
+   "spec": "CS.00102"
+  },
+  "64419": {
+   "status": "Submitted",
+   "spec": "Projection Device R1L-R HMI Logic and Flow (February 5 2026) (1)"
+  },
+  "64421": {
+   "status": "Submitted",
+   "spec": "LVDS Atl Message Map ETM-RVCM R41.xlsx, PDT27_E2A_R5_FDCAN8.dbc"
   }
  }
 }
