@@ -69,8 +69,13 @@
    "text": "18/Nov: STLA:This signal Telematic_FD_14.CameraDisplaySts is not used by HDCC/DT platform. In the past, it was used by WL. [CR needed]] ---> MD to check with Harman. Romulo to discuss internally.",
    "by": "",
    "at": "2026-11-19T11:58:29.366Z"
+  },
+  "NR1LD-1129": {
+   "text": "19/Nov: (RAR Query NR1LD-1129 (#2)\") 3 Way Call Out come -STLA has proposal and will provide more clear information to MD. after receive that, MD to update sys2.",
+   "by": "",
+   "at": "2026-11-19T11:59:10.641Z"
   }
  },
- "updated_at": "2026-11-19T11:58:29.366Z",
+ "updated_at": "2026-11-19T11:59:10.641Z",
  "updated_by": ""
 }
