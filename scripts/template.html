@@ -224,6 +224,8 @@ const t=k=>T[lang][k];
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const data=DATA||{issues:[]};
+const DONE_STATUS=['done','drop','dropped','released','polarion in progress','polarion in review','pc (polarion checked)'];
+data.issues.forEach(i=>{if(DONE_STATUS.includes(String(i.status||'').trim().toLowerCase()))i.category='done'});
 let active=new Set(),sortK='status',sortDir=1,projF=null,catF=null,tab=({'#pm':'pm','#rd':'rd','#atlh':'atlh','#stla':'stla'})[location.hash]||'all',lblF='',openCm=new Set(),pmSub='';
 const projOf=k=>String(k).split('-')[0];
 
