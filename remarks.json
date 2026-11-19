@@ -26,9 +26,9 @@
    "at": "2026-11-19T08:49:26.335Z"
   },
   "NR1LD-1246": {
-   "text": "SR 26-CR004 will be released. MD need to make sure nothing missing for Audio",
+   "text": "SR 26-CR004 will be reworked. MD need to make sure nothing missing for Audio",
    "by": "",
-   "at": "2026-11-19T12:19:17.842Z"
+   "at": "2026-11-19T12:20:14.149Z"
   },
   "NR1LD-927": {
    "text": "Not blocker, only wait for LID",
@@ -91,6 +91,6 @@
    "at": "2026-11-19T12:00:18.467Z"
   }
  },
- "updated_at": "2026-11-19T12:19:17.842Z",
+ "updated_at": "2026-11-19T12:20:14.149Z",
  "updated_by": ""
 }
