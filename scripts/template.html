@@ -249,7 +249,7 @@ function renderAll(){
     .map(([l,v,c])=>`<div class="kpi click${(c?catF===c:!catF&&!projF)?' on':''}" data-cat="${c}"><b>${v}</b><span>${l}</span></div>`).join('');
   $('projs').innerHTML=PROJECTS.map(p=>{
     const its=all.filter(i=>projOf(i.key)===p), c=k=>its.filter(i=>i.category===k).length;
-    return `<div class="kpi click${projF===p?' on':''}" data-proj="${p}"><b>${p} · ${its.length}</b><span class="sub2">${t('projOf')}: ${c('new')} / ${c('indeterminate')} / ${c('done')}</span></div>`;
+    return `<div class="kpi click${projF===p?' on':''}" data-proj="${p}"><b>${p} · ${its.filter(i=>i.category!=='done').length}</b><span class="sub2">${t('projOf')}: ${c('new')} / ${c('indeterminate')} / ${c('done')}</span></div>`;
   }).join('');
   const counts={};all.filter(i=>inTab(i)&&doneOk(i)&&(!lblF||(lblF==='__none'?!(i.labels||[]).length:hasLabel(i,lblF)))&&(!projF||projOf(i.key)===projF)&&(!catF||i.category===catF)).forEach(i=>counts[i.status]=(counts[i.status]||0)+1);
   [...active].forEach(s=>{if(!counts[s])active.delete(s)});
