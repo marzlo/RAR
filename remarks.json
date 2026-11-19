@@ -59,8 +59,13 @@
    "text": "Not blocker, LID table updated",
    "by": "",
    "at": "2026-11-19T11:56:37.720Z"
+  },
+  "NR1LD-905": {
+   "text": "Not blocker, waiting for LID updat",
+   "by": "",
+   "at": "2026-11-19T11:57:24.854Z"
   }
  },
- "updated_at": "2026-11-19T11:56:37.720Z",
+ "updated_at": "2026-11-19T11:57:24.854Z",
  "updated_by": ""
 }
