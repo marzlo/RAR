@@ -29,8 +29,13 @@
    "text": "SR 26-CR004 will be released",
    "by": "",
    "at": "2026-11-19T09:31:57.868Z"
+  },
+  "NR1LD-927": {
+   "text": "only wait for LID",
+   "by": "",
+   "at": "2026-11-19T11:31:56.897Z"
   }
  },
- "updated_at": "2026-11-19T09:31:57.868Z",
+ "updated_at": "2026-11-19T11:31:56.897Z",
  "updated_by": ""
 }
