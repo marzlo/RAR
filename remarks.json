@@ -51,11 +51,11 @@
    "at": "2026-11-19T11:33:04.782Z"
   },
   "NR1LD-957": {
-   "text": "No Master CDD file.\nWe need now to move with the diagnostics design review which is waiting MD’s feedback.",
+   "text": "1.\tThere is no “master CDD” delivery from STLA. The overall agreed design for R1L-R consists of Harman’s management of a master CDD based on each vehicle CDD. \nWe need now to move with the diagnostics design review which is waiting MD’s feedback.",
    "by": "",
-   "at": "2026-11-19T11:40:55.263Z"
+   "at": "2026-11-19T11:41:05.815Z"
   }
  },
- "updated_at": "2026-11-19T11:40:55.263Z",
+ "updated_at": "2026-11-19T11:41:05.815Z",
  "updated_by": ""
 }
