@@ -4,8 +4,13 @@
    "text": "Not a blocker, only test procedure, Harman will propose",
    "by": "",
    "at": "2026-11-19T06:55:06.564Z"
+  },
+  "NR1LD-1251": {
+   "text": "Add comments in RTC and wait STLA feedback",
+   "by": "",
+   "at": "2026-11-19T08:17:24.099Z"
   }
  },
- "updated_at": "2026-11-19T06:55:06.564Z",
+ "updated_at": "2026-11-19T08:17:24.099Z",
  "updated_by": ""
 }
