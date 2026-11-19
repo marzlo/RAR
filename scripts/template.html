@@ -631,7 +631,8 @@ $('xlsAll').onclick=()=>{XF.forEach(f=>xSel.add(f[0]));openXls()};
 $('xlsNone').onclick=()=>{xSel.clear();openXls()};
 $('xlsCancel').onclick=()=>$('dlgXls').close();
 $('xlsGo').onclick=doXls;
-applyLang(); refreshTokenBtn(); rmRefresh(); applyCols();
+applyLang(); refreshTokenBtn(); rmRefresh(); cmRefresh(); applyCols();
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){cmRefresh();rmRefresh()}});
 </script>
 </body>
 </html>
