@@ -30,10 +30,12 @@ def main():
         })
     # STLA prsse export (scripts/prsse.json): External Link id -> STLA status / Other Specification
     ppath = os.path.join(HERE, "prsse.json")
-    prsse = {}
+    prsse, stla_meta = {}, {}
     if os.path.exists(ppath):
         with open(ppath, encoding="utf-8") as fh:
-            prsse = json.load(fh).get("items", {})
+            pj = json.load(fh)
+        prsse = pj.get("items", {})
+        stla_meta = {k: v for k, v in pj.items() if k != "items"}
     for i in issues:
         p = prsse.get(i["extId"]) or {}
         i["stla"] = p.get("status", "")
@@ -55,6 +57,7 @@ def main():
         "issues": issues,
         "comments": comments,
         "remarks": remarks,
+        "stla_meta": stla_meta,
     }
     with open(TEMPLATE, encoding="utf-8") as fh:
         html = fh.read()
