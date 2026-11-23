@@ -6,9 +6,9 @@
    "at": "2026-11-19T06:55:06.564Z"
   },
   "NR1LD-1251": {
-   "text": "Add comments in RTC and wait STLA feedback",
+   "text": "STLA had feedback, move to Shawn",
    "by": "",
-   "at": "2026-11-19T08:17:24.099Z"
+   "at": "2026-11-23T10:00:42.728Z"
   },
   "NR1LD-1055": {
    "text": "Not be able to have a call. Feedback in comment",
@@ -91,6 +91,6 @@
    "at": "2026-11-19T12:00:18.467Z"
   }
  },
- "updated_at": "2026-11-23T02:27:56.910Z",
- "updated_by": "Joseph Lee"
+ "updated_at": "2026-11-23T10:00:42.728Z",
+ "updated_by": ""
 }
