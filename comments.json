@@ -120,12 +120,6 @@
     "text": "The message has been posted from STLA to Jira.",
     "by": "Nick",
     "at": "2026-11-19T05:50:22.416Z"
-   },
-   {
-    "id": "mwsn2wzqoxos",
-    "text": "no update",
-    "by": "Olivia",
-    "at": "2026-11-23T02:21:05.030Z"
    }
   ],
   "NR1L-13554": [
@@ -263,6 +257,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T09:14:52.354Z",
+ "updated_at": "2026-11-23T09:16:09.408Z",
  "updated_by": "Olivia"
 }
