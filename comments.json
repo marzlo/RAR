@@ -194,7 +194,14 @@
     "at": "2026-11-23T08:00:28.297Z"
    }
   ],
-  "NR1L-16999": [],
+  "NR1L-16999": [
+   {
+    "id": "mwszb3rdpxn7",
+    "text": "RD accept solution, PM should close tickets from both JIRA and STLA",
+    "by": "Olivia",
+    "at": "2026-11-23T08:03:22.441Z"
+   }
+  ],
   "NR1L-17838": [
    {
     "id": "mwspj1imaf3n",
@@ -228,6 +235,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T08:03:18.637Z",
+ "updated_at": "2026-11-23T08:03:22.932Z",
  "updated_by": "Olivia"
 }
