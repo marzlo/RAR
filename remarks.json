@@ -76,9 +76,9 @@
    "at": "2026-11-19T11:59:10.641Z"
   },
   "NR1LD-1250": {
-   "text": "23/Nov: no update\n20/Nov: Reject the RTC 61940 with the MoM and request an updated proposal",
+   "text": "23/Nov: pending on RTC 61940\n20/Nov: Reject the RTC 61940 with the MoM and request an updated proposal",
    "by": "",
-   "at": "2026-11-23T10:15:10.646Z"
+   "at": "2026-11-23T10:16:53.667Z"
   },
   "NR1LD-1275": {
    "text": "19/Nov: (RAR 63610 & 63719 Waiting Response from STLA",
@@ -91,6 +91,6 @@
    "at": "2026-11-19T12:00:18.467Z"
   }
  },
- "updated_at": "2026-11-23T10:15:10.646Z",
+ "updated_at": "2026-11-23T10:16:53.667Z",
  "updated_by": ""
 }
