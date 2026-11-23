@@ -186,14 +186,7 @@
     "at": "2026-11-23T02:27:36.029Z"
    }
   ],
-  "NR1L-16900": [
-   {
-    "id": "mwsolaoabpa8",
-    "text": "status update in JIRA",
-    "by": "Olivia",
-    "at": "2026-11-23T03:03:22.186Z"
-   }
-  ],
+  "NR1L-16900": [],
   "NR1L-16999": [
    {
     "id": "mwsowoahek43",
@@ -235,6 +228,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T07:52:47.025Z",
+ "updated_at": "2026-11-23T08:00:25.588Z",
  "updated_by": "Olivia"
 }
