@@ -280,6 +280,12 @@
     "text": "STLA feedback copied from RTC to Jira.",
     "by": "Olivia",
     "at": "2026-11-23T09:51:59.488Z"
+   },
+   {
+    "id": "mwt5i5t7uq0e",
+    "text": "This tickets contain multiple RTC tickets, need to carefully handle answers and status",
+    "by": "Leyo",
+    "at": "2026-11-23T10:56:49.387Z"
    }
   ],
   "NR1LD-1250": [
@@ -321,6 +327,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T10:17:49.184Z",
- "updated_by": "Lynn"
+ "updated_at": "2026-11-23T10:56:50.010Z",
+ "updated_by": "Leyo"
 }
