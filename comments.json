@@ -106,12 +106,6 @@
     "text": "The message has been posted from STLA to Jira.",
     "by": "Nick",
     "at": "2026-11-19T05:49:00.603Z"
-   },
-   {
-    "id": "mwt1v1idu76k",
-    "text": "Required: Continue the RAR with STLA and change the status as “Submitted” in RAR 60549",
-    "by": "Olivia",
-    "at": "2026-11-23T09:14:51.877Z"
    }
   ],
   "NR1L-12932": [
@@ -263,6 +257,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T09:16:14.669Z",
+ "updated_at": "2026-11-23T09:16:24.585Z",
  "updated_by": "Olivia"
 }
