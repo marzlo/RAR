@@ -162,6 +162,12 @@
     "text": "status update in JIRA",
     "by": "Nick",
     "at": "2026-11-19T09:17:29.318Z"
+   },
+   {
+    "id": "mwswf6s061j0",
+    "text": "RD accept solution, PM should close tickets from both JIRA and STLA",
+    "by": "Olivia",
+    "at": "2026-11-23T06:42:34.128Z"
    }
   ],
   "NR1LD-1170": [
@@ -219,6 +225,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T06:39:13.287Z",
+ "updated_at": "2026-11-23T06:42:34.617Z",
  "updated_by": "Olivia"
 }
