@@ -274,14 +274,7 @@
     "at": "2026-11-23T08:25:26.619Z"
    }
   ],
-  "NR1LD-1275": [
-   {
-    "id": "mwt209zxf0zc",
-    "text": "Jira was updated 5 days ago, but it requires confirmation from the PM.",
-    "by": "Olivia",
-    "at": "2026-11-23T09:18:56.157Z"
-   }
-  ],
+  "NR1LD-1275": [],
   "NR1LD-1250": [
    {
     "id": "mwt21xv1bwm2",
@@ -299,6 +292,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T09:41:39.172Z",
+ "updated_at": "2026-11-23T09:51:54.202Z",
  "updated_by": "Olivia"
 }
