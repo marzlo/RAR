@@ -274,7 +274,14 @@
     "at": "2026-11-23T08:25:26.619Z"
    }
   ],
-  "NR1LD-1275": [],
+  "NR1LD-1275": [
+   {
+    "id": "mwt36scgcvbx",
+    "text": "STLA feedback copied from RTC to Jira.",
+    "by": "Olivia",
+    "at": "2026-11-23T09:51:59.488Z"
+   }
+  ],
   "NR1LD-1250": [
    {
     "id": "mwt21xv1bwm2",
@@ -292,6 +299,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T09:51:54.202Z",
+ "updated_at": "2026-11-23T09:51:59.992Z",
  "updated_by": "Olivia"
 }
