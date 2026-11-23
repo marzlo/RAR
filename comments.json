@@ -34,6 +34,12 @@
     "text": "11/18 Jira更新至RTC",
     "by": "Olivia",
     "at": "2026-11-18T09:45:39.707Z"
+   },
+   {
+    "id": "mwt0624hun88",
+    "text": "RD feedback copied from Jira to RTC.",
+    "by": "Olivia",
+    "at": "2026-11-23T08:27:26.657Z"
    }
   ],
   "NR1LD-1236": [
@@ -257,6 +263,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T08:25:27.197Z",
- "updated_by": "Melody"
+ "updated_at": "2026-11-23T08:27:27.106Z",
+ "updated_by": "Olivia"
 }
