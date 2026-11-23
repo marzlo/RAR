@@ -1,7 +1,7 @@
 {
- "imported": "2026-11-23T01:57:30.275Z",
- "by": "Olivia",
- "source": "RAR (include done) (2).csv (uploaded from the dashboard)",
+ "imported": "2026-11-23T10:33:00.119Z",
+ "by": "",
+ "source": "RAR (include done) (3).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
   "53722": {
@@ -2745,7 +2745,7 @@
    "spec": "CS00051"
   },
   "59383": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "SD-A0502"
   },
   "59384": {
@@ -2881,11 +2881,11 @@
    "spec": "[DT27][VF009_V2]"
   },
   "60548": {
-   "status": "RAR Rejected",
+   "status": "Submitted",
    "spec": "CS.00101"
   },
   "60549": {
-   "status": "RAR Rejected",
+   "status": "Submitted",
    "spec": "CFTS015"
   },
   "60550": {
@@ -3141,11 +3141,11 @@
    "spec": "CS.00102"
   },
   "63719": {
-   "status": "Solution Proposed",
+   "status": "Submitted",
    "spec": "cs.00102"
   },
   "63768": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "CS.00099"
   },
   "63815": {
@@ -3185,7 +3185,7 @@
    "spec": "VF155"
   },
   "64116": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "CFTS092"
   },
   "64163": {
@@ -3209,7 +3209,7 @@
    "spec": "HUIG 4.5"
   },
   "64200": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "SYS1_KPI_R1L-R_Rev2 -"
   },
   "64246": {
@@ -3239,6 +3239,26 @@
   "64424": {
    "status": "Analysis",
    "spec": "CFTS_022"
+  },
+  "64472": {
+   "status": "Submitted",
+   "spec": "CFTS009"
+  },
+  "64475": {
+   "status": "Submitted",
+   "spec": "CFTS_004"
+  },
+  "64479": {
+   "status": "Submitted",
+   "spec": "Media HMI Logic and Flow (R1L-R, 2026-02-09）"
+  },
+  "64481": {
+   "status": "Submitted",
+   "spec": "CS.000102"
+  },
+  "64486": {
+   "status": "Submitted",
+   "spec": "VF551_V2(DT/HDCC), VF551_V42(Promaster), VF551_V3(Fastback), VF551_V33(Toro)"
   }
  }
 }
