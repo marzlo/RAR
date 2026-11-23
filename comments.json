@@ -226,8 +226,15 @@
     "at": "2026-11-23T07:25:46.907Z"
    }
   ],
-  "NR1L-11764": []
+  "NR1L-11764": [
+   {
+    "id": "mwsyxh3bxiv8",
+    "text": "RD has provided feedback in Jira. PM to review and decide the next action.",
+    "by": "Olivia",
+    "at": "2026-11-23T07:52:46.535Z"
+   }
+  ]
  },
- "updated_at": "2026-11-23T07:52:23.991Z",
+ "updated_at": "2026-11-23T07:52:47.025Z",
  "updated_by": "Olivia"
 }
