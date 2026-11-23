@@ -1,17 +1,722 @@
 {
- "imported": "2026-11-19",
- "source": "RAR (include done) (1).csv (uploaded from the dashboard)",
+ "imported": "2026-11-23T01:57:30.275Z",
+ "by": "Olivia",
+ "source": "RAR (include done) (2).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
+  "53722": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "53732": {
+   "status": "Closed",
+   "spec": "CFTS 024"
+  },
+  "53733": {
+   "status": "Closed",
+   "spec": "CFTS092"
+  },
+  "53734": {
+   "status": "Closed",
+   "spec": "CFTS86"
+  },
+  "53735": {
+   "status": "Closed",
+   "spec": "CFTS 092"
+  },
+  "53736": {
+   "status": "Closed",
+   "spec": "CFTS 024"
+  },
+  "53752": {
+   "status": "Closed",
+   "spec": "CFTS 024"
+  },
+  "53753": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 024"
+  },
+  "53754": {
+   "status": "Closed",
+   "spec": "CFTS 024"
+  },
+  "53802": {
+   "status": "RAR Rejected",
+   "spec": "VF560/VF570"
+  },
+  "53908": {
+   "status": "Closed",
+   "spec": "CFTS_004"
+  },
+  "53909": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "53910": {
+   "status": "Closed",
+   "spec": "CFTS 092"
+  },
+  "53911": {
+   "status": "Closed",
+   "spec": "CFTS 092"
+  },
+  "53912": {
+   "status": "Closed",
+   "spec": "HDCC27_VF509_V1"
+  },
+  "53913": {
+   "status": "Closed",
+   "spec": "VF230"
+  },
+  "53944": {
+   "status": "Closed",
+   "spec": "CFTS013"
+  },
+  "53945": {
+   "status": "Closed",
+   "spec": "VF230"
+  },
+  "53946": {
+   "status": "Closed",
+   "spec": "VF727"
+  },
+  "53948": {
+   "status": "Closed",
+   "spec": "CFTS-043"
+  },
+  "53990": {
+   "status": "Closed",
+   "spec": "CFTS-043"
+  },
+  "53991": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "53992": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "53993": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "53999": {
+   "status": "Closed",
+   "spec": "CFTS026"
+  },
+  "54000": {
+   "status": "Closed",
+   "spec": "CFTS091"
+  },
+  "54047": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "54048": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "54049": {
+   "status": "RAR Rejected",
+   "spec": "CFTS026"
+  },
+  "54050": {
+   "status": "Closed",
+   "spec": "CFTS026"
+  },
+  "54051": {
+   "status": "Closed",
+   "spec": "CFTS026"
+  },
+  "54092": {
+   "status": "RAR Rejected",
+   "spec": "CFTS026"
+  },
+  "54100": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "54101": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "54240": {
+   "status": "Closed",
+   "spec": "[HDCC27]VF169"
+  },
+  "54241": {
+   "status": "Closed",
+   "spec": "CFTS_069"
+  },
+  "54242": {
+   "status": "Closed",
+   "spec": "CFTS_069"
+  },
+  "54243": {
+   "status": "Closed",
+   "spec": "CFTS_042"
+  },
+  "54244": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "54245": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "54246": {
+   "status": "Closed",
+   "spec": "CFTS010"
+  },
   "54247": {
    "status": "Solution Accepted",
    "spec": "CFTS043"
+  },
+  "54258": {
+   "status": "Closed",
+   "spec": "CFTS-026"
+  },
+  "54259": {
+   "status": "Solution Proposed",
+   "spec": "CFTS084"
+  },
+  "54260": {
+   "status": "Closed",
+   "spec": "CFTS_085"
+  },
+  "54261": {
+   "status": "Closed",
+   "spec": "CFTS_026"
+  },
+  "54263": {
+   "status": "Closed",
+   "spec": "CFTS_042"
+  },
+  "54290": {
+   "status": "Closed",
+   "spec": "[HDCC27]VF617"
+  },
+  "54294": {
+   "status": "Closed",
+   "spec": "[HDCC27]VF664"
+  },
+  "54295": {
+   "status": "Closed",
+   "spec": "CFTS074"
+  },
+  "54325": {
+   "status": "Closed",
+   "spec": "CFTS 074"
+  },
+  "54399": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "54402": {
+   "status": "Closed",
+   "spec": "CFTS018"
+  },
+  "54403": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54404": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54443": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "54445": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "54456": {
+   "status": "Closed",
+   "spec": "CFTS026"
+  },
+  "54459": {
+   "status": "Closed",
+   "spec": "CFTS_042"
+  },
+  "54463": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
+  "54465": {
+   "status": "Closed",
+   "spec": "CFTS_025"
+  },
+  "54466": {
+   "status": "Closed",
+   "spec": "CFTS_025"
+  },
+  "54467": {
+   "status": "Closed",
+   "spec": "CFTS_025"
+  },
+  "54493": {
+   "status": "RAR Rejected",
+   "spec": "CFTS_057"
+  },
+  "54564": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "54565": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "54566": {
+   "status": "Solution Accepted",
+   "spec": "CFTS024"
+  },
+  "54567": {
+   "status": "Closed",
+   "spec": "CFTS074"
+  },
+  "54568": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54574": {
+   "status": "Closed",
+   "spec": "CFTS_042"
+  },
+  "54576": {
+   "status": "Closed",
+   "spec": "CFTS_042"
+  },
+  "54608": {
+   "status": "RAR Rejected",
+   "spec": "VF561_V2_HDCC27"
+  },
+  "54609": {
+   "status": "Closed",
+   "spec": "SD.00094/03"
   },
   "54610": {
    "status": "Solution Accepted",
    "spec": "CFTS-026"
   },
+  "54611": {
+   "status": "Closed",
+   "spec": "CFTS_004"
+  },
+  "54619": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "54629": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54630": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54631": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54633": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54634": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54635": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54647": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54648": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54650": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54651": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54652": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54654": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54655": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54656": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54658": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54659": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54661": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54662": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54663": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54664": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54665": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54666": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54667": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54697": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54698": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54699": {
+   "status": "Closed",
+   "spec": "CFTS 057"
+  },
+  "54700": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54701": {
+   "status": "Closed",
+   "spec": "CFTS 069"
+  },
+  "54702": {
+   "status": "Closed",
+   "spec": "CFTS_044"
+  },
+  "54703": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "54704": {
+   "status": "RAR Rejected",
+   "spec": "VF155"
+  },
+  "54705": {
+   "status": "Closed",
+   "spec": "CFTS 004"
+  },
+  "54706": {
+   "status": "RAR Rejected",
+   "spec": "VF155"
+  },
+  "54707": {
+   "status": "Closed",
+   "spec": "CFTS044"
+  },
+  "54708": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "54709": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "54713": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "54715": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "54728": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54729": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54731": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54733": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54734": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54735": {
+   "status": "Closed",
+   "spec": "CFTS 004"
+  },
+  "54736": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54737": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54742": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54743": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54746": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54747": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54748": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 015"
+  },
+  "54749": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "54750": {
+   "status": "Closed",
+   "spec": "CFTS 038"
+  },
+  "54751": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 010"
+  },
+  "54757": {
+   "status": "Closed",
+   "spec": "CFTS 015"
+  },
+  "54758": {
+   "status": "Closed",
+   "spec": "CFTS 044"
+  },
+  "54759": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 004"
+  },
+  "54761": {
+   "status": "RAR Rejected",
+   "spec": "CFTS 019"
+  },
+  "54765": {
+   "status": "RAR Rejected",
+   "spec": "CFTS-026"
+  },
+  "54766": {
+   "status": "RAR Rejected",
+   "spec": "[HDCC27]VF664"
+  },
+  "54767": {
+   "status": "Closed",
+   "spec": "CFTS020"
+  },
+  "54813": {
+   "status": "RAR Rejected",
+   "spec": "CFTS _015"
+  },
+  "54814": {
+   "status": "Closed",
+   "spec": "CFTS _016"
+  },
+  "54816": {
+   "status": "Closed",
+   "spec": "CFTS _010"
+  },
+  "54818": {
+   "status": "RAR Rejected",
+   "spec": "CFTS _010"
+  },
+  "54819": {
+   "status": "Closed",
+   "spec": "CFTS_085"
+  },
+  "54853": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
+  "54854": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
   "54855": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
+  "54856": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
+  "54857": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "54858": {
+   "status": "RAR Rejected",
+   "spec": "CFTS025"
+  },
+  "54859": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "54864": {
+   "status": "Closed",
+   "spec": "CFTS_020"
+  },
+  "54867": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "54874": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "54875": {
+   "status": "Closed",
+   "spec": "CFTS_025"
+  },
+  "54942": {
+   "status": "Closed",
+   "spec": "CFTS015"
+  },
+  "54944": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "54946": {
+   "status": "Closed",
+   "spec": "HDCC27"
+  },
+  "54947": {
+   "status": "Closed",
+   "spec": "CFTS018"
+  },
+  "54973": {
+   "status": "Closed",
+   "spec": "CFTS 019"
+  },
+  "54980": {
+   "status": "RAR Rejected",
+   "spec": "CFTS022"
+  },
+  "54981": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54982": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54983": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54984": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54985": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54986": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54987": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54988": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "54989": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "55012": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "55013": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "55014": {
+   "status": "Closed",
+   "spec": "CFTS091"
+  },
+  "55015": {
+   "status": "Closed",
+   "spec": "CTFS091 CFTS018"
+  },
+  "55016": {
+   "status": "RAR Rejected",
+   "spec": "CFTS022,"
+  },
+  "55019": {
+   "status": "RAR Rejected",
+   "spec": "CFTS024, CFTS012, CFTS004"
+  },
+  "55021": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "55040": {
+   "status": "Solution Accepted",
+   "spec": "CFTS057"
+  },
+  "55041": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55042": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55043": {
    "status": "Closed",
    "spec": "CFTS057"
   },
@@ -27,45 +732,2153 @@
    "status": "Solution Accepted",
    "spec": "CFTS057"
   },
+  "55048": {
+   "status": "Closed",
+   "spec": "CFTS 044"
+  },
+  "55050": {
+   "status": "Closed",
+   "spec": "VF747"
+  },
+  "55099": {
+   "status": "Closed",
+   "spec": "General"
+  },
+  "55125": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55127": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55128": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55130": {
+   "status": "Closed",
+   "spec": "CFTS_014"
+  },
+  "55150": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
   "55151": {
    "status": "Solution Accepted",
    "spec": "CFTS086"
+  },
+  "55152": {
+   "status": "Closed",
+   "spec": "CFTS086"
+  },
+  "55153": {
+   "status": "Solution Proposed",
+   "spec": "CFTS086"
+  },
+  "55154": {
+   "status": "RAR Rejected",
+   "spec": "CFTS086"
+  },
+  "55155": {
+   "status": "Closed",
+   "spec": "CFTS086"
+  },
+  "55156": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "55157": {
+   "status": "Closed",
+   "spec": "CFTS 009"
+  },
+  "55158": {
+   "status": "Closed",
+   "spec": "CFTS_026"
+  },
+  "55188": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
+  "55194": {
+   "status": "Closed",
+   "spec": "CFTS 016"
+  },
+  "55197": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "55205": {
+   "status": "Closed",
+   "spec": "CFTS 024"
+  },
+  "55206": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55227": {
+   "status": "Closed",
+   "spec": "CFTS 025"
+  },
+  "55228": {
+   "status": "Closed",
+   "spec": "CFTS 025"
+  },
+  "55229": {
+   "status": "Closed",
+   "spec": "CFTS 025"
+  },
+  "55230": {
+   "status": "Closed",
+   "spec": "CFTS 025"
+  },
+  "55231": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "55232": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "55233": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "55243": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55259": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55260": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55261": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "55262": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55275": {
+   "status": "RAR Rejected",
+   "spec": "VF155"
+  },
+  "55276": {
+   "status": "Closed",
+   "spec": "VF658"
+  },
+  "55278": {
+   "status": "Closed",
+   "spec": "CFTS026"
+  },
+  "55280": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "55296": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "55297": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "55298": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "55299": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "55300": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "55302": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "55304": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "55305": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55306": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55307": {
+   "status": "RAR Rejected",
+   "spec": "VF155(HDCC27)"
+  },
+  "55317": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55320": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55345": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "55346": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55347": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55348": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55349": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55350": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55351": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55352": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55353": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55354": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55355": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55356": {
+   "status": "RAR Rejected",
+   "spec": "VF491"
+  },
+  "55367": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55370": {
+   "status": "Closed",
+   "spec": "CFTS016"
+  },
+  "55371": {
+   "status": "Closed",
+   "spec": "CFTS_024"
+  },
+  "55379": {
+   "status": "RAR Rejected",
+   "spec": "CFTS_024"
+  },
+  "55381": {
+   "status": "RAR Rejected",
+   "spec": "CFTS019"
+  },
+  "55382": {
+   "status": "RAR Rejected",
+   "spec": "VF491"
+  },
+  "55383": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "55384": {
+   "status": "RAR Rejected",
+   "spec": "VF491"
+  },
+  "55385": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "55386": {
+   "status": "RAR Rejected",
+   "spec": "VF491"
+  },
+  "55387": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "55388": {
+   "status": "Closed",
+   "spec": "CFTS_012"
+  },
+  "55389": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "55390": {
+   "status": "RAR Rejected",
+   "spec": "VF491"
+  },
+  "55391": {
+   "status": "Closed",
+   "spec": "CFTS 024"
+  },
+  "55392": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55393": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55394": {
+   "status": "Solution Accepted",
+   "spec": "CFTS041"
+  },
+  "55395": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55396": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55397": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55398": {
+   "status": "RAR Rejected",
+   "spec": "CFTS041"
+  },
+  "55400": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55401": {
+   "status": "Solution Accepted",
+   "spec": "CFTS041"
+  },
+  "55403": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55404": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55405": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55406": {
+   "status": "Solution Accepted",
+   "spec": "CFTS041"
+  },
+  "55407": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55408": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55410": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "55416": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55417": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55418": {
+   "status": "RAR Rejected",
+   "spec": "VF491"
+  },
+  "55419": {
+   "status": "Closed",
+   "spec": "CTFS091 /CFTS018 /CFTS085"
+  },
+  "55420": {
+   "status": "Solution Accepted",
+   "spec": "CFTS026"
+  },
+  "55421": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55429": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55430": {
+   "status": "Closed",
+   "spec": "CFTS038"
+  },
+  "55431": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55432": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "55433": {
+   "status": "Closed",
+   "spec": "CFTS026"
+  },
+  "55434": {
+   "status": "Closed",
+   "spec": "CFTS043"
+  },
+  "55435": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "55436": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "55439": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "55457": {
+   "status": "RAR Rejected",
+   "spec": "CFTS086"
+  },
+  "55458": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55459": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "55461": {
+   "status": "Closed",
+   "spec": "CFTS 024"
+  },
+  "55462": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55463": {
+   "status": "Closed",
+   "spec": "CFTS012"
+  },
+  "55477": {
+   "status": "Closed",
+   "spec": "CAE"
+  },
+  "55478": {
+   "status": "Closed",
+   "spec": "HDCC_VF511_V1_R4 (Trailer Reverse Steering Control - CVADAS)"
+  },
+  "55499": {
+   "status": "RAR Rejected",
+   "spec": "CFTS038"
+  },
+  "55500": {
+   "status": "Closed",
+   "spec": "CFTS038"
+  },
+  "55501": {
+   "status": "Closed",
+   "spec": "CS.00180"
+  },
+  "55502": {
+   "status": "Closed",
+   "spec": "Selectable Tire Fill Assist HMI Logic and Flow R1 SR24 1A (June 1 2021) Bed Lowering Mode HMI Logic and Flow R1 SR24 1A (June 21 2021).pdf Market HMI Logic and Flow R1 SR24 1A (June 21 2021) Arabic mirroring HMI"
+  },
+  "55503": {
+   "status": "Closed",
+   "spec": "CFTS042"
+  },
+  "55537": {
+   "status": "Closed",
+   "spec": "HDCC_VF561_V2"
+  },
+  "55542": {
+   "status": "RAR Rejected",
+   "spec": "226MCA: VF551_V36, VF700_VF700_V1 Network Management)V31, VF652_V32"
+  },
+  "55591": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "55592": {
+   "status": "Closed",
+   "spec": "DT27: VF700_V1,VF684_V3,VF606_V1, VF674_V3,VF673_V4"
+  },
+  "55593": {
+   "status": "RAR Rejected",
+   "spec": "363_376: VF176_V2_R2"
+  },
+  "55602": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "55711": {
+   "status": "Closed",
+   "spec": "HDDC27 VF009_V2"
+  },
+  "55717": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55754": {
+   "status": "RAR Rejected",
+   "spec": "CFTS074"
+  },
+  "55755": {
+   "status": "Closed",
+   "spec": "SD-A0502"
+  },
+  "55758": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "55770": {
+   "status": "Closed",
+   "spec": "VF491_V42_R2"
+  },
+  "55771": {
+   "status": "RAR Rejected",
+   "spec": "VF491_V42_R2"
+  },
+  "55772": {
+   "status": "Closed",
+   "spec": "VF491_V42_R2"
+  },
+  "55773": {
+   "status": "Closed",
+   "spec": "VF491_V42_R2"
+  },
+  "55798": {
+   "status": "Closed",
+   "spec": "VF747"
+  },
+  "55799": {
+   "status": "Closed",
+   "spec": "VF747"
+  },
+  "55800": {
+   "status": "Closed",
+   "spec": "VF747"
+  },
+  "55803": {
+   "status": "Closed",
+   "spec": "CFTS020"
+  },
+  "55828": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "55829": {
+   "status": "Closed",
+   "spec": "CFTS048"
+  },
+  "55832": {
+   "status": "Closed",
+   "spec": "CFTS_024"
+  },
+  "55854": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55855": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "55856": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55857": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55858": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55859": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "55860": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "55861": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55864": {
+   "status": "Closed",
+   "spec": "F551_V2-Video_Parking_Assistance"
+  },
+  "55865": {
+   "status": "RAR Rejected",
+   "spec": "VF234_V42_R1"
+  },
+  "55867": {
+   "status": "RAR Rejected",
+   "spec": "VF234_V42_R1"
+  },
+  "55868": {
+   "status": "RAR Rejected",
+   "spec": "VF491_V42_R2]"
+  },
+  "55869": {
+   "status": "RAR Rejected",
+   "spec": "VF234_V42_R1"
+  },
+  "55870": {
+   "status": "Closed",
+   "spec": "CTFS018 CFTS025"
+  },
+  "55872": {
+   "status": "Closed",
+   "spec": "VF608_V31_R2 (Toro)"
+  },
+  "55876": {
+   "status": "Closed",
+   "spec": "CTFS084 CFTS057"
+  },
+  "55879": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "55897": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "55898": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "55899": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "55900": {
+   "status": "Closed",
+   "spec": "CFTS015"
+  },
+  "55901": {
+   "status": "Closed",
+   "spec": "CFTS015"
+  },
+  "55902": {
+   "status": "Closed",
+   "spec": "CFTS015"
+  },
+  "55904": {
+   "status": "Closed",
+   "spec": "CFTS _015"
+  },
+  "55936": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
   },
   "55937": {
    "status": "Solution Proposed",
    "spec": "CFTS032"
   },
+  "55938": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55939": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55940": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "55941": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "55942": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55943": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55945": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55946": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "55947": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55948": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "55949": {
+   "status": "Closed",
+   "spec": "Phone_Repetition_on_IPC-LTM_(R1L)_[VF464_V42_R2]"
+  },
+  "55955": {
+   "status": "RAR Rejected",
+   "spec": "Trip_Computer_Repetition_on_VP-LTM_(R1L)_VF234_V42_R1"
+  },
+  "55956": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
+  "55957": {
+   "status": "Closed",
+   "spec": "Audio_Output_Management_-LTM(R1L)_with_TBM_VF651_V43_R1.doc"
+  },
+  "55960": {
+   "status": "Closed",
+   "spec": "VF491_V42_R2"
+  },
+  "55961": {
+   "status": "Closed",
+   "spec": "VF491_V42_R2"
+  },
+  "55972": {
+   "status": "Closed",
+   "spec": "CFTS016"
+  },
+  "55974": {
+   "status": "Closed",
+   "spec": "VF608_V31_R2"
+  },
+  "55983": {
+   "status": "Closed",
+   "spec": "VF660_V42_R1_P226MCA"
+  },
+  "55984": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "55985": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55986": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55987": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "55999": {
+   "status": "Closed",
+   "spec": "VF352_V2_R2"
+  },
+  "56000": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56001": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56002": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56003": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56004": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56005": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56006": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56007": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56008": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56009": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56010": {
+   "status": "Solution Proposed",
+   "spec": "CFTS084"
+  },
+  "56011": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56012": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56013": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56014": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "56018": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56063": {
+   "status": "Closed",
+   "spec": "Radio Error Management [CFTSMV013_CIP_R2]"
+  },
+  "56064": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56065": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56066": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56067": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56075": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "56081": {
+   "status": "RAR Rejected",
+   "spec": "R1LR_Atl-H_25PI3.5_Cabin_CFTS_020 ICS and DCSD _SR26_20250909-1852.doc"
+  },
+  "56082": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "56083": {
+   "status": "Closed",
+   "spec": "Audio_Output_Management_-_LTM_(R1L)_with_CAN_AMP_and_TBM_VF651_V44_R1"
+  },
+  "56115": {
+   "status": "Closed",
+   "spec": "VF747 Fota_Management_VF747_V6_R3 (Fastback)"
+  },
   "56116": {
    "status": "Closed",
    "spec": "VF747 Fota_Management_VF747_V6_R3 (Fastback)"
   },
-  "57711": {
-   "status": "Solution Proposed",
+  "56125": {
+   "status": "Closed",
+   "spec": "VP_SDK_Integration_for_CAN-B_VF673_V3_R2"
+  },
+  "56164": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "56165": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56166": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56167": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56168": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56169": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "56170": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56171": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56172": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56173": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "56174": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "56175": {
+   "status": "Closed",
+   "spec": "CFTS038"
+  },
+  "56213": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "56216": {
+   "status": "Closed",
+   "spec": "CFTS018"
+  },
+  "56217": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "56218": {
+   "status": "RAR Rejected",
+   "spec": "CFTS013"
+  },
+  "56219": {
+   "status": "Closed",
+   "spec": "CFTS012"
+  },
+  "56220": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
+  "56222": {
+   "status": "Closed",
+   "spec": "VF673_V3_R2"
+  },
+  "56224": {
+   "status": "Closed",
+   "spec": "CFTS012"
+  },
+  "56230": {
+   "status": "Closed",
+   "spec": "VF668_V31_R5"
+  },
+  "56266": {
+   "status": "RAR Rejected",
+   "spec": "CFTS013"
+  },
+  "56267": {
+   "status": "Closed",
+   "spec": "HDCC27_Diagnostic Requirement_DTC_Matrix_R1L_Atlantis-High_April_15_2020"
+  },
+  "56268": {
+   "status": "Closed",
    "spec": "CFTS024"
+  },
+  "56271": {
+   "status": "Closed",
+   "spec": "VF651_V42_R1"
+  },
+  "56274": {
+   "status": "Closed",
+   "spec": "VF456_V1"
+  },
+  "56314": {
+   "status": "Solution Proposed",
+   "spec": "VF658_V8"
+  },
+  "56315": {
+   "status": "Closed",
+   "spec": "VF668_V31_R5"
+  },
+  "56316": {
+   "status": "Closed",
+   "spec": "VF668_V31_R5"
+  },
+  "56317": {
+   "status": "Closed",
+   "spec": "CTFS084"
+  },
+  "56318": {
+   "status": "Closed",
+   "spec": "CS.000166"
+  },
+  "56319": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56320": {
+   "status": "Closed",
+   "spec": "CFTS039"
+  },
+  "56321": {
+   "status": "Closed",
+   "spec": "SD.00126"
+  },
+  "56322": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56323": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56331": {
+   "status": "Closed",
+   "spec": "VF673_V3_R2"
+  },
+  "56332": {
+   "status": "Closed",
+   "spec": "VF668_V31_R6"
+  },
+  "56334": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "56341": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56350": {
+   "status": "Closed",
+   "spec": "Pop Up List Priority Matrix HMI R1 SR24 1A (May 3 2021)"
+  },
+  "56360": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56361": {
+   "status": "Closed",
+   "spec": "VF551_V4"
+  },
+  "56368": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56370": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56377": {
+   "status": "Closed",
+   "spec": "SD-A0502"
+  },
+  "56378": {
+   "status": "RAR Rejected",
+   "spec": "CFTS020"
+  },
+  "56379": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56381": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "56414": {
+   "status": "Closed",
+   "spec": "CFTS014"
+  },
+  "56417": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "56419": {
+   "status": "Closed",
+   "spec": "VF651_V43_R1"
+  },
+  "56420": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "56446": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "56447": {
+   "status": "Closed",
+   "spec": "SIS_V1_R1_PSR24_210623"
+  },
+  "56449": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "56450": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "56467": {
+   "status": "Closed",
+   "spec": "VF651_V44_R1"
+  },
+  "56468": {
+   "status": "Closed",
+   "spec": "CFTS013"
+  },
+  "56469": {
+   "status": "Closed",
+   "spec": "CFTS013"
+  },
+  "56470": {
+   "status": "Closed",
+   "spec": "CFTS013"
+  },
+  "56471": {
+   "status": "Closed",
+   "spec": "CFTS013"
+  },
+  "56472": {
+   "status": "Closed",
+   "spec": "CFTS013"
+  },
+  "56473": {
+   "status": "Closed",
+   "spec": "CFTS013"
+  },
+  "56474": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "56475": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "56476": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "56483": {
+   "status": "RAR Rejected",
+   "spec": "CS.00165"
+  },
+  "56484": {
+   "status": "Closed",
+   "spec": "VF551_V33"
+  },
+  "56492": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "56495": {
+   "status": "Closed",
+   "spec": "HDCC27_VF135_V4"
+  },
+  "56501": {
+   "status": "RAR Rejected",
+   "spec": "CFTS009"
+  },
+  "56502": {
+   "status": "Closed",
+   "spec": "VF668_V1_R2"
+  },
+  "56503": {
+   "status": "Solution Proposed",
+   "spec": "CFTS084"
+  },
+  "56506": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "56543": {
+   "status": "Closed",
+   "spec": "SD.00082"
+  },
+  "56546": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "56547": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "56548": {
+   "status": "Closed",
+   "spec": "VF169_V44_R3, VF169_V44_R5"
+  },
+  "56549": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "56550": {
+   "status": "Closed",
+   "spec": "VF155_V43_R3"
+  },
+  "56551": {
+   "status": "RAR Rejected",
+   "spec": "VF491"
+  },
+  "56559": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "56562": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "56594": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "56644": {
+   "status": "Closed",
+   "spec": "VF464_V42_R2"
+  },
+  "56645": {
+   "status": "Solution Proposed",
+   "spec": "VF607_V1_R3"
+  },
+  "56646": {
+   "status": "Closed",
+   "spec": "VF556_V4"
+  },
+  "56647": {
+   "status": "Closed",
+   "spec": "VF491_V42"
+  },
+  "56664": {
+   "status": "RAR Rejected",
+   "spec": "CFTS019"
+  },
+  "56665": {
+   "status": "Closed",
+   "spec": "VF601_V1_R5"
+  },
+  "56680": {
+   "status": "Closed",
+   "spec": "VF668_V31_R6, VF668_V31_R5,VF668_V1_R5"
+  },
+  "56681": {
+   "status": "Closed",
+   "spec": "VF668_V1_R5"
+  },
+  "56696": {
+   "status": "Closed",
+   "spec": "VF668_V1_R5"
+  },
+  "56697": {
+   "status": "Closed",
+   "spec": "CFTS010"
+  },
+  "56813": {
+   "status": "Closed",
+   "spec": "VF247_HDCC"
+  },
+  "56814": {
+   "status": "RAR Rejected",
+   "spec": "VF651_V42_R3"
+  },
+  "56815": {
+   "status": "Solution Proposed",
+   "spec": "VF651_V43_R4"
+  },
+  "56816": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "56817": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "56818": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "56819": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "56820": {
+   "status": "Closed",
+   "spec": "NA"
+  },
+  "56821": {
+   "status": "Closed",
+   "spec": "CFTS012"
+  },
+  "56822": {
+   "status": "Closed",
+   "spec": "VF665_V43_R3"
+  },
+  "56823": {
+   "status": "Closed",
+   "spec": "VF668_V23_R1"
+  },
+  "56824": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "56831": {
+   "status": "Closed",
+   "spec": "Personal Account HMI Logic and Flow R1 SR24 Post2A CR24798 (October 03 2023)"
+  },
+  "56852": {
+   "status": "Closed",
+   "spec": "VF451_V43_R1"
+  },
+  "56855": {
+   "status": "Closed",
+   "spec": "VF498_V40"
+  },
+  "56886": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "56890": {
+   "status": "Closed",
+   "spec": "VF491"
+  },
+  "56891": {
+   "status": "Closed",
+   "spec": "VF155_V42_R4"
+  },
+  "56893": {
+   "status": "Closed",
+   "spec": "VF601_V31_R1"
+  },
+  "56894": {
+   "status": "Closed",
+   "spec": "VF601_V31_R3"
+  },
+  "56895": {
+   "status": "Solution Proposed",
+   "spec": "VF451_V42_R1"
+  },
+  "56907": {
+   "status": "RAR Rejected",
+   "spec": "CS.00095"
+  },
+  "56934": {
+   "status": "Closed",
+   "spec": "VF169_V42_R4"
+  },
+  "56935": {
+   "status": "Closed",
+   "spec": "DCT matrix core"
+  },
+  "56936": {
+   "status": "Closed",
+   "spec": "DT27_VF551_V2"
+  },
+  "56939": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "56940": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "56956": {
+   "status": "Closed",
+   "spec": "CFTS085"
+  },
+  "56968": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "56969": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "56971": {
+   "status": "RAR Rejected",
+   "spec": "VF503_V40_R3"
+  },
+  "57011": {
+   "status": "Closed",
+   "spec": "VF665_V42_R6"
+  },
+  "57027": {
+   "status": "Closed",
+   "spec": "Toro VF551_V33"
+  },
+  "57057": {
+   "status": "Closed",
+   "spec": "SD-A0502"
+  },
+  "57087": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "57114": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "57115": {
+   "status": "RAR Rejected",
+   "spec": "CFTS044 and CFTS092"
+  },
+  "57123": {
+   "status": "Closed",
+   "spec": "VF176_V42"
+  },
+  "57124": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "57126": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "57127": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "57164": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "57165": {
+   "status": "Closed",
+   "spec": "CFTS044"
+  },
+  "57177": {
+   "status": "Closed",
+   "spec": "VF155_V43_R3"
+  },
+  "57259": {
+   "status": "Closed",
+   "spec": "CFTS020"
+  },
+  "57261": {
+   "status": "Closed",
+   "spec": "KPI_R1L-R_Rev2"
+  },
+  "57264": {
+   "status": "RAR Rejected",
+   "spec": "CFTS084"
+  },
+  "57299": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "57308": {
+   "status": "Closed",
+   "spec": "VF503_V40"
+  },
+  "57334": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "57368": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "57369": {
+   "status": "Closed",
+   "spec": "SYS_KPI_R1L-R"
+  },
+  "57371": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "57372": {
+   "status": "Solution Accepted",
+   "spec": "CFTS004"
+  },
+  "57373": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "57374": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "57375": {
+   "status": "RAR Rejected",
+   "spec": "CFTS032"
+  },
+  "57376": {
+   "status": "Closed",
+   "spec": "VF498_V42"
+  },
+  "57381": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57385": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "57386": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "57409": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "57410": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "57413": {
+   "status": "Closed",
+   "spec": "VF491_V1"
+  },
+  "57415": {
+   "status": "Closed",
+   "spec": "CS.180"
+  },
+  "57517": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "57518": {
+   "status": "Closed",
+   "spec": "PF-13120"
+  },
+  "57572": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "57585": {
+   "status": "Closed",
+   "spec": "CFTS057"
+  },
+  "57586": {
+   "status": "Solution Accepted",
+   "spec": "CFTS021"
+  },
+  "57631": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "57667": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57669": {
+   "status": "RAR Rejected",
+   "spec": "VF607_V1_R3"
+  },
+  "57676": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "57709": {
+   "status": "Closed",
+   "spec": "Android Auto HUIG (R12-380 / R12-390)"
+  },
+  "57711": {
+   "status": "Solution Accepted",
+   "spec": "CFTS024"
+  },
+  "57752": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "57777": {
+   "status": "Closed",
+   "spec": "CS.00165"
+  },
+  "57803": {
+   "status": "Closed",
+   "spec": "CFTS004"
   },
   "57812": {
    "status": "Solution Accepted",
    "spec": "CFTS043"
   },
+  "57893": {
+   "status": "Closed",
+   "spec": "VF451_V43_R1, VF451_V42_R1"
+  },
+  "57926": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57927": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57928": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57929": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "57930": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57931": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57932": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57933": {
+   "status": "Closed",
+   "spec": "SD.00074"
+  },
+  "57939": {
+   "status": "Closed",
+   "spec": "VF503_V40_R3"
+  },
+  "57943": {
+   "status": "Closed",
+   "spec": "SYS_KPI_R1L-R"
+  },
+  "57945": {
+   "status": "Closed",
+   "spec": "SYS1_KPI_R1L-R_Rev2 - KPI-46 KPI-47 KPI-126"
+  },
+  "57952": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "57971": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57972": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "57973": {
+   "status": "Closed",
+   "spec": "VF155_V43_R3"
+  },
+  "58057": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "58058": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "58059": {
+   "status": "Solution Proposed",
+   "spec": "CFTS020"
+  },
+  "58060": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "58062": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "58092": {
+   "status": "Closed",
+   "spec": "VF668_V1_R2"
+  },
+  "58095": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "58125": {
+   "status": "Closed",
+   "spec": "VF451_V42_R1"
+  },
+  "58126": {
+   "status": "Closed",
+   "spec": "CFTS084"
+  },
+  "58140": {
+   "status": "Closed",
+   "spec": "VF665_V43_R4"
+  },
+  "58151": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "58152": {
+   "status": "Closed",
+   "spec": "SYS1_KPI_R1L-R_Rev2"
+  },
+  "58179": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58200": {
+   "status": "Closed",
+   "spec": "PF R1L-R v1 _Radio Performance Standard"
+  },
+  "58203": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58205": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58206": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58207": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58208": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58209": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58210": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58229": {
+   "status": "Closed",
+   "spec": "SYS_KPI_R1L-R"
+  },
+  "58230": {
+   "status": "Closed",
+   "spec": "HUIG 4.5"
+  },
+  "58233": {
+   "status": "Solution Proposed",
+   "spec": "CIP_Radio_DSPPP_V3_9.doc and R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58242": {
+   "status": "Closed",
+   "spec": "CP R10 / HUIG 4.5"
+  },
+  "58243": {
+   "status": "Closed",
+   "spec": "CP R10 / HUIG 4.5"
+  },
+  "58244": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "58245": {
+   "status": "RAR Rejected",
+   "spec": "CP R10"
+  },
+  "58246": {
+   "status": "Solution Proposed",
+   "spec": "CFTS069"
+  },
+  "58247": {
+   "status": "Closed",
+   "spec": "HUIG"
+  },
+  "58248": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "58282": {
+   "status": "Closed",
+   "spec": "Apple CarPlay R10 performance requirements."
+  },
+  "58284": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "58285": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "58320": {
+   "status": "Closed",
+   "spec": "PF R1L-R v1 _Radio Performance Standard.pdf"
+  },
+  "58342": {
+   "status": "Closed",
+   "spec": "CFTS020"
+  },
+  "58348": {
+   "status": "Closed",
+   "spec": "VF508_V1 VF551_V9"
+  },
+  "58350": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "58351": {
+   "status": "Closed",
+   "spec": "VF465_V42"
+  },
+  "58352": {
+   "status": "Closed",
+   "spec": "VF607_V1, VF607_31, VF607_23"
+  },
+  "58400": {
+   "status": "Closed",
+   "spec": "VF665_V43"
+  },
+  "58401": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "58456": {
+   "status": "Solution Proposed",
+   "spec": "CS.00038"
+  },
+  "58470": {
+   "status": "RAR Rejected",
+   "spec": "CIP_Radio_DSPPP_V3_9"
+  },
+  "58471": {
+   "status": "RAR Rejected",
+   "spec": "CIP_Radio_DSPPP_V3_9"
+  },
+  "58472": {
+   "status": "RAR Rejected",
+   "spec": "CS.00192"
+  },
+  "58482": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "58511": {
+   "status": "Closed",
+   "spec": "VF155_V2_R1"
+  },
+  "58514": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "58545": {
+   "status": "Closed",
+   "spec": "VF451_V42_R1"
+  },
+  "58546": {
+   "status": "Closed",
+   "spec": "VF451_V42_R1"
+  },
+  "58547": {
+   "status": "Closed",
+   "spec": "VF451_V42_R1"
+  },
+  "58548": {
+   "status": "Closed",
+   "spec": "VF451_V42_R1"
+  },
+  "58549": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "58550": {
+   "status": "Closed",
+   "spec": "Toro DBC"
+  },
+  "58553": {
+   "status": "Closed",
+   "spec": "SD.00094_05"
+  },
+  "58614": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "58726": {
+   "status": "Closed",
+   "spec": "PF R1L-R v1 _Radio Performance Standard.pdf and CIP_Radio_DSPPP_V3_9.doc"
+  },
   "58748": {
    "status": "Solution Proposed",
    "spec": "CFTS069"
+  },
+  "58780": {
+   "status": "Solution Proposed",
+   "spec": "CFTS025"
+  },
+  "58804": {
+   "status": "Closed",
+   "spec": "CS.00092"
+  },
+  "58805": {
+   "status": "Closed",
+   "spec": "VF176_V42, VF176_V32"
+  },
+  "58824": {
+   "status": "Closed",
+   "spec": "CFTS015"
+  },
+  "58879": {
+   "status": "Closed",
+   "spec": "CFTS012"
+  },
+  "58880": {
+   "status": "RAR Rejected",
+   "spec": "CFTS011"
+  },
+  "58881": {
+   "status": "Closed",
+   "spec": "CS.00038"
+  },
+  "58914": {
+   "status": "Closed",
+   "spec": "Associated Stack Display"
+  },
+  "58915": {
+   "status": "Solution Proposed",
+   "spec": "HUIG 4.5"
+  },
+  "58916": {
+   "status": "Solution Accepted",
+   "spec": "CS.00158_01"
+  },
+  "58976": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "58977": {
+   "status": "Closed",
+   "spec": "R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "58979": {
+   "status": "Closed",
+   "spec": "CFTS025"
+  },
+  "58996": {
+   "status": "Closed",
+   "spec": "CFTS 019_Audio Management"
+  },
+  "58999": {
+   "status": "Closed",
+   "spec": "KPI_R1L-R_Rev2.xls"
+  },
+  "59004": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "59061": {
+   "status": "Closed",
+   "spec": "VF668_V1"
+  },
+  "59066": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "59067": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "59069": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "59072": {
+   "status": "Solution Proposed",
+   "spec": "CFTS019"
+  },
+  "59073": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "59074": {
+   "status": "Closed",
+   "spec": "Thermal Management Requirements"
+  },
+  "59092": {
+   "status": "RAR Rejected",
+   "spec": "details of TBM HW"
+  },
+  "59109": {
+   "status": "Closed",
+   "spec": "SYS1_KPI_R1L-R_Rev2.xlsx"
+  },
+  "59179": {
+   "status": "Closed",
+   "spec": "CFTS021"
   },
   "59210": {
    "status": "Solution Proposed",
    "spec": "CFTS026"
   },
+  "59243": {
+   "status": "Closed",
+   "spec": "Media HMI Logic and Flow R1 SR24 Post 2A (July 25th, 2023)"
+  },
   "59266": {
    "status": "RAR Rejected",
    "spec": "CS.00152_04"
+  },
+  "59268": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "59276": {
+   "status": "Closed",
+   "spec": "CFTS-025 AppStore support in R1L-R"
+  },
+  "59334": {
+   "status": "RAR Rejected",
+   "spec": "CFTS019"
+  },
+  "59361": {
+   "status": "Closed",
+   "spec": "CS00051"
   },
   "59383": {
    "status": "Solution Proposed",
    "spec": "SD-A0502"
   },
+  "59384": {
+   "status": "Closed",
+   "spec": "CIP_Radio_DSPPP_V3_9.doc"
+  },
+  "59385": {
+   "status": "Closed",
+   "spec": "CIP_Radio_DSPPP_V3_9.doc"
+  },
+  "59386": {
+   "status": "Closed",
+   "spec": "CIP_Radio_DSPPP_V3_9.doc"
+  },
+  "59387": {
+   "status": "Closed",
+   "spec": "CIP_Radio_DSPPP_V3_9.doc"
+  },
+  "59390": {
+   "status": "Closed",
+   "spec": "CIP_Radio_DSPPP_V3_9.doc and R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "59398": {
+   "status": "Closed",
+   "spec": "VF230"
+  },
+  "59489": {
+   "status": "Solution Proposed",
+   "spec": "ECU Identity GCSB Web Services - V1.2"
+  },
+  "59490": {
+   "status": "RAR Rejected",
+   "spec": "CFTS004"
+  },
+  "59515": {
+   "status": "Solution Proposed",
+   "spec": "mutiple CAN architecture"
+  },
+  "59516": {
+   "status": "Closed",
+   "spec": "CFTS021"
+  },
+  "59518": {
+   "status": "Closed",
+   "spec": "CS.00038, CS.00040"
+  },
+  "59546": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "59555": {
+   "status": "Solution Proposed",
+   "spec": "HDCC/DT_VF009_V2"
+  },
+  "59556": {
+   "status": "RAR Rejected",
+   "spec": "KPI_Camera"
+  },
+  "59557": {
+   "status": "Closed",
+   "spec": "CFTS069"
+  },
+  "59558": {
+   "status": "Solution Proposed",
+   "spec": "VF176_V42(Promaster, Toro), VF176_V32 (Fastback)"
+  },
+  "59560": {
+   "status": "Closed",
+   "spec": "CIP_Radio_DSPPP_V3_9.doc and R1 Series Radio EQ Document Version 1.8.pdf"
+  },
+  "59579": {
+   "status": "Closed",
+   "spec": "CFTS024"
+  },
+  "59580": {
+   "status": "Closed",
+   "spec": "CS.00192"
+  },
+  "59616": {
+   "status": "Closed",
+   "spec": "HUIG 4.5 / CP R10"
+  },
+  "59618": {
+   "status": "Closed",
+   "spec": "HUIG 4.5"
+  },
+  "59619": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "59717": {
+   "status": "Closed",
+   "spec": "CFTS022 and VF668_V1 (HDCC and DT)"
+  },
+  "59750": {
+   "status": "Solution Proposed",
+   "spec": "CFTS004"
+  },
+  "59768": {
+   "status": "Closed",
+   "spec": "Proposal from Harman CAN architecture detection"
+  },
+  "59861": {
+   "status": "Solution Proposed",
+   "spec": "VF503_V40_R3"
+  },
+  "59886": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "59901": {
+   "status": "Closed",
+   "spec": "CFTS044"
+  },
+  "59902": {
+   "status": "Closed",
+   "spec": "CFTS032"
+  },
   "59920": {
    "status": "Analysis",
    "spec": "CFTS086"
+  },
+  "59959": {
+   "status": "RAR Rejected",
+   "spec": "KPI_R1L-R_Rev2"
+  },
+  "59995": {
+   "status": "Closed",
+   "spec": "CS.00102"
+  },
+  "60073": {
+   "status": "Solution Proposed",
+   "spec": "[DT27][VF009_V2]"
   },
   "60548": {
    "status": "RAR Rejected",
@@ -75,6 +2888,10 @@
    "status": "RAR Rejected",
    "spec": "CFTS015"
   },
+  "60550": {
+   "status": "Solution Proposed",
+   "spec": "CFTS044"
+  },
   "60579": {
    "status": "Solution Proposed",
    "spec": "CS.00038"
@@ -83,25 +2900,113 @@
    "status": "Solution Proposed",
    "spec": "CS.00038"
   },
+  "60581": {
+   "status": "Draft",
+   "spec": "CFTS024"
+  },
+  "60582": {
+   "status": "Draft",
+   "spec": "SYS1_KPI_R1L-R_Rev2 - KPI-43, KPI-43a, KPI-44, KPI-45"
+  },
+  "60583": {
+   "status": "Draft",
+   "spec": "SYS1_KPI_R1L-R_Rev2 - KPI-39, KPI-40"
+  },
+  "60928": {
+   "status": "Closed",
+   "spec": "CS.000148"
+  },
+  "60929": {
+   "status": "Closed",
+   "spec": "CS.00102"
+  },
   "60986": {
    "status": "Submitted",
    "spec": "CS.00099"
+  },
+  "61094": {
+   "status": "Closed",
+   "spec": "CFTS042"
+  },
+  "61217": {
+   "status": "Closed",
+   "spec": "CFTS086"
+  },
+  "61256": {
+   "status": "Solution Proposed",
+   "spec": "CFTS048"
+  },
+  "61258": {
+   "status": "Closed",
+   "spec": "CFTS044"
+  },
+  "61259": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "61260": {
+   "status": "Closed",
+   "spec": "CFTS041"
+  },
+  "61262": {
+   "status": "Closed",
+   "spec": "CFTS014"
+  },
+  "61263": {
+   "status": "Closed",
+   "spec": "VF556"
   },
   "61536": {
    "status": "RAR Rejected",
    "spec": "CFTS044"
   },
+  "61650": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "61800": {
+   "status": "Solution Proposed",
+   "spec": "CFTS019 Audio Management"
+  },
+  "61824": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "61828": {
+   "status": "Closed",
+   "spec": "CFTS019"
+  },
+  "61881": {
+   "status": "Closed",
+   "spec": "CFTS012"
+  },
   "61900": {
    "status": "Solution Proposed",
    "spec": "CFTS041"
   },
-  "61940": {
+  "61916": {
    "status": "Solution Proposed",
+   "spec": "CFTS022"
+  },
+  "61939": {
+   "status": "Closed",
+   "spec": "CFTS009"
+  },
+  "61940": {
+   "status": "Solution Rejected",
    "spec": "VF654"
   },
   "61964": {
    "status": "Closed",
    "spec": "CFTS092"
+  },
+  "62069": {
+   "status": "Closed",
+   "spec": "CFTS022"
+  },
+  "62408": {
+   "status": "Closed",
+   "spec": "CFTS042"
   },
   "62486": {
    "status": "RAR Rejected",
@@ -111,9 +3016,25 @@
    "status": "RAR Rejected",
    "spec": "CFTS057"
   },
+  "62606": {
+   "status": "Solution Proposed",
+   "spec": "CFTS004"
+  },
+  "62607": {
+   "status": "Closed",
+   "spec": "CFTS004"
+  },
+  "62686": {
+   "status": "Draft",
+   "spec": "CFTS004"
+  },
   "62761": {
    "status": "RAR Rejected",
    "spec": "VF551"
+  },
+  "62932": {
+   "status": "Solution Proposed",
+   "spec": "CFTS042"
   },
   "62983": {
    "status": "Solution Proposed",
@@ -123,13 +3044,37 @@
    "status": "Solution Proposed",
    "spec": "CFTS026"
   },
+  "62985": {
+   "status": "Closed",
+   "spec": "CFTS011"
+  },
+  "63023": {
+   "status": "Solution Proposed",
+   "spec": "CFTS022"
+  },
+  "63219": {
+   "status": "Closed",
+   "spec": "CS.00102"
+  },
   "63225": {
    "status": "Solution Proposed",
    "spec": "CFTS012"
   },
+  "63251": {
+   "status": "Analysis",
+   "spec": "CFTS011"
+  },
+  "63364": {
+   "status": "Solution Proposed",
+   "spec": "CFTS011"
+  },
   "63365": {
    "status": "Analysis",
    "spec": "CFTS011"
+  },
+  "63399": {
+   "status": "Closed",
+   "spec": "SYS1_KPI_R1L-R_Rev2 - KPI-31"
   },
   "63400": {
    "status": "RAR Rejected",
@@ -143,9 +3088,21 @@
    "status": "Solution Proposed",
    "spec": "CFTS044"
   },
+  "63454": {
+   "status": "RAR Rejected",
+   "spec": "VF551"
+  },
+  "63470": {
+   "status": "RAR Rejected",
+   "spec": "VF234"
+  },
   "63474": {
    "status": "Solution Proposed",
    "spec": "RVC+PAM R1 Low SR24 1A (June 25 2021).pdf"
+  },
+  "63507": {
+   "status": "Solution Proposed",
+   "spec": "HUIG 4.5 / CP R10"
   },
   "63558": {
    "status": "Solution Proposed",
@@ -154,6 +3111,10 @@
   "63559": {
    "status": "RAR Rejected",
    "spec": "CS.00038"
+  },
+  "63560": {
+   "status": "Solution Proposed",
+   "spec": "CFTS044"
   },
   "63603": {
    "status": "Solution Proposed",
@@ -171,12 +3132,16 @@
    "status": "RAR Accepted",
    "spec": "CFTS004"
   },
+  "63645": {
+   "status": "Closed",
+   "spec": "VF551_V33"
+  },
   "63646": {
    "status": "RAR Rejected",
    "spec": "CS.00102"
   },
   "63719": {
-   "status": "Submitted",
+   "status": "Solution Proposed",
    "spec": "cs.00102"
   },
   "63768": {
@@ -188,7 +3153,7 @@
    "spec": "CFTS013_26PI1.5, CS.00263"
   },
   "63816": {
-   "status": "Submitted",
+   "status": "Solution Proposed",
    "spec": "CS.00093"
   },
   "63823": {
@@ -196,16 +3161,24 @@
    "spec": "CFTS026 / VF451"
   },
   "63831": {
-   "status": "RAR Accepted",
+   "status": "Solution Proposed",
    "spec": "CS.00212"
   },
   "63846": {
    "status": "Solution Proposed",
    "spec": "CFTS039"
   },
+  "63939": {
+   "status": "Closed",
+   "spec": ""
+  },
   "63975": {
    "status": "RAR Accepted",
    "spec": "CFTS_022"
+  },
+  "63976": {
+   "status": "Closed",
+   "spec": "HMI"
   },
   "64057": {
    "status": "Analysis",
@@ -232,7 +3205,7 @@
    "spec": "CFTS043"
   },
   "64193": {
-   "status": "Solution Proposed",
+   "status": "Analysis",
    "spec": "HUIG 4.5"
   },
   "64200": {
@@ -248,16 +3221,24 @@
    "spec": "CFTS020"
   },
   "64418": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CS.00102"
   },
   "64419": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "Projection Device R1L-R HMI Logic and Flow (February 5 2026) (1)"
   },
   "64421": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "LVDS Atl Message Map ETM-RVCM R41.xlsx, PDT27_E2A_R5_FDCAN8.dbc"
+  },
+  "64423": {
+   "status": "Analysis",
+   "spec": "CFTS048"
+  },
+  "64424": {
+   "status": "Analysis",
+   "spec": "CFTS_022"
   }
  }
 }
