@@ -148,6 +148,12 @@
     "text": "no update",
     "by": "Nick",
     "at": "2026-11-19T05:58:16.335Z"
+   },
+   {
+    "id": "mwt1t2dx48ak",
+    "text": "Jira was updated a week ago, but it requires confirmation from the PM.",
+    "by": "Olivia",
+    "at": "2026-11-23T09:13:19.701Z"
    }
   ],
   "NR1L-16858": [
@@ -257,6 +263,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T09:13:11.889Z",
+ "updated_at": "2026-11-23T09:13:20.190Z",
  "updated_by": "Olivia"
 }
