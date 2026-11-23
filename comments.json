@@ -26,6 +26,12 @@
     "text": "11/18 已雙向更新",
     "by": "Olivia",
     "at": "2026-11-18T09:43:19.138Z"
+   },
+   {
+    "id": "mwt22yylvgxv",
+    "text": "Jira was updated a week ago, but it requires confirmation from the PM.",
+    "by": "Olivia",
+    "at": "2026-11-23T09:21:01.821Z"
    }
   ],
   "NR1LD-1241": [
@@ -279,6 +285,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T09:20:14.205Z",
+ "updated_at": "2026-11-23T09:21:02.344Z",
  "updated_by": "Olivia"
 }
