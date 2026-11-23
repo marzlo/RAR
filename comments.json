@@ -12,6 +12,12 @@
     "text": "The message has been posted from STLA to Jira.",
     "by": "Melody",
     "at": "2026-11-19T03:35:04.643Z"
+   },
+   {
+    "id": "mwszzxcpsc61",
+    "text": "RD has provided feedback in Jira. PM to review and decide the next action.",
+    "by": "Olivia",
+    "at": "2026-11-23T08:22:40.537Z"
    }
   ],
   "NR1LD-1251": [
@@ -243,6 +249,6 @@
    }
   ]
  },
- "updated_at": "2026-11-23T08:18:36.388Z",
+ "updated_at": "2026-11-23T08:22:41.139Z",
  "updated_by": "Olivia"
 }
