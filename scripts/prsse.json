@@ -1,6 +1,6 @@
 {
- "imported": "2026-11-23T10:33:00.119Z",
- "by": "",
+ "imported": "2026-11-24T01:43:28.917Z",
+ "by": "Olivia",
  "source": "RAR (include done) (3).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
@@ -2881,11 +2881,11 @@
    "spec": "[DT27][VF009_V2]"
   },
   "60548": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CS.00101"
   },
   "60549": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS015"
   },
   "60550": {
@@ -2921,7 +2921,7 @@
    "spec": "CS.00102"
   },
   "60986": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CS.00099"
   },
   "61094": {
@@ -2981,7 +2981,7 @@
    "spec": "CFTS012"
   },
   "61900": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "CFTS041"
   },
   "61916": {
@@ -2993,7 +2993,7 @@
    "spec": "CFTS009"
   },
   "61940": {
-   "status": "Solution Rejected",
+   "status": "Submitted",
    "spec": "VF654"
   },
   "61964": {
@@ -3013,7 +3013,7 @@
    "spec": "CS.00102"
   },
   "62518": {
-   "status": "RAR Rejected",
+   "status": "Analysis",
    "spec": "CFTS057"
   },
   "62606": {
@@ -3041,7 +3041,7 @@
    "spec": "CFTS084"
   },
   "62984": {
-   "status": "Solution Proposed",
+   "status": "Submitted",
    "spec": "CFTS026"
   },
   "62985": {
@@ -3129,7 +3129,7 @@
    "spec": "CS.00102"
   },
   "63610": {
-   "status": "RAR Accepted",
+   "status": "Solution Proposed",
    "spec": "CFTS004"
   },
   "63645": {
@@ -3141,7 +3141,7 @@
    "spec": "CS.00102"
   },
   "63719": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "cs.00102"
   },
   "63768": {
@@ -3165,7 +3165,7 @@
    "spec": "CS.00212"
   },
   "63846": {
-   "status": "Solution Proposed",
+   "status": "Submitted",
    "spec": "CFTS039"
   },
   "63939": {
@@ -3189,7 +3189,7 @@
    "spec": "CFTS092"
   },
   "64163": {
-   "status": "RAR Accepted",
+   "status": "Solution Proposed",
    "spec": "Latest-R1LR_Atl-H_25PI4.5 Dec Release-Multimedia - Radio and Audio_CFTS 019_Audio Management_20251203-1112.doc and Logical Identifiers and CAN Mapping v1_80.xls"
   },
   "64164": {
@@ -3197,7 +3197,7 @@
    "spec": "Latest-R1LR_Atl-H_25PI4.5 Dec Release-Multimedia - Radio and Audio_CFTS 019_Audio Management_20251203-1112.doc (reference: Apple Accessory Interface Specification R10)"
   },
   "64167": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "Pop Up List HMI CR0003 - PU1633 & PU1634"
   },
   "64188": {
@@ -3225,7 +3225,7 @@
    "spec": "CS.00102"
   },
   "64419": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "Projection Device R1L-R HMI Logic and Flow (February 5 2026) (1)"
   },
   "64421": {
@@ -3241,23 +3241,23 @@
    "spec": "CFTS_022"
   },
   "64472": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS009"
   },
   "64475": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS_004"
   },
   "64479": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "Media HMI Logic and Flow (R1L-R, 2026-02-09）"
   },
   "64481": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CS.000102"
   },
   "64486": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "VF551_V2(DT/HDCC), VF551_V42(Promaster), VF551_V3(Fastback), VF551_V33(Toro)"
   }
  }
