@@ -17,7 +17,7 @@ JIRA_EMAIL = os.environ.get("JIRA_EMAIL", "")
 JIRA_API_TOKEN = os.environ.get("JIRA_API_TOKEN", "")
 JQL = os.environ.get("JIRA_JQL", "filter=12811 ORDER BY key ASC")
 # External Link: NR1L uses customfield_10599, NR1LD uses customfield_10595
-FIELDS = ["summary", "status", "assignee", "labels", "customfield_10595", "customfield_10599"]
+FIELDS = ["summary", "status", "assignee", "labels", "customfield_10595", "customfield_10599", "comment"]
 
 _auth = base64.b64encode(f"{JIRA_EMAIL}:{JIRA_API_TOKEN}".encode()).decode()
 _HEADERS = {"Authorization": f"Basic {_auth}", "Content-Type": "application/json",
@@ -77,6 +77,24 @@ def search(jql, fields):
             return issues
 
 
+def latest_comments(issues):
+    """Keep only the newest Jira comment of each issue (fetch it separately when the search result was cut short)."""
+    extra = 0
+    for it in issues:
+        f = it.setdefault("fields", {})
+        c = f.get("comment") or {}
+        lst = c.get("comments") or []
+        if (c.get("total") or 0) > len(lst):
+            code, data = _get(f"https://{JIRA_SITE}/rest/api/3/issue/{it['key']}/comment?orderBy=-created&maxResults=1")
+            if code == 200 and data.get("comments"):
+                lst = data["comments"][:1]
+                extra += 1
+        lst = sorted(lst, key=lambda x: x.get("created", ""))
+        f["comment"] = {"total": c.get("total", len(lst)), "comments": lst[-1:]}
+    if extra:
+        print(f"Fetched the latest comment separately for {extra} issues")
+
+
 def main():
     if not JIRA_EMAIL or not JIRA_API_TOKEN:
         sys.exit("JIRA_EMAIL / JIRA_API_TOKEN are empty. Add both under "
@@ -84,6 +102,7 @@ def main():
     diagnose()
     issues = search(JQL, FIELDS)
     print(f"'{JQL}': {len(issues)} issues")
+    latest_comments(issues)
     if not issues:
         # Jira answers an unauthorised search with 200 and no issues: do not publish an empty page.
         sys.exit(f"'{JQL}' returned 0 issues. Check that the secrets belong to an account that can open the filter.")
