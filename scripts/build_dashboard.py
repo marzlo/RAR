@@ -56,6 +56,22 @@ def release_of(f):
     return ("R" + m.group(1), "sum") if m else ("", "")
 
 
+def cross_links(key, f):
+    """Links between an NR1L and an NR1LD ticket (either direction)."""
+    proj = key.split("-")[0]
+    out = []
+    for l in f.get("issuelinks") or []:
+        d = "outward" if l.get("outwardIssue") else "inward"
+        o = l.get(d + "Issue") or {}
+        ok = o.get("key", "")
+        if {proj, ok.split("-")[0]} != {"NR1L", "NR1LD"}:
+            continue
+        st = ((o.get("fields") or {}).get("status") or {})
+        out.append({"key": ok, "type": (l.get("type") or {}).get(d, ""), "status": st.get("name", ""),
+                    "cat": (st.get("statusCategory") or {}).get("key", "")})
+    return out
+
+
 def latest_jira_comment(f):
     lst = ((f.get("comment") or {}).get("comments")) or []
     if not lst:
@@ -83,6 +99,7 @@ def main():
             "key": it["key"],
             "relAuto": rel,
             "relSrc": rel_src,
+            "xl": cross_links(it["key"], f),
             "summary": (f.get("summary") or "").strip(),
             "status": st.get("name", ""),
             "category": (st.get("statusCategory") or {}).get("key", "indeterminate"),
@@ -100,7 +117,10 @@ def main():
             pj = json.load(fh)
         prsse = pj.get("items", {})
         stla_meta = {k: v for k, v in pj.items() if k != "items"}
+    keys = {i["key"] for i in issues}
     for i in issues:
+        for l in i["xl"]:
+            l["inList"] = l["key"] in keys
         p = prsse.get(i["extId"]) or {}
         i["stla"] = p.get("status", "")
         i["spec"] = p.get("spec", "")
