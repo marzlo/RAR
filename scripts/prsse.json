@@ -1,7 +1,7 @@
 {
- "imported": "2026-11-24T05:59:39.739Z",
+ "imported": "2026-11-24T10:05:46.676Z",
  "by": "Olivia",
- "source": "RAR (include done) (3).csv (uploaded from the dashboard)",
+ "source": "RAR (include done) (4).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
   "53722": {
@@ -3240,6 +3240,10 @@
    "status": "Analysis",
    "spec": "CFTS_022"
   },
+  "64471": {
+   "status": "Analysis",
+   "spec": "CFTS041"
+  },
   "64472": {
    "status": "Analysis",
    "spec": "CFTS009"
@@ -3259,6 +3263,14 @@
   "64486": {
    "status": "Analysis",
    "spec": "VF551_V2(DT/HDCC), VF551_V42(Promaster), VF551_V3(Fastback), VF551_V33(Toro)"
+  },
+  "64525": {
+   "status": "Submitted",
+   "spec": "CFTS057"
+  },
+  "64526": {
+   "status": "Submitted",
+   "spec": "VF668"
   }
  }
 }
