@@ -200,6 +200,12 @@
     "text": "STLA feedback copied from RTC to Jira.",
     "by": "Olivia",
     "at": "2026-11-23T09:41:38.508Z"
+   },
+   {
+    "id": "mwucc0h0hd3u",
+    "text": "Partha Koley has provided a new response; please confirm this message.",
+    "by": "Olivia",
+    "at": "2026-11-24T06:55:46.020Z"
    }
   ],
   "NR1LD-1410": [
@@ -335,6 +341,6 @@
    }
   ]
  },
- "updated_at": "2026-11-24T02:35:34.164Z",
+ "updated_at": "2026-11-24T06:55:46.635Z",
  "updated_by": "Olivia"
 }
