@@ -39,6 +39,23 @@ def adf_text(node):
     return inner
 
 
+REL_RE = re.compile(r"(?<![A-Za-z0-9])R([1-9][0-9]?)(?![A-Za-z0-9])")
+
+
+def release_of(f):
+    """BSP Release field first, else an R<n> tag in the summary (R1..R99; not R1L / SR26 / R07)."""
+    for cf in ("customfield_10560", "customfield_10830"):
+        v = f.get(cf)
+        if isinstance(v, list):
+            v = v[0] if v else None
+        if isinstance(v, dict):
+            v = v.get("value") or v.get("name")
+        if v:
+            return str(v).strip(), "bsp"
+    m = REL_RE.search(f.get("summary") or "")
+    return ("R" + m.group(1), "sum") if m else ("", "")
+
+
 def latest_jira_comment(f):
     lst = ((f.get("comment") or {}).get("comments")) or []
     if not lst:
@@ -61,8 +78,11 @@ def main():
         st = f.get("status") or {}
         ext = str(f.get("customfield_10599") or f.get("customfield_10595") or "").strip()
         m = re.search(r"[?&#]id=(\d+)", ext)
+        rel, rel_src = release_of(f)
         issues.append({
             "key": it["key"],
+            "relAuto": rel,
+            "relSrc": rel_src,
             "summary": (f.get("summary") or "").strip(),
             "status": st.get("name", ""),
             "category": (st.get("statusCategory") or {}).get("key", "indeterminate"),
@@ -89,6 +109,11 @@ def main():
     if os.path.exists(cpath):
         with open(cpath, encoding="utf-8") as fh:
             comments = json.load(fh)
+    lpath = os.path.join(HERE, "..", "releases.json")   # Release values typed on the page
+    releases = {"releases": {}}
+    if os.path.exists(lpath):
+        with open(lpath, encoding="utf-8") as fh:
+            releases = json.load(fh)
     rpath = os.path.join(HERE, "..", "remarks.json")    # per-ticket "Status remark" (one editable text each)
     remarks = {"remarks": {}}
     if os.path.exists(rpath):
@@ -101,6 +126,7 @@ def main():
         "issues": issues,
         "comments": comments,
         "remarks": remarks,
+        "releases": releases,
         "stla_meta": stla_meta,
     }
     with open(TEMPLATE, encoding="utf-8") as fh:
