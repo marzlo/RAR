@@ -17,7 +17,8 @@ JIRA_EMAIL = os.environ.get("JIRA_EMAIL", "")
 JIRA_API_TOKEN = os.environ.get("JIRA_API_TOKEN", "")
 JQL = os.environ.get("JIRA_JQL", "filter=12811 ORDER BY key ASC")
 # External Link: NR1L uses customfield_10599, NR1LD uses customfield_10595
-FIELDS = ["summary", "status", "assignee", "labels", "customfield_10595", "customfield_10599", "comment"]
+FIELDS = ["summary", "status", "assignee", "labels", "customfield_10595", "customfield_10599", "comment",
+          "customfield_10560", "customfield_10830"]  # BSP Release (NR1LD / NR1L)
 
 _auth = base64.b64encode(f"{JIRA_EMAIL}:{JIRA_API_TOKEN}".encode()).decode()
 _HEADERS = {"Authorization": f"Basic {_auth}", "Content-Type": "application/json",
