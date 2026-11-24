@@ -9,6 +9,49 @@ TEMPLATE = os.path.join(HERE, "template.html")
 JIRA_SITE = os.environ.get("JIRA_SITE", "mobiledrivetech.atlassian.net")
 
 
+def adf_text(node):
+    """Atlassian Document Format -> plain text."""
+    if isinstance(node, list):
+        return "".join(adf_text(n) for n in node)
+    if not isinstance(node, dict):
+        return str(node or "")
+    t = node.get("type")
+    a = node.get("attrs") or {}
+    if t == "text":
+        return node.get("text", "")
+    if t == "hardBreak":
+        return "\n"
+    if t == "mention":
+        return a.get("text") or "@user"
+    if t == "emoji":
+        return a.get("text") or a.get("shortName") or ""
+    if t in ("inlineCard", "blockCard"):
+        return a.get("url", "")
+    if t in ("mediaSingle", "mediaGroup", "media"):
+        return "[image]"
+    inner = adf_text(node.get("content") or [])
+    if t in ("paragraph", "heading", "codeBlock", "blockquote", "rule", "table", "tableRow"):
+        return inner + "\n"
+    if t == "listItem":
+        return "• " + inner
+    if t in ("tableCell", "tableHeader"):
+        return inner.strip() + " | "
+    return inner
+
+
+def latest_jira_comment(f):
+    lst = ((f.get("comment") or {}).get("comments")) or []
+    if not lst:
+        return None
+    c = sorted(lst, key=lambda x: x.get("created", ""))[-1]
+    body = c.get("body")
+    text = adf_text(body) if isinstance(body, (dict, list)) else str(body or "")
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    if len(text) > 600:
+        text = text[:600].rstrip() + "…"
+    return {"by": (c.get("author") or {}).get("displayName", ""), "at": c.get("created", ""), "text": text}
+
+
 def main():
     with open("raw_issues.json", encoding="utf-8") as f:
         raw = json.load(f)
@@ -27,6 +70,7 @@ def main():
             "labels": f.get("labels") or [],
             "ext": ext,
             "extId": m.group(1) if m else ("link" if ext else ""),
+            "jc": latest_jira_comment(f),
         })
     # STLA prsse export (scripts/prsse.json): External Link id -> STLA status / Other Specification
     ppath = os.path.join(HERE, "prsse.json")
