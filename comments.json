@@ -405,8 +405,16 @@
     "by": "Nick",
     "at": "2026-11-25T01:44:53.944Z"
    }
+  ],
+  "NR1L-17758": [
+   {
+    "id": "mwvgs0rdfzkp",
+    "text": "STLA feedback copied from RTC to Jira",
+    "by": "Nick",
+    "at": "2026-11-25T01:47:57.529Z"
+   }
   ]
  },
- "updated_at": "2026-11-25T01:44:54.388Z",
+ "updated_at": "2026-11-25T01:47:57.985Z",
  "updated_by": "Nick"
 }
