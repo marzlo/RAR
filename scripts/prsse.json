@@ -1,7 +1,7 @@
 {
- "imported": "2026-11-24T10:06:58.303Z",
- "by": "Olivia",
- "source": "RAR (include done) (4).csv (uploaded from the dashboard)",
+ "imported": "2026-11-25T01:08:04.628Z",
+ "by": "Nick",
+ "source": "RAR (include done) (2).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
   "53722": {
@@ -2881,7 +2881,7 @@
    "spec": "[DT27][VF009_V2]"
   },
   "60548": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "CS.00101"
   },
   "60549": {
@@ -2893,7 +2893,7 @@
    "spec": "CFTS044"
   },
   "60579": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "CS.00038"
   },
   "60580": {
@@ -2921,7 +2921,7 @@
    "spec": "CS.00102"
   },
   "60986": {
-   "status": "Analysis",
+   "status": "RAR Rejected",
    "spec": "CS.00099"
   },
   "61094": {
@@ -2993,7 +2993,7 @@
    "spec": "CFTS009"
   },
   "61940": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "VF654"
   },
   "61964": {
@@ -3037,11 +3037,11 @@
    "spec": "CFTS042"
   },
   "62983": {
-   "status": "Solution Proposed",
+   "status": "Submitted",
    "spec": "CFTS084"
   },
   "62984": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS026"
   },
   "62985": {
@@ -3069,7 +3069,7 @@
    "spec": "CFTS011"
   },
   "63365": {
-   "status": "Analysis",
+   "status": "RAR Rejected",
    "spec": "CFTS011"
   },
   "63399": {
@@ -3149,7 +3149,7 @@
    "spec": "CS.00099"
   },
   "63815": {
-   "status": "Solution Proposed",
+   "status": "Submitted",
    "spec": "CFTS013_26PI1.5, CS.00263"
   },
   "63816": {
@@ -3157,7 +3157,7 @@
    "spec": "CS.00093"
   },
   "63823": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "CFTS026 / VF451"
   },
   "63831": {
@@ -3165,7 +3165,7 @@
    "spec": "CS.00212"
   },
   "63846": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS039"
   },
   "63939": {
@@ -3217,11 +3217,11 @@
    "spec": "CFTS086 (LID 1.80)"
   },
   "64288": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "CFTS020"
   },
   "64418": {
-   "status": "Analysis",
+   "status": "Submitted",
    "spec": "CS.00102"
   },
   "64419": {
@@ -3233,11 +3233,11 @@
    "spec": "LVDS Atl Message Map ETM-RVCM R41.xlsx, PDT27_E2A_R5_FDCAN8.dbc"
   },
   "64423": {
-   "status": "Analysis",
+   "status": "RAR Accepted",
    "spec": "CFTS048"
   },
   "64424": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "CFTS_022"
   },
   "64471": {
@@ -3249,7 +3249,7 @@
    "spec": "CFTS009"
   },
   "64475": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "CFTS_004"
   },
   "64479": {
@@ -3265,12 +3265,16 @@
    "spec": "VF551_V2(DT/HDCC), VF551_V42(Promaster), VF551_V3(Fastback), VF551_V33(Toro)"
   },
   "64525": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS057"
   },
   "64526": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "VF668"
+  },
+  "64540": {
+   "status": "RAR Rejected",
+   "spec": "CFTS0019"
   }
  }
 }
