@@ -1,7 +1,7 @@
 {
- "imported": "2026-11-25T01:08:04.628Z",
+ "imported": "2026-11-25T06:26:02.184Z",
  "by": "Nick",
- "source": "RAR (include done) (2).csv (uploaded from the dashboard)",
+ "source": "RAR (include done) (3).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
   "53722": {
@@ -2717,7 +2717,7 @@
    "spec": "CFTS021"
   },
   "59210": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "CFTS026"
   },
   "59243": {
@@ -2965,7 +2965,7 @@
    "spec": "CFTS011"
   },
   "61800": {
-   "status": "Solution Proposed",
+   "status": "Solution Accepted",
    "spec": "CFTS019 Audio Management"
   },
   "61824": {
@@ -3225,7 +3225,7 @@
    "spec": "CS.00102"
   },
   "64419": {
-   "status": "Solution Proposed",
+   "status": "Solution Accepted",
    "spec": "Projection Device R1L-R HMI Logic and Flow (February 5 2026) (1)"
   },
   "64421": {
@@ -3273,8 +3273,16 @@
    "spec": "VF668"
   },
   "64540": {
-   "status": "RAR Rejected",
+   "status": "Submitted",
    "spec": "CFTS0019"
+  },
+  "64559": {
+   "status": "Submitted",
+   "spec": "VF665"
+  },
+  "64560": {
+   "status": "Submitted",
+   "spec": "VF664"
   }
  }
 }
