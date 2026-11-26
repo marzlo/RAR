@@ -122,6 +122,12 @@
     "text": "Amanda posted the message from STLA to JIRA",
     "by": "Nick",
     "at": "2026-11-19T05:43:57.836Z"
+   },
+   {
+    "id": "mwwzuyonujve",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]; [Tuner] is a topic tag, allowed after the class tag) and no document ID\n2. Document ID: The document is the Market Configuration Table (your 7/6 comment links \"SR24 R1 Market Configuration Table v1.6\"), but no ID line in the Description\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T03:29:53.687Z"
    }
   ],
   "NR1L-12813": [
@@ -529,6 +535,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T03:26:49.502Z",
+ "updated_at": "2026-11-26T03:29:54.294Z",
  "updated_by": "Nick"
 }
