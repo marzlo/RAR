@@ -148,6 +148,12 @@
     "text": "STLA feedback copied from RTC to Jira",
     "by": "Nick",
     "at": "2026-11-26T01:01:20.373Z"
+   },
+   {
+    "id": "mwx4p85y4f4k",
+    "text": "RD need to fill in the missing fields:\n1. Summary: No class tag (the main question is about Atlantis Mid → [Atl-M]). Document ID written as \"CFTS _015\" with a file-version suffix. [R5] conflicts with \"R6 release\" in the same title.\n3. STLA Requirement ID: Format differs from STLA numeric IDs\n4. Description: Mixes Atl-M and Atl-H in one ticket; does not name the vehicles or DBC files checked",
+    "by": "Nick",
+    "at": "2026-11-26T05:45:24.118Z"
    }
   ],
   "NR1L-12932": [
@@ -559,6 +565,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T05:31:06.979Z",
+ "updated_at": "2026-11-26T05:45:24.714Z",
  "updated_by": "Nick"
 }
