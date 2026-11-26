@@ -661,8 +661,16 @@
     "by": "Nick",
     "at": "2026-11-26T07:06:29.774Z"
    }
+  ],
+  "NR1L-16996": [
+   {
+    "id": "mwx7o9a4gkl6",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]; [DT] is a vehicle-line tag, allowed after the class tag) and no document ID\n2. Document ID: File names, not STLA document IDs.\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T07:08:37.756Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T07:06:30.404Z",
+ "updated_at": "2026-11-26T07:08:38.372Z",
  "updated_by": "Nick"
 }
