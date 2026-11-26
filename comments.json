@@ -505,8 +505,16 @@
     "by": "Nick",
     "at": "2026-11-26T03:13:57.135Z"
    }
+  ],
+  "NR1L-784": [
+   {
+    "id": "mwwzdbyf47vs",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]). \"Requirement clarification\" does not say what is being clarified.\n3. STLA Requirement ID: Regarding requirement 4907394\". STLA's reply covers 4907382–4907394 only; 4907627 is not in that list",
+    "by": "Nick",
+    "at": "2026-11-26T03:16:11.079Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T03:13:57.824Z",
+ "updated_at": "2026-11-26T03:16:11.738Z",
  "updated_by": "Nick"
 }
