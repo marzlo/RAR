@@ -380,6 +380,12 @@
     "text": "Jira did not render the Stellantis Requirement ID.",
     "by": "Melody",
     "at": "2026-11-23T09:26:55.996Z"
+   },
+   {
+    "id": "mwx9vverof48",
+    "text": "RD need to fill in the missing field:\n1. Summary: Missing: class tag (covers both Atl-H and Atl-M; PM to confirm tag) and the document ID\n3. STLA Requirement ID: One requirement per VF is quoted by section name (\"HU Automatic Display Mode\", \"RearView image deactivation…\"), but no requirement IDs. Add the ID for each",
+    "by": "Nick",
+    "at": "2026-11-26T08:10:32.259Z"
    }
   ],
   "NR1LD-927": [
@@ -717,6 +723,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T08:08:39.064Z",
+ "updated_at": "2026-11-26T08:10:32.914Z",
  "updated_by": "Nick"
 }
