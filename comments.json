@@ -533,8 +533,16 @@
     "by": "Nick",
     "at": "2026-11-26T03:26:49.019Z"
    }
+  ],
+  "NR1L-4123": [
+   {
+    "id": "mwwzzcd67hxj",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]\n2. Document ID\n3. STLA Requirement ID\n4. Description: Generic; does not name the missing signals, the affected requirements, or the vehicle lines, and does not refer to the attachment",
+    "by": "Nick",
+    "at": "2026-11-26T03:33:18.042Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T03:29:54.294Z",
+ "updated_at": "2026-11-26T03:33:18.836Z",
  "updated_by": "Nick"
 }
