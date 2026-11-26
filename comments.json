@@ -466,8 +466,15 @@
     "at": "2026-11-26T02:52:37.172Z"
    }
   ],
-  "NR1L-475": []
+  "NR1L-475": [
+   {
+    "id": "mwwypcef7xo4",
+    "text": "RD need to fill in the missing fields：\n1. Summary: no class tag (\"ALT-H\" is only in the sentence; should be [Atl-H]) and does not mention CFTS-043\n4. Description: Does not explain why the requirements cannot be met or what to clarify. The \"Solution Proposed\" block is STLA's reply, not the question. The actual concerns (HDCC27 DBC shows ETM as transmitter; no Atl-H + LTM vehicle can fulfill these; VF727 lists the signals without describing their use) are only in Frank's 2025-11-20 comment",
+    "by": "Nick",
+    "at": "2026-11-26T02:57:31.911Z"
+   }
+  ]
  },
- "updated_at": "2026-11-26T02:56:31.166Z",
+ "updated_at": "2026-11-26T02:57:32.585Z",
  "updated_by": "Nick"
 }
