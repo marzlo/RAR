@@ -58,6 +58,12 @@
     "text": "RD feedback copied from Jira to RTC.",
     "by": "Olivia",
     "at": "2026-11-23T08:27:26.657Z"
+   },
+   {
+    "id": "mwxcaj5j1bc1",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]) and no document ID (CS.00102)\n3. STLA Requirement ID: The Description cites \"RQMT 5.2.1.16-2\"; use that or the numeric requirement ID\n4. Description: Referenced images are missing (flagged by Amanda on 10/16). The question gives no reason why F185 might not apply. STLA rejected it as a question already answered in meetings",
+    "by": "Nick",
+    "at": "2026-11-26T09:17:55.447Z"
    }
   ],
   "NR1LD-1236": [
@@ -779,6 +785,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T09:15:11.246Z",
+ "updated_at": "2026-11-26T09:17:56.155Z",
  "updated_by": "Nick"
 }
