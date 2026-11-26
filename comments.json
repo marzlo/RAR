@@ -489,8 +489,16 @@
     "by": "Nick",
     "at": "2026-11-26T03:05:27.214Z"
    }
+  ],
+  "NR1L-782": [
+   {
+    "id": "mwwz52igl0gv",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]). \"Clarification on requirement\" does not say what is being clarified.",
+    "by": "Nick",
+    "at": "2026-11-26T03:09:45.592Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T03:05:27.774Z",
+ "updated_at": "2026-11-26T03:09:46.215Z",
  "updated_by": "Nick"
 }
