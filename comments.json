@@ -497,8 +497,16 @@
     "by": "Nick",
     "at": "2026-11-26T03:09:45.592Z"
    }
+  ],
+  "NR1L-783": [
+   {
+    "id": "mwwzaglrn1sz",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]). Identical to NR1L-782, so the two tickets cannot be told apart.",
+    "by": "Nick",
+    "at": "2026-11-26T03:13:57.135Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T03:09:46.215Z",
+ "updated_at": "2026-11-26T03:13:57.824Z",
  "updated_by": "Nick"
 }
