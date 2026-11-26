@@ -438,6 +438,12 @@
     "text": "STLA feedback copied from RTC to Jira",
     "by": "Nick",
     "at": "2026-11-25T01:41:13.048Z"
+   },
+   {
+    "id": "mwx5sc8a6uvc",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]) and no topic\n3. STLA Requirement ID: Only \"complete section 10.1 Implementation requirements\" is referenced. List the requirement IDs in §10.1, or PM to confirm whether a section reference is acceptable",
+    "by": "Nick",
+    "at": "2026-11-26T06:15:48.970Z"
    }
   ],
   "NR1L-17012": [
@@ -577,6 +583,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T06:12:10.692Z",
+ "updated_at": "2026-11-26T06:15:49.583Z",
  "updated_by": "Nick"
 }
