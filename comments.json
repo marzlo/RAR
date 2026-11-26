@@ -609,14 +609,7 @@
     "at": "2026-11-26T03:16:11.079Z"
    }
   ],
-  "NR1L-1537": [
-   {
-    "id": "mwwzr06zo3wq",
-    "text": "RD need to fill in the missing fields:\n1. Summary: no class tag (the question is about Atlantis Mid, so likely [Atl-M]). VF747 is a VF document, so a vehicle-line tag is required (document says \"Fastback\"; vehicle line code to be confirmed). No topic in the title\n3. STLA Requirement ID: NA is not accepted. If the LID $OperationalModeSts$ is used by specific VF747 requirements, list those IDs; otherwise PM to confirm how to fill this for LID-mapping questions",
-    "by": "Nick",
-    "at": "2026-11-26T03:26:49.019Z"
-   }
-  ],
+  "NR1L-1537": [],
   "NR1L-4123": [
    {
     "id": "mwwzzcd67hxj",
@@ -778,6 +771,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T09:20:10.332Z",
+ "updated_at": "2026-11-26T09:21:46.094Z",
  "updated_by": "Nick"
 }
