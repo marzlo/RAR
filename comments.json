@@ -621,8 +621,16 @@
     "by": "Nick",
     "at": "2026-11-26T06:38:33.571Z"
    }
+  ],
+  "NR1L-16550": [
+   {
+    "id": "mwx6s72pu7v6",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]; the Hosted App DIDs are marked \"AtlHi\") and no document ID\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T06:43:41.905Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T06:38:34.216Z",
+ "updated_at": "2026-11-26T06:43:42.468Z",
  "updated_by": "Nick"
 }
