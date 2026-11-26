@@ -605,8 +605,16 @@
     "by": "Nick",
     "at": "2026-11-26T06:26:46.818Z"
    }
+  ],
+  "NR1L-16512": [
+   {
+    "id": "mwx6cstw4caf",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]) and no document ID. VF174 is listed, but since the question covers all R1L vehicle lines, a single vehicle-line tag does not apply\n3. STLA Requirement ID: NRL-150637 is MDT's internal ID, which STLA cannot access. STLA stated that CFTS039 req 4908751 does not relate to the question. Use the VF174 requirement ID (§1.10.1) instead, and a source for the 14–21 inch wheel radius\n4. Description: Relies on an internal requirement STLA cannot see. Does not quote VF174 directly, does not say where 14–21 inches comes from, and does not explain why Harman needs these values. STLA rejected it as unclear",
+    "by": "Nick",
+    "at": "2026-11-26T06:31:43.604Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T06:26:47.315Z",
+ "updated_at": "2026-11-26T06:31:44.327Z",
  "updated_by": "Nick"
 }
