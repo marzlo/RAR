@@ -465,8 +465,16 @@
     "by": "Nick",
     "at": "2026-11-26T02:32:00.302Z"
    }
+  ],
+  "NR1L-475": [
+   {
+    "id": "mwwyaqlxdjqs",
+    "text": "RD need to fill in the missing fields：\nSummary: No class tag; \"ALT-H\" only appears in the sentence. Should be [Atl-H]；CFTS-043 missing from the Summary\n1. Release: Post 1A(currently), Non-standard value\n5. Description: Only a statement, no explanation or question. The \"Solution Proposed\" block is STLA's reply, not the question\n6. Assignee: change to JosephWDLee\n7. Labels: RAR and class label missing\n8. Issue Type = Story",
+    "by": "Nick",
+    "at": "2026-11-26T02:46:10.485Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T02:36:15.520Z",
+ "updated_at": "2026-11-26T02:46:11.130Z",
  "updated_by": "Nick"
 }
