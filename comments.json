@@ -78,6 +78,12 @@
     "text": "Amanda asks the RD team a question.",
     "by": "Olivia",
     "at": "2026-11-23T08:29:33.873Z"
+   },
+   {
+    "id": "mwxc2o8n2neb",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack])\n2. Document ID\t\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T09:11:48.791Z"
    }
   ],
   "NR1LD-1061": [
@@ -765,6 +771,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T09:06:34.802Z",
+ "updated_at": "2026-11-26T09:11:49.420Z",
  "updated_by": "Nick"
 }
