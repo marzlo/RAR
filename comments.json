@@ -755,8 +755,16 @@
     "by": "Nick",
     "at": "2026-11-26T09:03:39.422Z"
    }
+  ],
+  "NR1LD-1234": [
+   {
+    "id": "mwxbvxhs6jz9",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack])\n2. Document ID\n3. STLA Requirement ID\n4. Description: Does not explain why $F122 depends on CAN reprogramming, nor what exactly to confirm (DID not supported? or a default value?). The premise also conflicts with STLA's reply in NR1L-12932 that CS.00101 remains valid",
+    "by": "Nick",
+    "at": "2026-11-26T09:06:34.192Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T09:03:40.067Z",
+ "updated_at": "2026-11-26T09:06:34.802Z",
  "updated_by": "Nick"
 }
