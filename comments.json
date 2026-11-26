@@ -408,6 +408,12 @@
     "text": "Nov 23: no update in RTC",
     "by": "Lynn",
     "at": "2026-11-23T10:17:48.674Z"
+   },
+   {
+    "id": "mwxb8ukoyuu7",
+    "text": "RD need to fill in the missing field:\n1. Summary: No class tag. VF654 is a VF document, so vehicle-line tags are required (Toro / Fastback / ProMaster per Book's 8/31 comment). No document ID. Labels say Atl-H, but these vehicles appear to be Atlantis Mid (NR1L-17202 lists ProMaster 637 and Toro 226 under ATL-Mid)\n3. STLA Requirement ID: \"and many more\" is incomplete; SYS-RA-… is an MDT internal ID. List all STLA requirement IDs for GPS_Presence and SDAR_Presence\n4. Description: the ask is vague (STLA replied on 9/11 asking what was meant) and the vehicle lines are not stated (STLA then answered only for Fastback). No concrete proposal or yes/no question",
+    "by": "Nick",
+    "at": "2026-11-26T08:48:37.320Z"
    }
   ],
   "NR1LD-708": [
@@ -731,6 +737,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T08:17:55.035Z",
+ "updated_at": "2026-11-26T08:48:38.049Z",
  "updated_by": "Nick"
 }
