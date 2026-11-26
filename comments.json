@@ -344,6 +344,12 @@
     "text": "RTC ticket created (RTC ID: 64481).",
     "by": "Melody",
     "at": "2026-11-23T08:25:26.619Z"
+   },
+   {
+    "id": "mwx9qubghr2l",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]). \"RAR ticket for…\" does not state the question\n2. Document ID\n3. STLA Requirement ID\n4. Description: Does not say what is unclear: whether STLA assigns these values or the supplier defines them, what format is expected, or what the CDD already says",
+    "by": "Nick",
+    "at": "2026-11-26T08:06:37.564Z"
    }
   ],
   "NR1LD-1275": [
@@ -711,6 +717,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T07:53:48.713Z",
+ "updated_at": "2026-11-26T08:06:38.203Z",
  "updated_by": "Nick"
 }
