@@ -677,8 +677,16 @@
     "by": "Nick",
     "at": "2026-11-26T07:11:41.005Z"
    }
+  ],
+  "NR1L-17047": [
+   {
+    "id": "mwx871qzrful",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack])\n4. Description: Does not name the vehicle(s) or DBC file(s) checked, does not quote requirement 5251352, and asks \"why\" instead of what is needed (correct CAN mapping, or which DBC/vehicle contains them)",
+    "by": "Nick",
+    "at": "2026-11-26T07:23:14.459Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T07:11:41.588Z",
+ "updated_at": "2026-11-26T07:23:15.119Z",
  "updated_by": "Nick"
 }
