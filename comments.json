@@ -629,8 +629,16 @@
     "by": "Nick",
     "at": "2026-11-26T06:43:41.905Z"
    }
+  ],
+  "NR1L-16575": [
+   {
+    "id": "mwx70e1hy85t",
+    "text": "RD need to fill in the missing fields:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]; [Theme] is a topic tag) and no document ID\n2. Document ID\n3. STLA Requirement ID: Only 6 digits, while STLA IDs are usually 7. Please verify it is not missing a digit.",
+    "by": "Nick",
+    "at": "2026-11-26T06:50:04.181Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T06:43:42.468Z",
+ "updated_at": "2026-11-26T06:50:04.804Z",
  "updated_by": "Nick"
 }
