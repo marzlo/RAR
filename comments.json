@@ -174,6 +174,12 @@
     "text": "STLA feedback copied from RTC to Jira",
     "by": "Nick",
     "at": "2026-11-25T01:40:04.409Z"
+   },
+   {
+    "id": "mwx5ixifodtd",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]) and \"diagnostic\" does not describe the question\n3. STLA Requirement ID: exist one is the document ID, not a requirement ID\n4. Description: Asks about the whole document; does not name specific requirements or explain why CAN flash reprogramming is out of scope for R1L-R. STLA's reply shows the premise (whole CS = flash only) was incorrect",
+    "by": "Nick",
+    "at": "2026-11-26T06:08:29.991Z"
    }
   ],
   "NR1L-13554": [
@@ -565,6 +571,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T05:45:24.714Z",
+ "updated_at": "2026-11-26T06:08:30.648Z",
  "updated_by": "Nick"
 }
