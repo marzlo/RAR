@@ -653,8 +653,16 @@
     "by": "Nick",
     "at": "2026-11-26T07:00:04.423Z"
    }
+  ],
+  "NR1L-16889": [
+   {
+    "id": "mwx7lij29se2",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag (table says AtlHi → likely [Atl-H]). \"DTC Queries\" does not name the DTC. Spaces between tags\n2. Document ID\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T07:06:29.774Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T07:00:05.105Z",
+ "updated_at": "2026-11-26T07:06:30.404Z",
  "updated_by": "Nick"
 }
