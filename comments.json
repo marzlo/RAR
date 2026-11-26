@@ -769,8 +769,16 @@
     "by": "Nick",
     "at": "2026-11-26T09:06:34.192Z"
    }
+  ],
+  "NR1LD-1239": [
+   {
+    "id": "mwxc6zxztt7j",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag. the Description notes \"Requirement applicable to Atl-HI\", so [Atl-H] fits\n2. Document ID\t\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T09:15:10.583Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T09:11:49.420Z",
+ "updated_at": "2026-11-26T09:15:11.246Z",
  "updated_by": "Nick"
 }
