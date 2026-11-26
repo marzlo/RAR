@@ -260,6 +260,12 @@
     "text": "Partha Koley has provided a new response; please confirm this message.",
     "by": "Olivia",
     "at": "2026-11-24T06:55:46.020Z"
+   },
+   {
+    "id": "mwxbfpynzci1",
+    "text": "RD need to fill in the missing field: \n1. Summary: Does not start with [RAR] (starts with [R8]); no class tag; no document ID\n3. STLA Requirement ID: MDT internal ID; STLA rejected because it cannot access it. Use the VF174 §1.10.1 requirement ID\n4. Description: Relies on an internal requirement; does not state that the 96-pulse statement comes from MDT's SYS2 feedback (Jesse, 2026-01-19), nor the source of 14–21 inches. Partha's 2026-11-24 comment explains this clearly but is not in the Description",
+    "by": "Nick",
+    "at": "2026-11-26T08:53:57.935Z"
    }
   ],
   "NR1LD-1410": [
@@ -737,6 +743,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T08:48:38.049Z",
+ "updated_at": "2026-11-26T08:53:58.774Z",
  "updated_by": "Nick"
 }
