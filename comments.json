@@ -38,6 +38,12 @@
     "text": "STLA feedback copied from RTC to Jira.",
     "by": "Olivia",
     "at": "2026-11-23T09:53:05.753Z"
+   },
+   {
+    "id": "mwwyn7gs9mq6",
+    "text": "RD need to fill in the missing fields：\n1. Summary: no class tag, labels already say Atl-H, so it should be [Atl-H]. Not a VF document. Spaces between tags should be removed\n2. Document ID\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T02:55:52.204Z"
    }
   ],
   "NR1LD-1241": [
@@ -469,6 +475,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T02:53:35.758Z",
+ "updated_at": "2026-11-26T02:55:52.777Z",
  "updated_by": "Nick"
 }
