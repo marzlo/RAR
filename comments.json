@@ -124,6 +124,12 @@
     "text": "Need to change the status in the STLA system.",
     "by": "Olivia",
     "at": "2026-11-23T09:16:27.957Z"
+   },
+   {
+    "id": "mwwujx4loptc",
+    "text": "STLA feedback copied from RTC to Jira",
+    "by": "Nick",
+    "at": "2026-11-26T01:01:20.373Z"
    }
   ],
   "NR1L-12932": [
@@ -447,6 +453,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T00:59:49.278Z",
+ "updated_at": "2026-11-26T01:01:20.850Z",
  "updated_by": "Nick"
 }
