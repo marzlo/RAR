@@ -549,8 +549,16 @@
     "by": "Nick",
     "at": "2026-11-26T03:41:45.823Z"
    }
+  ],
+  "NR1L-12762": [
+   {
+    "id": "mwx46ub01byx",
+    "text": "RD need to fill in the missing fields:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T05:31:06.348Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T03:41:46.369Z",
+ "updated_at": "2026-11-26T05:31:06.979Z",
  "updated_by": "Nick"
 }
