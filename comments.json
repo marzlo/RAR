@@ -747,8 +747,16 @@
     "by": "Nick",
     "at": "2026-11-26T08:17:54.364Z"
    }
+  ],
+  "NR1LD-1233": [
+   {
+    "id": "mwxbs6n2a30c",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack])\n3. STLA Requirement ID: not a requirement ID. §5.2.2.90 is quoted; add the requirement ID for DID $F10B\n4. Description: \"MID 2261\" is not explained (another CDD? another vehicle?). \"If I will consider the HDCC/DT it will loss the Data\" is unclear. STLA rejected and asked whether the payload can differ by assembly line, showing the conflict was not understood. Embedded images are broken blob links (same images are attached)",
+    "by": "Nick",
+    "at": "2026-11-26T09:03:39.422Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T09:01:24.665Z",
+ "updated_at": "2026-11-26T09:03:40.067Z",
  "updated_by": "Nick"
 }
