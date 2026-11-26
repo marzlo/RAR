@@ -637,8 +637,16 @@
     "by": "Nick",
     "at": "2026-11-26T06:50:04.181Z"
    }
+  ],
+  "NR1L-16799": [
+   {
+    "id": "mwx79bb9kfqb",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag (the table lists AtlHi and AtlMi; PM to confirm which tag\n2. Document ID\n3. STLA Requirement ID: NRL-150680 is an MDT internal ID that STLA cannot see (same issue as NR1L-16512). Use the STLA requirement ID; the VF654 requirement ID is empty",
+    "by": "Nick",
+    "at": "2026-11-26T06:57:00.549Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T06:50:04.804Z",
+ "updated_at": "2026-11-26T06:57:01.195Z",
  "updated_by": "Nick"
 }
