@@ -394,6 +394,12 @@
     "text": "RD responded the question to Amanda.",
     "by": "Olivia",
     "at": "2026-11-24T07:02:57.075Z"
+   },
+   {
+    "id": "mwx5nn8upvdd",
+    "text": "RD needs to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]",
+    "by": "Nick",
+    "at": "2026-11-26T06:12:09.966Z"
    }
   ],
   "NR1L-7376": [
@@ -571,6 +577,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T06:08:30.648Z",
+ "updated_at": "2026-11-26T06:12:10.692Z",
  "updated_by": "Nick"
 }
