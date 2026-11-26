@@ -613,8 +613,16 @@
     "by": "Nick",
     "at": "2026-11-26T06:31:43.604Z"
    }
+  ],
+  "NR1L-16536": [
+   {
+    "id": "mwx6ll5vqsu4",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]; [PAM] is a topic tag) and no document ID\n2. Document ID: A file name, not an STLA document ID (e.g. CFTSxx / VFxxx / CS.xxxxx). Provide the formal ID of this HMI document, or the CFTS/VF that defines PAM for R1L-R\n3. STLA Requirement ID:\n4. Description: Q2 and Q3 are clear, but Q1 refers to \"this requirement\" without identifying it. No background on what in the HMI document is unclear",
+    "by": "Nick",
+    "at": "2026-11-26T06:38:33.571Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T06:31:44.327Z",
+ "updated_at": "2026-11-26T06:38:34.216Z",
  "updated_by": "Nick"
 }
