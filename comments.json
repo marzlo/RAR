@@ -598,8 +598,15 @@
     "at": "2026-11-26T06:23:22.824Z"
    }
   ],
-  "NR1L-16274": []
+  "NR1L-16274": [
+   {
+    "id": "mwx66ftut4rr",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]). Wording unclear (\"the useful for\")\n4. Description: Was a valid clarification, but is now outdated: STLA answered the clarification on 10/07, and MDT's current position is \"not feasible, please remove BT Link Key from 4942579\". The Description does not state that position or the technical reasons (only in comments from Johnny 10/27 and Dean 11/11, 11/26)",
+    "by": "Nick",
+    "at": "2026-11-26T06:26:46.818Z"
+   }
+  ]
  },
- "updated_at": "2026-11-26T06:26:20.825Z",
+ "updated_at": "2026-11-26T06:26:47.315Z",
  "updated_by": "Nick"
 }
