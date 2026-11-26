@@ -108,6 +108,12 @@
     "text": "no update",
     "by": "Nick",
     "at": "2026-11-19T03:19:42.993Z"
+   },
+   {
+    "id": "mwwzgou843ie",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack])\n4. Description: One vague sentence; no requirement text quoted and \"multi display\" is undefined. STLA rejected it for exactly this reason. The real concern (4816097 requires touch events from a secondary display to be sent back to the HU) only appeared later in the 2026-02-25 comment",
+    "by": "Nick",
+    "at": "2026-11-26T03:18:47.744Z"
    }
   ],
   "NR1L-3633": [
@@ -515,6 +521,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T03:16:11.738Z",
+ "updated_at": "2026-11-26T03:18:48.351Z",
  "updated_by": "Nick"
 }
