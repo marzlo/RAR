@@ -472,6 +472,12 @@
     "text": "STLA feedback copied from RTC to Jira",
     "by": "Nick",
     "at": "2026-11-25T01:47:57.529Z"
+   },
+   {
+    "id": "mwx93qm7lydd",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]; the ticket covers both ATL-H and ATL-M)",
+    "by": "Nick",
+    "at": "2026-11-26T07:48:39.679Z"
    }
   ],
   "NR1LD-1441": [
@@ -699,6 +705,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T07:31:52.750Z",
+ "updated_at": "2026-11-26T07:48:40.332Z",
  "updated_by": "Nick"
 }
