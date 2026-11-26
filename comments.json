@@ -458,7 +458,14 @@
     "at": "2026-11-26T00:59:48.781Z"
    }
   ],
-  "NR1LD-1117": [],
+  "NR1LD-1117": [
+   {
+    "id": "mwwyj0z8gcmd",
+    "text": "RD need to fill in the missing fields：\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]\n3. STLA Requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T02:52:37.172Z"
+   }
+  ],
   "NR1L-475": [
    {
     "id": "mwwyaqlxdjqs",
@@ -468,6 +475,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T02:51:43.518Z",
+ "updated_at": "2026-11-26T02:52:37.750Z",
  "updated_by": "Nick"
 }
