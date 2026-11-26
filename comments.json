@@ -451,8 +451,16 @@
     "by": "Nick",
     "at": "2026-11-26T00:59:48.781Z"
    }
+  ],
+  "NR1LD-1117": [
+   {
+    "id": "mwwx1607uavb",
+    "text": "RD need to fill in the missing fields：\nSummary: Missing [Atl-H] / [Atl-M] / [Core]\n1. Release: Fix versions also empty; only [R7] appears in the Summary\n4. STLA requirement ID: The questions refer to §5.3.5 and §5.4, but no ID is given\n6. Assignee: StevenJSHsu change to JosephWDLee\n7. Labels: RAR + Atl-H/Atl-M/Core/SWPack: Both labels missing",
+    "by": "Nick",
+    "at": "2026-11-26T02:10:44.263Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T01:01:20.850Z",
+ "updated_at": "2026-11-26T02:10:44.718Z",
  "updated_by": "Nick"
 }
