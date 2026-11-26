@@ -1,7 +1,7 @@
 {
- "imported": "2026-11-25T10:13:08.948Z",
+ "imported": "2026-11-26T00:53:46.274Z",
  "by": "Nick",
- "source": "RAR (include done) (5).csv (uploaded from the dashboard)",
+ "source": "RAR (include done) (6).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
   "53722": {
@@ -2885,7 +2885,7 @@
    "spec": "CS.00101"
   },
   "60549": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "CFTS015"
   },
   "60550": {
@@ -3013,7 +3013,7 @@
    "spec": "CS.00102"
   },
   "62518": {
-   "status": "Analysis",
+   "status": "RAR Accepted",
    "spec": "CFTS057"
   },
   "62606": {
@@ -3037,7 +3037,7 @@
    "spec": "CFTS042"
   },
   "62983": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS084"
   },
   "62984": {
@@ -3149,7 +3149,7 @@
    "spec": "CS.00099"
   },
   "63815": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS013_26PI1.5, CS.00263"
   },
   "63816": {
@@ -3161,7 +3161,7 @@
    "spec": "CFTS026 / VF451"
   },
   "63831": {
-   "status": "Solution Proposed",
+   "status": "Closed",
    "spec": "CS.00212"
   },
   "63846": {
@@ -3181,7 +3181,7 @@
    "spec": "HMI"
   },
   "64057": {
-   "status": "Analysis",
+   "status": "Solution Proposed",
    "spec": "VF155"
   },
   "64116": {
@@ -3221,7 +3221,7 @@
    "spec": "CFTS020"
   },
   "64418": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CS.00102"
   },
   "64419": {
@@ -3269,19 +3269,19 @@
    "spec": "CFTS057"
   },
   "64526": {
-   "status": "RAR Rejected",
+   "status": "Analysis",
    "spec": "VF668"
   },
   "64540": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "CFTS0019"
   },
   "64559": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "VF665"
   },
   "64560": {
-   "status": "Submitted",
+   "status": "Analysis",
    "spec": "VF664"
   }
  }
