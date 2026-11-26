@@ -300,6 +300,12 @@
     "text": "RTC tickets have been completed.",
     "by": "Melody",
     "at": "2026-11-23T05:59:26.448Z"
+   },
+   {
+    "id": "mwx8i588j5bn",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]). \"RAR ticket for … Diagnostic 0x1821\" does not state the question\n3. STLA Requirement ID: This is the document ID, not a requirement ID",
+    "by": "Nick",
+    "at": "2026-11-26T07:31:52.184Z"
    }
   ],
   "NR1L-17549": [
@@ -693,6 +699,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T07:28:25.893Z",
+ "updated_at": "2026-11-26T07:31:52.750Z",
  "updated_by": "Nick"
 }
