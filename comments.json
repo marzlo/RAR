@@ -38,6 +38,12 @@
     "text": "STLA feedback copied from RTC to Jira.",
     "by": "Olivia",
     "at": "2026-11-23T09:53:05.753Z"
+   },
+   {
+    "id": "mwwxxz6dn0zk",
+    "text": "RD need to fill in the missing fields：\nSummary: Missing class tag\n1. Release: Fix versions empty; only [R7] in the Summary\n2. ECU name\n3. Document ID\t\n4. STLA Requirement ID\n6. Assignee: change to JosephWDLee\t\n8. Issue Type = Story",
+    "by": "Nick",
+    "at": "2026-11-26T02:36:15.061Z"
    }
   ],
   "NR1LD-1241": [
@@ -461,6 +467,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T02:32:00.766Z",
+ "updated_at": "2026-11-26T02:36:15.520Z",
  "updated_by": "Nick"
 }
