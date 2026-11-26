@@ -645,8 +645,16 @@
     "by": "Nick",
     "at": "2026-11-26T06:57:00.549Z"
    }
+  ],
+  "NR1L-16860": [
+   {
+    "id": "mwx7d96vyrel",
+    "text": "RD need to fill in the missing field:\n1. Summary: Does not start with [RAR] (written as \"RAR —\"); no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]); no document ID.\n3. STLA Requirement ID: List the CFTS013 display-thermal requirement IDs (backlight 51–55°C, popup 56–59°C, display off ≥60°C). The Polarion IDs in the 11/13 comment (SYS-RA-RADIO-DERATING-STRATEGY-004~007) are MDT internal and STLA cannot see them",
+    "by": "Nick",
+    "at": "2026-11-26T07:00:04.423Z"
+   }
   ]
  },
- "updated_at": "2026-11-26T06:57:01.195Z",
+ "updated_at": "2026-11-26T07:00:05.105Z",
  "updated_by": "Nick"
 }
