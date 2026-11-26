@@ -330,6 +330,12 @@
     "text": "RTC ticket created (RTC ID:64479).",
     "by": "Olivia",
     "at": "2026-11-23T08:18:35.932Z"
+   },
+   {
+    "id": "mwx9ackdguwd",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack]; [Media][HMI] are topic tags) and no document ID\n3. STLA Requirement ID: A page reference, not a requirement ID.",
+    "by": "Nick",
+    "at": "2026-11-26T07:53:48.061Z"
    }
   ],
   "NR1L-17858": [
@@ -705,6 +711,6 @@
    }
   ]
  },
- "updated_at": "2026-11-26T07:48:40.332Z",
+ "updated_at": "2026-11-26T07:53:48.713Z",
  "updated_by": "Nick"
 }
