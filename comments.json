@@ -586,6 +586,12 @@
     "text": "STLA feedback copied from RTC to Jira",
     "by": "Nick",
     "at": "2026-11-27T01:06:40.809Z"
+   },
+   {
+    "id": "mwydihw8nnzh",
+    "text": "RD need to fill in the missing field:\n1. Summary: Does not start with [RAR].\n3. STLA Requirement ID: STLA cannot trace \"VF_ID\" numbers. Use the STLA requirement ID from the VF664 document\n4. Description: The findings are specific, but there is no requirement text and no question.",
+    "by": "Nick",
+    "at": "2026-11-27T02:39:52.856Z"
    }
   ],
   "NR1LD-1298": [
@@ -843,6 +849,6 @@
    }
   ]
  },
- "updated_at": "2026-11-27T02:19:28.360Z",
+ "updated_at": "2026-11-27T02:39:53.513Z",
  "updated_by": "Nick"
 }
