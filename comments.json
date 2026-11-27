@@ -991,8 +991,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:31:03.592Z"
    }
+  ],
+  "NR1L-17025": [
+   {
+    "id": "mwyfeim66bhb",
+    "text": "RAR check: fail\n1. Summary: Missing class tag\n3. STLA Requirement ID: No requirement IDs; the decision covers the whole document\n4. Description: A record of an internal decision, not a question for STLA. The email screenshot is not attached as a file",
+    "by": "Nick",
+    "at": "2026-11-27T03:32:46.398Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:31:04.542Z",
+ "updated_at": "2026-11-27T03:32:47.061Z",
  "updated_by": "Nick"
 }
