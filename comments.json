@@ -24,6 +24,12 @@
     "text": "Varun Kumar suggested that a discussion is needed.",
     "by": "Olivia",
     "at": "2026-11-24T09:46:33.282Z"
+   },
+   {
+    "id": "mwybz9hyjz6n",
+    "text": "RD need to fill in the missing field: \n1. Summary: no class tag (DT/HDCC → likely [Atl-H]). Missing space in \"$2956Calibration\".\n3. STLA Requirement ID\n4. Description: The reasoning does not connect SGW to ADA; STLA replied the DID is unrelated to ADA. The table image (image156.png) is not attached; the CDD screenshot is a broken blob link (attached separately)",
+    "by": "Nick",
+    "at": "2026-11-27T01:56:55.894Z"
    }
   ],
   "NR1LD-1251": [
@@ -805,6 +811,6 @@
    }
   ]
  },
- "updated_at": "2026-11-27T01:10:08.945Z",
+ "updated_at": "2026-11-27T01:56:56.742Z",
  "updated_by": "Nick"
 }
