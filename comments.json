@@ -999,8 +999,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:32:46.398Z"
    }
+  ],
+  "NR1LD-905": [
+   {
+    "id": "mwyfgdzbj3w8",
+    "text": "RAR check: fail\n1. Summary: no class tag (Labels say Atl-H) and no document ID\n3. STLA Requirement ID: MDT internal IDs, not STLA requirement IDs",
+    "by": "Nick",
+    "at": "2026-11-27T03:34:13.703Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:32:47.061Z",
+ "updated_at": "2026-11-27T03:34:14.405Z",
  "updated_by": "Nick"
 }
