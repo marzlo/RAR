@@ -967,8 +967,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:27:09.497Z"
    }
+  ],
+  "NR1LD-1448": [
+   {
+    "id": "mwyf96ro93tt",
+    "text": "RAR check: fail\n1. Summary: no class tag (AtlMid → [Atl-M]), no document ID (VF660), and no vehicle-line tag (VF document → [ProMaster])\n3. STLA Requirement ID: MDT internal SYS2 ID; use the VF660 STLA requirement ID\n4. Description: One line only: no DBC file / vehicle checked, no requirement text, no explanation of what the signal is used for",
+    "by": "Nick",
+    "at": "2026-11-27T03:28:37.764Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:27:10.141Z",
+ "updated_at": "2026-11-27T03:28:38.409Z",
  "updated_by": "Nick"
 }
