@@ -812,6 +812,12 @@
     "text": "STLA feedback copied from RTC to Jira.",
     "by": "Nick",
     "at": "2026-11-26T09:35:27.440Z"
+   },
+   {
+    "id": "mwycn0eetmtc",
+    "text": "RD need to fill in the missing field:\n1. Summary: required for VF documents). Missing class tag (Toro appears to be Atlantis Mid → likely [Atl-M]). Title does not state the question. Spaces between tags\n3. STLA Requirement ID: NA is not accepted. Add the VF668 requirement ID for the initialization rule",
+    "by": "Nick",
+    "at": "2026-11-27T02:15:23.846Z"
    }
   ],
   "NR1LD-1055": [
@@ -831,6 +837,6 @@
    }
   ]
  },
- "updated_at": "2026-11-27T02:11:12.586Z",
+ "updated_at": "2026-11-27T02:15:24.519Z",
  "updated_by": "Nick"
 }
