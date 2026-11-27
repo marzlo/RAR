@@ -855,8 +855,16 @@
     "by": "Nick",
     "at": "2026-11-27T02:41:35.761Z"
    }
+  ],
+  "NR1L-17548": [
+   {
+    "id": "mwydormph63z",
+    "text": "RD need to fill in the missing field:\n1. Summary: no class tag (two items are Atl-H, one is Atl-M; PM to confirm tag). \"Missing CAN Signals\" does not match the content, which is about correcting existing mappings.\n3. STLA Requirement ID: TBD is not accepted.\n4. Description: Written as instructions, not questions. No evidence for each change (which DBC/vehicle shows the signal is unused or correct, why $CallEnd$ should be empty), and no reference to the affected requirements",
+    "by": "Nick",
+    "at": "2026-11-27T02:44:45.409Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T02:41:36.374Z",
+ "updated_at": "2026-11-27T02:44:46.092Z",
  "updated_by": "Nick"
 }
