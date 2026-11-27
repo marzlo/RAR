@@ -556,6 +556,12 @@
     "text": "RTC ticket created (RTC ID:64560)",
     "by": "Nick",
     "at": "2026-11-25T02:56:56.243Z"
+   },
+   {
+    "id": "mwya6n1l23qb",
+    "text": "STLA feedback copied from RTC to Jira",
+    "by": "Nick",
+    "at": "2026-11-27T01:06:40.809Z"
    }
   ],
   "NR1LD-1298": [
@@ -785,6 +791,6 @@
    }
   ]
  },
- "updated_at": "2026-11-27T01:05:15.072Z",
+ "updated_at": "2026-11-27T01:06:41.266Z",
  "updated_by": "Nick"
 }
