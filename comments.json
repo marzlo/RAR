@@ -887,8 +887,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:06:58.872Z"
    }
+  ],
+  "NR1LD-1206": [
+   {
+    "id": "mwyel7p7xuly",
+    "text": "RAR CHECK: FAIL\n1. Summary: No class tag and no document ID. More importantly, this is an internal support request, not an STLA requirement clarification, so the [RAR] prefix is misleading\n2. Document ID: Not applicable: no STLA document involved\n3. STLA Requirement ID: Not applicable: no STLA requirement involved\n4. Description: Clear as a support request, but nothing for STLA to answer",
+    "by": "Nick",
+    "at": "2026-11-27T03:09:59.227Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:06:59.566Z",
+ "updated_at": "2026-11-27T03:09:59.908Z",
  "updated_by": "Nick"
 }
