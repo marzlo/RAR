@@ -1015,8 +1015,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:35:58.199Z"
    }
+  ],
+  "NR1LD-1300": [
+   {
+    "id": "mwyfk7d3ad00",
+    "text": "RAR check: fail\n1. Summary: no class tag (Ved says Atl-Mid → [Atl-M]); VF668 is a VF document but no vehicle-line tag (Toro/Fastback)\n3. STLA Requirement ID: MDT internal SYS2 IDs (acceptable for a Harman→MDT query). Both items in the Description are labelled 359; the second should be 360",
+    "by": "Nick",
+    "at": "2026-11-27T03:37:11.751Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:35:58.874Z",
+ "updated_at": "2026-11-27T03:37:12.400Z",
  "updated_by": "Nick"
 }
