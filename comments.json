@@ -502,6 +502,12 @@
     "text": "STLA feedback copied from RTC to Jira",
     "by": "Olivia",
     "at": "2026-11-24T07:13:21.925Z"
+   },
+   {
+    "id": "mwyc8nvagbnr",
+    "text": "RD need to fill in the missing field:\n1. Summary: Minor format issues only: class tag should be [Atl-H] (not [Atl-Hi]) and placed right after [RAR]; document ID typo \"CFTS0019\" → \"CFTS019\". Title is very long; the parenthetical can be shortened.",
+    "by": "Nick",
+    "at": "2026-11-27T02:04:14.422Z"
    }
   ],
   "NR1L-13236": [
@@ -817,6 +823,6 @@
    }
   ]
  },
- "updated_at": "2026-11-27T02:00:13.190Z",
+ "updated_at": "2026-11-27T02:04:15.281Z",
  "updated_by": "Nick"
 }
