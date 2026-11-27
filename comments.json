@@ -863,8 +863,16 @@
     "by": "Nick",
     "at": "2026-11-27T02:44:45.409Z"
    }
+  ],
+  "NR1L-16559": [
+   {
+    "id": "mwyduvk893ao",
+    "text": "RD need to fill in the missing field: \n1. Summary: no class tag (all rows are AtlMi → [Atl-M])\n2. Document ID: Add a Document ID line\n3. STLA Requirement ID: MDT internal IDs; STLA cannot see them. Use the CFTS044 STLA requirement IDs",
+    "by": "Nick",
+    "at": "2026-11-27T02:49:30.440Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T02:44:46.092Z",
+ "updated_at": "2026-11-27T02:49:31.115Z",
  "updated_by": "Nick"
 }
