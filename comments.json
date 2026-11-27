@@ -927,8 +927,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:18:52.015Z"
    }
+  ],
+  "NR1LD-1134": [
+   {
+    "id": "mwyezk0m4imp",
+    "text": "RAR check:\n1. Summary: no class tag. Mixes two documents (CFTS_021, CS.00038) with an internal SYS-RA ID\n2. Document ID: CFTS_021 / CS.00038 appear only in the Summary\n3. STLA Requirement ID: MDT internal SYS2 ID, not an STLA requirement ID\n4. Description: This is Harman's response, not a problem statement or question",
+    "by": "Nick",
+    "at": "2026-11-27T03:21:08.374Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:18:52.476Z",
+ "updated_at": "2026-11-27T03:21:09.059Z",
  "updated_by": "Nick"
 }
