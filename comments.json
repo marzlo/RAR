@@ -935,8 +935,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:21:08.374Z"
    }
+  ],
+  "NR1LD-1277": [
+   {
+    "id": "mwyf1rza03uq",
+    "text": "RAR check: fail\n1. Summary: no class tag. VF503 is a VF document, so a vehicle-line tag is required ([ProMaster] per NR1LD-1292). Spaces between tags\n3. STLA Requirement ID: MDT internal SYS2 ID. Acceptable for a Harman→MDT SYS2 request, but not an STLA requirement ID",
+    "by": "Nick",
+    "at": "2026-11-27T03:22:52.006Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:21:09.059Z",
+ "updated_at": "2026-11-27T03:22:52.797Z",
  "updated_by": "Nick"
 }
