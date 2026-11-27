@@ -871,8 +871,16 @@
     "by": "Nick",
     "at": "2026-11-27T02:49:30.440Z"
    }
+  ],
+  "NR1L-16647": [
+   {
+    "id": "mwydyxsxmuq2",
+    "text": "RD need to fill in the missing field:\n1. Summary: Missing class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack])\n3. STLA Requirement ID: A section number, not a requirement ID. Use the numeric ID if CS.00038 has one",
+    "by": "Nick",
+    "at": "2026-11-27T02:52:39.969Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T02:49:31.115Z",
+ "updated_at": "2026-11-27T02:52:40.822Z",
  "updated_by": "Nick"
 }
