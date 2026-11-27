@@ -895,8 +895,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:09:59.227Z"
    }
+  ],
+  "NR1LD-1228": [
+   {
+    "id": "mwyeozfb24a7",
+    "text": "RAR check: FAIL\n1. Summary: No class tag and no document ID. The ask is directed at Harman, not STLA, so [RAR] is misleading\n2. Document ID: The VF sheets and VF230 are referenced only implicitly\n3. STLA Requirement ID: No requirement IDs; the VF230 IDs appear only in Naveen's 11/17 comment\n4. Description: Clear as an internal tracking request, but neither part is a question for STLA. Part 1 is delivery tracking; part 2 depends on the VF documents",
+    "by": "Nick",
+    "at": "2026-11-27T03:12:55.127Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:09:59.908Z",
+ "updated_at": "2026-11-27T03:12:55.793Z",
  "updated_by": "Nick"
 }
