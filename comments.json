@@ -1007,8 +1007,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:34:13.703Z"
    }
+  ],
+  "NR1LD-1253": [
+   {
+    "id": "mwyfimlz8n4t",
+    "text": "RAR check: fail\n1. Summary: no class tag. VF556 is a VF document, so a vehicle-line tag is required (HDCC/DT per the attached workbook)\n2. Document ID: Add a Document ID line with the version (VF556_V4)\n3. STLA Requirement ID: Row numbers in the SYSRA workbook, not STLA requirement IDs",
+    "by": "Nick",
+    "at": "2026-11-27T03:35:58.199Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:34:14.405Z",
+ "updated_at": "2026-11-27T03:35:58.874Z",
  "updated_by": "Nick"
 }
