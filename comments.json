@@ -789,8 +789,16 @@
     "by": "Nick",
     "at": "2026-11-26T09:35:27.440Z"
    }
+  ],
+  "NR1LD-1055": [
+   {
+    "id": "mwya7y4bl9rt",
+    "text": "Amanda copied STLA feedback from RTC to Jira",
+    "by": "Nick",
+    "at": "2026-11-27T01:07:41.819Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T01:06:41.266Z",
+ "updated_at": "2026-11-27T01:07:42.407Z",
  "updated_by": "Nick"
 }
