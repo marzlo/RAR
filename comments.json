@@ -879,8 +879,16 @@
     "by": "Nick",
     "at": "2026-11-27T02:52:39.969Z"
    }
+  ],
+  "NR1LD-928": [
+   {
+    "id": "mwyehcjczhjr",
+    "text": "RAR CHECK: FAIL\n1. Summary: no class tag ([Atl-H]/[Atl-M]/[Core]/[SWPack])\n2. Document ID: Add a Document ID line\n3. STLA Requirement ID: No requirement IDs for the TC8-related requirements\n4. Description: A commercial reason only: no specific requirement, no technical reason, no question to STLA",
+    "by": "Nick",
+    "at": "2026-11-27T03:06:58.872Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T02:52:40.822Z",
+ "updated_at": "2026-11-27T03:06:59.566Z",
  "updated_by": "Nick"
 }
