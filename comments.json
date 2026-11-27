@@ -951,8 +951,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:24:10.630Z"
    }
+  ],
+  "NR1LD-1299": [
+   {
+    "id": "mwyf54va7vg6",
+    "text": "RAR check: fail\n1. Summary: no class tag and no document ID; topic is in brackets. Spaces between tags\n3. STLA Requirement ID: MDT internal SYS2 IDs (acceptable for a Harman→MDT SYS2 query, but not STLA IDs). The CFTS016 link points to Harman's internal ALM",
+    "by": "Nick",
+    "at": "2026-11-27T03:25:28.678Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:24:11.773Z",
+ "updated_at": "2026-11-27T03:25:29.359Z",
  "updated_by": "Nick"
 }
