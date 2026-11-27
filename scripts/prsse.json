@@ -1,7 +1,7 @@
 {
- "imported": "2026-11-26T09:34:21.670Z",
+ "imported": "2026-11-27T00:56:56.208Z",
  "by": "Nick",
- "source": "RAR (include done) (7).csv (uploaded from the dashboard)",
+ "source": "RAR (include done) (8).csv (uploaded from the dashboard)",
  "note": "Only the IDs used by the dashboard.",
  "items": {
   "53722": {
@@ -3013,7 +3013,7 @@
    "spec": "CS.00102"
   },
   "62518": {
-   "status": "RAR Accepted",
+   "status": "Solution Proposed",
    "spec": "CFTS057"
   },
   "62606": {
@@ -3221,7 +3221,7 @@
    "spec": "CFTS020"
   },
   "64418": {
-   "status": "Analysis",
+   "status": "RAR Rejected",
    "spec": "CS.00102"
   },
   "64419": {
@@ -3283,6 +3283,10 @@
   "64560": {
    "status": "RAR Rejected",
    "spec": "VF664"
+  },
+  "64612": {
+   "status": "Analysis",
+   "spec": "CFTS024"
   }
  }
 }
