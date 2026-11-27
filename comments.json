@@ -959,8 +959,16 @@
     "by": "Nick",
     "at": "2026-11-27T03:25:28.678Z"
    }
+  ],
+  "NR1LD-1447": [
+   {
+    "id": "mwyf7antznzn",
+    "text": "RAR check: fail\n1. Summary: no class tag (covers both architectures) and no document ID (CFTS057)\n2. Document ID: Add a Document ID line\n3. STLA Requirement ID: MDT internal ID; neither STLA nor MDT outside Harman can open the ALM link. Use the CFTS057 STLA requirement ID",
+    "by": "Nick",
+    "at": "2026-11-27T03:27:09.497Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T03:25:29.359Z",
+ "updated_at": "2026-11-27T03:27:10.141Z",
  "updated_by": "Nick"
 }
