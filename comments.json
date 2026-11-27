@@ -821,8 +821,16 @@
     "by": "Nick",
     "at": "2026-11-27T01:07:41.819Z"
    }
+  ],
+  "NR1LD-1367": [
+   {
+    "id": "mwychly1scdz",
+    "text": "RD need to fill in the missing field:\n1. Summary: Class tag should be [Atl-H] (not [Atl-Hi]) right after [RAR]; \"CFTS0019\" → \"CFTS019\"",
+    "by": "Nick",
+    "at": "2026-11-27T02:11:11.833Z"
+   }
   ]
  },
- "updated_at": "2026-11-27T02:04:15.281Z",
+ "updated_at": "2026-11-27T02:11:12.586Z",
  "updated_by": "Nick"
 }
