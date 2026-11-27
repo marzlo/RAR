@@ -780,6 +780,12 @@
     "text": "RD need to fill in the missing field:\n1. Summary: no class tag. the Description notes \"Requirement applicable to Atl-HI\", so [Atl-H] fits\n2. Document ID\t\n3. STLA Requirement ID",
     "by": "Nick",
     "at": "2026-11-26T09:15:10.583Z"
+   },
+   {
+    "id": "mwyab3abij6m",
+    "text": "STLA feedback copied from RTC to Jira",
+    "by": "Nick",
+    "at": "2026-11-27T01:10:08.483Z"
    }
   ],
   "NR1LD-1432": [
@@ -799,6 +805,6 @@
    }
   ]
  },
- "updated_at": "2026-11-27T01:07:42.407Z",
+ "updated_at": "2026-11-27T01:10:08.945Z",
  "updated_by": "Nick"
 }
